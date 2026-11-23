@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Excel Tutorial &amp; Campbell Key Assessment</title>
+<style>/*CSS*/</style>
+</head>
+<body>
+<header>
+  <h1>Excel Tutorial &amp; Campbell Key Assessment</h1>
+  <div class="sub">Campbell University · Learn Excel for the web with chemistry data, then check your own workbook.</div>
+  <nav class="tabs">
+    <button data-tab="learn" class="on">Learn</button>
+    <button data-tab="lab">Labs</button>
+    <button data-tab="check">Check my workbook</button>
+    <button data-tab="ka">Key Assessment</button>
+    <button data-tab="instructor">Instructor</button>
+  </nav>
+</header>
+<div class="banner">Prototype: Modules 1–12, Labs A–C and Key Assessment Capstones 1–2. Screenshots are placeholders until the screenshot session.</div>
+<main>
+
+<!-- ================= LEARN ================= -->
+<section id="learn" class="tab on">
+<div class="learn">
+  <div class="mods" id="mods">
+    <button data-m="1" class="on"><span class="n">1</span>Basics</button>
+    <button data-m="2"><span class="n">2</span>Bringing data in</button>
+    <button data-m="3"><span class="n">3</span>Sorting &amp; filtering</button>
+    <button data-m="4"><span class="n">4</span>Formulas &amp; references</button>
+    <button data-m="5"><span class="n">5</span>Statistics</button>
+    <button data-m="6"><span class="n">6</span>Formatting ranges</button>
+    <button data-m="7"><span class="n">7</span>Making a plot</button>
+    <button data-m="8"><span class="n">8</span>Chart elements</button>
+    <button data-m="9"><span class="n">9</span>Chart text &amp; axes</button>
+    <button data-m="10"><span class="n">10</span>Trendlines</button>
+    <button data-m="11"><span class="n">11</span>Capstone 1: Mass vs. Volume</button>
+    <button data-m="12"><span class="n">12</span>Capstone 2: Ethanol–water</button>
+    <p class="muted">Modules 1–6 → <a href="#" data-golab="A">Lab A</a><br>Modules 7–9 → <a href="#" data-golab="B">Lab B</a><br>Modules 10–11 → <a href="#" data-golab="C">Lab C</a><br>Modules 11, 12 → <a href="#" data-go="ka">Key Assessment</a></p>
+  </div>
+  <div>
+
+<article class="card lesson" data-lesson="1">
+  <h2>1 · Basics</h2>
+  <p class="goal">Goal: find your way around a worksheet, type data, use AutoFill, and label columns with units.</p>
+  <h3>Start Excel for the web</h3>
+  <ol>
+    <li>Go to <b>microsoft365.com</b> and sign in with your Campbell account.</li>
+    <li>Choose <b>Excel</b>, then <b>Blank workbook</b>.</li>
+  </ol>
+  <div class="shot"><b>Screenshot to come</b>Excel for the web: a blank workbook, with the ribbon, Name Box, formula bar and grid labeled.</div>
+  <h3>Words you need</h3>
+  <ul>
+    <li><b>Cell:</b> one box, named by column letter + row number: <code>C4</code>.</li>
+    <li><b>Range:</b> a block of cells, first and last joined by a colon: <code>C4:C6</code> means C4, C5, C6.</li>
+    <li><b>Formula bar:</b> shows what's really in the selected cell (the number you typed, or the formula behind a result).</li>
+  </ul>
+  <h3>Type data</h3>
+  <ol>
+    <li>Click a cell and type. Press <kbd>Enter</kbd> to move down, <kbd>Tab</kbd> to move right.</li>
+    <li>To fix a cell, click it and retype, or double-click it to edit inside it.</li>
+    <li>Put a header in the top row of each column, with the unit in the header: <code>Volume (mL)</code>.</li>
+  </ol>
+  <h3>AutoFill a series</h3>
+  <ol>
+    <li>Type <code>1</code> in one cell and <code>2</code> in the cell below.</li>
+    <li>Select both, then drag the <b>fill handle</b> (the small square at the bottom-right corner of the selection) down. Excel continues 3, 4, 5, ….</li>
+  </ol>
+  <div class="shot"><b>Screenshot to come</b>The fill handle, and a series being dragged down.</div>
+  <div class="mistake"><b>Common mistake: units in the cells.</b> If you type <code>24.15 mL</code>, Excel stores text, not a number, and can't average it. Put units only in the header. Quick check: numbers line up on the <b>right</b> of a cell, text on the <b>left</b>.</div>
+  <div class="yourself"><b>Check yourself:</b> in a blank workbook, type the headers Sample, Trial, Volume (mL) in A1:C1, then AutoFill Trial numbers 1, 2, 3 in B2:B4. Do the numbers sit on the right side of their cells?</div>
+</article>
+
+<article class="card lesson" data-lesson="2" hidden>
+  <h2>2 · Bringing data in</h2>
+  <p class="goal">Goal: get data into Excel without retyping it, and get your workbook back out as a file.</p>
+  <h3>Paste from another page (fastest)</h3>
+  <ol>
+    <li>Copy the data (on the Lab page, the <b>Copy data</b> button does this).</li>
+    <li>In Excel, click the cell where the top-left value should go (for the Lab, <code>A1</code>).</li>
+    <li>Paste: <kbd>Ctrl</kbd>+<kbd>V</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>V</kbd> (Mac). Each value lands in its own cell.</li>
+  </ol>
+  <h3>Open a file</h3>
+  <ul>
+    <li><b>.xlsx</b> is an Excel workbook: data, formulas, formatting and charts.</li>
+    <li><b>.csv</b> ("comma-separated values") is plain text: just the values, separated by commas. No formulas or formatting are saved in it.</li>
+    <li>To open either one in Excel for the web, upload it: on microsoft365.com choose <span class="path">Upload</span> (or drag the file onto the page), then click it to open it in Excel.</li>
+    <li>Do your work in an <b>.xlsx</b>. If you start from a .csv, save your work as an .xlsx so your formulas and formats are kept.</li>
+  </ul>
+  <div class="shot"><b>Screenshot to come</b>Uploading a file on microsoft365.com and opening it in Excel for the web.</div>
+  <h3>Get your workbook out (for the checker)</h3>
+  <ol>
+    <li>Excel for the web saves automatically to OneDrive.</li>
+    <li>To get a file on your computer: <span class="path">File → Create a Copy → Download a Copy</span> (some versions say <span class="path">File → Save As → Download a Copy</span>).</li>
+    <li>The file goes to your Downloads folder as an .xlsx.</li>
+  </ol>
+  <div class="shot"><b>Screenshot to come</b>File menu → Download a Copy.</div>
+  <div class="mistake"><b>Common mistake: pasting in the wrong place.</b> Everything shifts by a row or column, and the Lab's instructions (B1, B2, row 3) no longer match. Press <kbd>Ctrl</kbd>/<kbd>⌘</kbd>+<kbd>Z</kbd> to undo and paste again at A1.</div>
+  <div class="desk"><b>Desktop Excel:</b> <span class="path">File → Open</span> opens .xlsx and .csv directly; <span class="path">Data → From Text/CSV</span> imports a .csv into an existing workbook. Save with <span class="path">File → Save As</span> and choose Excel Workbook (.xlsx).</div>
+</article>
+
+<article class="card lesson" data-lesson="3" hidden>
+  <h2>3 · Sorting &amp; filtering</h2>
+  <p class="goal">Goal: put a table in order without scrambling it, and show only the rows you want.</p>
+  <h3>Sort a whole table by two columns</h3>
+  <ol>
+    <li>Click <b>any one cell inside the table</b> (don't select a single column).</li>
+    <li><span class="path">Data → Custom Sort</span> (also under <span class="path">Home → Sort &amp; Filter → Custom Sort</span>).</li>
+    <li>Make sure <b>My data has headers</b> is checked, so the header row stays on top.</li>
+    <li>Sort by <b>Sample</b>, A to Z. Then <b>Add Level</b>: then by <b>Trial</b>, Smallest to Largest. Click <b>OK</b>.</li>
+  </ol>
+  <div class="shot"><b>Screenshot to come</b>The Custom Sort dialog with two levels: Sample, then Trial.</div>
+  <div class="mistake"><b>Common mistake: sorting one column by itself.</b> If only the Volume column is selected, Excel sorts just those numbers, and every volume ends up next to the wrong sample. The data are now wrong, and nothing looks broken. If Excel asks, choose <b>Expand the selection</b>. If it already happened, undo with <kbd>Ctrl</kbd>/<kbd>⌘</kbd>+<kbd>Z</kbd>.</div>
+  <h3>Filter</h3>
+  <ol>
+    <li>Click inside the table, then <span class="path">Data → Filter</span>. Arrow buttons appear in the header row.</li>
+    <li>Click the arrow on <b>Sample</b>, uncheck <b>Select All</b>, check <b>B</b>, click <b>OK</b>. Only Sample B's rows show.</li>
+    <li>Filtering <b>hides</b> rows; it doesn't delete them. Clear it with the same arrow → <b>Clear Filter</b>, or turn Filter off.</li>
+  </ol>
+  <div class="desk"><b>Keep tables apart.</b> Excel treats every block of touching cells as one table. In the Lab, column E stays empty so that sorting the data in A:D never pulls in the results table in F:I.</div>
+  <div class="yourself"><b>Check yourself:</b> after sorting, pick any row. Is its volume the same one that was beside that sample and trial before you sorted?</div>
+</article>
+
+<article class="card lesson" data-lesson="4" hidden>
+  <h2>4 · Formulas &amp; references</h2>
+  <p class="goal">Goal: let Excel do the arithmetic, and understand what happens to a formula when you copy it down.</p>
+  <h3>Formulas</h3>
+  <ul>
+    <li>Every formula starts with <code>=</code>. Example: <code>=C4/1000</code> changes mL in C4 to L.</li>
+    <li>Operators: <code>+ - * /</code> and <code>^</code> for powers. Use parentheses to control the order.</li>
+    <li>The cell shows the <b>result</b>; the formula bar shows the <b>formula</b>. To see every formula at once: <span class="path">Formulas → Show Formulas</span>.</li>
+  </ul>
+  <h3>Relative references move when you fill down</h3>
+  <p>If D4 holds <code>=C4/1000</code> and you drag the fill handle down, D5 gets <code>=C5/1000</code>, D6 gets <code>=C6/1000</code>, and so on. That's usually what you want: each row uses its own volume.</p>
+  <h3>Fixed references (<code>$</code>) don't move</h3>
+  <p>Moles of NaOH = volume (L) × concentration. The concentration is in one cell, <code>B2</code>, for every row. Write it as <code>$B$2</code> so it stays put when you fill down: <code>=C4/1000*$B$2</code>.</p>
+  <ul><li><code>$B$2</code> fixes both column and row. (<code>B$2</code> fixes only the row, which also works when filling down.)</li></ul>
+  <div class="tryit" id="try4"></div>
+  <div class="mistake"><b>Common mistake: forgetting the <code>$</code>.</b> The first row is right; every row below uses B3, B4, … (blank or wrong cells), so the answers are 0 or wrong.</div>
+  <div class="desk"><b>Shortcut:</b> while typing a reference, press <kbd>F4</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>T</kbd> (Mac desktop) to add the dollar signs. Or just type them.</div>
+</article>
+
+<article class="card lesson" data-lesson="5" hidden>
+  <h2>5 · Statistics</h2>
+  <p class="goal">Goal: summarize replicate measurements with the mean, standard deviation and %CV.</p>
+  <h3>The functions</h3>
+  <table class="data">
+    <tr><th>Function</th><th>What it gives</th></tr>
+    <tr><td><code>=AVERAGE(C4:C6)</code></td><td>mean</td></tr>
+    <tr><td><code>=MEDIAN(C4:C6)</code></td><td>middle value</td></tr>
+    <tr><td><code>=MIN(...)</code>, <code>=MAX(...)</code></td><td>smallest, largest</td></tr>
+    <tr><td><code>=COUNT(...)</code></td><td>how many numbers</td></tr>
+    <tr><td><code>=STDEV.S(C4:C6)</code></td><td>standard deviation of a <b>sample</b> (divides by n − 1)</td></tr>
+    <tr><td><code>=STDEV.P(C4:C6)</code></td><td>standard deviation of a whole <b>population</b> (divides by n)</td></tr>
+  </table>
+  <p class="muted"><code>STDEV</code> is the older name for <code>STDEV.S</code>; it gives the same answer.</p>
+  <h3>STDEV.S or STDEV.P?</h3>
+  <p>Your three trials are a small <b>sample</b> of all the titrations you could run, so use <b>STDEV.S</b>. STDEV.P is only for when you have every member of the group (rare in the lab). With 3 trials, STDEV.P comes out about 18% too small.</p>
+  <h3>%CV: precision on one scale</h3>
+  <p><b>%CV</b> (coefficient of variation, or relative standard deviation) = SD ÷ mean × 100. If the mean is in G4 and the SD in H4: <code>=100*H4/G4</code>. A lower %CV means more precise replicates; it lets you compare samples with different means. %CV has no units, so it's the same whether you use volumes or moles.</p>
+  <h3>The results table in Lab A</h3>
+  <div style="overflow-x:auto"><table class="data">
+    <tr><th class="rh"></th><th class="rh">F</th><th class="rh">G</th><th class="rh">H</th><th class="rh">I</th><th class="rh">J</th><th class="rh">K</th><th class="rh">L</th><th class="rh">M</th></tr>
+    <tr><td class="rh">3</td><td>Sample</td><td>Mean</td><td>SD</td><td>%CV</td><td>Median</td><td>Max</td><td>Min</td><td>n</td></tr>
+    <tr><td class="rh">4</td><td>A</td><td><code>=AVERAGE(D4:D6)</code></td><td><code>=STDEV.S(D4:D6)</code></td><td><code>=100*H4/G4</code></td><td><code>=MEDIAN(D4:D6)</code></td><td><code>=MAX(D4:D6)</code></td><td><code>=MIN(D4:D6)</code></td><td><code>=COUNT(D4:D6)</code></td></tr>
+    <tr><td class="rh">5</td><td>B</td><td colspan="2">same functions on D7:D9</td><td><code>=100*H5/G5</code></td><td colspan="4">same functions on D7:D9</td></tr>
+    <tr><td class="rh">6–8</td><td>C, D, E</td><td colspan="2">D10:D12, D13:D15, D16:D18</td><td>fill down</td><td colspan="4">D10:D12, D13:D15, D16:D18</td></tr>
+  </table></div>
+  <p>Each sample is a block of 3 rows, so the ranges can't be filled down (G5 would become D5:D7). Type each sample's range, or type row 4 and edit the ranges in rows 5–8 (or use FILTER, below). The %CV formula <i>can</i> be filled down from I4 to I8.</p>
+  <h3>Efficient way (optional): FILTER</h3>
+  <p>One formula per column that <i>can</i> be filled down: <code>=AVERAGE(FILTER($D$4:$D$18,$A$4:$A$18=F4))</code>. Use the same pattern with STDEV.S, MEDIAN, MAX, MIN and COUNT.</p>
+  <ol>
+    <li><code>$A$4:$A$18=F4</code> compares every sample letter with the one in F4, giving a list of 15 TRUE/FALSE values (TRUE only on that sample's rows).</li>
+    <li><code>FILTER($D$4:$D$18, …)</code> keeps the moles on the TRUE rows: that sample's three values.</li>
+    <li>AVERAGE (or STDEV.S, …) works on those three values, just as if you'd typed D4:D6.</li>
+  </ol>
+  <p>The ranges are fixed with <code>$</code>; only <code>F4</code> is relative, so filling down to row 5 makes it <code>F5</code> = "B" and picks Sample B's rows. Typed alone in a cell, <code>=FILTER($D$4:$D$18,$A$4:$A$18="B")</code> "spills" its three results into the cells below, a good way to see what it returns. If no letter matches (a typo or a stray space), you get <code>#CALC!</code>. FILTER works in Excel for the web and Microsoft 365, not in Excel 2019 or older.</p>
+  <p><b>n</b> should be 3 for every sample. COUNT counts only cells that hold numbers, so a 2 here means a trial is missing or was typed as text.</p>
+  <div class="tryit" id="try5"></div>
+  <div class="mistake"><b>Common mistake: the wrong rows.</b> <code>=AVERAGE(D4:D18)</code> averages all five samples together, and a range that's off by a few rows mixes two samples. Each sample needs its own three rows: A is D4:D6, B is D7:D9, … E is D16:D18 (after sorting). A %CV far bigger than the others is a hint that its SD range is wrong.</div>
+  <div class="yourself"><b>Check yourself:</b> which sample in your lab data has the lowest %CV? Is that the same as the one with the smallest SD?</div>
+</article>
+
+<article class="card lesson" data-lesson="6" hidden>
+  <h2>6 · Formatting ranges</h2>
+  <p class="goal">Goal: show numbers to the right number of decimals, in scientific notation when they're very small, and make a table easy to read.</p>
+  <h3>Decimal places</h3>
+  <ol>
+    <li>Select the cells (drag across them).</li>
+    <li><span class="path">Home → Increase Decimal</span> or <span class="path">Decrease Decimal</span> (the .0 / .00 buttons) until you see the number of places you want.</li>
+    <li>Or <span class="path">Home → Number Format</span> dropdown → <b>Number</b>, then set the decimal places.</li>
+  </ol>
+  <div class="shot"><b>Screenshot to come</b>The Number group on the Home tab: Number Format dropdown, Increase/Decrease Decimal.</div>
+  <h3>Scientific notation</h3>
+  <ol>
+    <li>Select the cells, then <span class="path">Home → Number Format → Scientific</span>.</li>
+    <li>Adjust the decimals with Increase/Decrease Decimal: <code>2.515E-03</code> has 3 decimals and means 2.515 × 10⁻³.</li>
+  </ol>
+  <h3>Make it readable</h3>
+  <ul>
+    <li>Bold the header row: select it, <span class="path">Home → Bold</span>.</li>
+    <li>Borders: select the table, <span class="path">Home → Borders → All Borders</span>.</li>
+    <li>Column too narrow? You'll see <code>####</code>. Double-click the right edge of the column's letter to fit it.</li>
+  </ul>
+  <div class="mistake"><b>Common mistake: typing rounded numbers.</b> Formatting changes only what you <b>see</b>; Excel keeps the full value for later calculations. If you retype a rounded result, you lose that precision and the cell is no longer a formula.</div>
+  <div class="desk"><b>Lab A formats:</b> moles (D4:D18) and Mean, SD, Median, Max, Min (G4:H8 and J4:L8) in Scientific with 3 decimals; %CV (I4:I8) with 3 decimals; n (M4:M8) as a whole number. Center the results table: <span class="path">Home → Center</span>.</div>
+  <div class="yourself"><b>Check yourself:</b> click a result you formatted to 3 decimals. The cell shows 3 decimals; does the formula bar show the formula?</div>
+</article>
+
+
+<article class="card lesson" data-lesson="7" hidden>
+  <h2>7 · Making a plot</h2>
+  <p class="goal">Goal: make an XY (Scatter) chart of measured data, with the right column on each axis.</p>
+  <h3>Scatter, not Line</h3>
+  <p>For measured data, where x is a number you set or measured, always use <b>Scatter (XY)</b>. A <b>Line</b> chart treats the x values as labels and spaces them evenly, whatever their values. With volumes 0.50, 0.75, 1.00, 1.25, 1.50, 2.00, 3.00, 4.00 L, the jump from 2 to 4 L takes the same width as 0.50 to 0.75 L, and the curve comes out the wrong shape:</p>
+  <div class="row" id="m7pics"></div>
+  <h3>Make the chart</h3>
+  <ol>
+    <li>Put the <b>x column on the left</b> of the y column(s); Excel uses the leftmost selected column as x.</li>
+    <li>Select the data <b>with its header row</b> (for Lab B: A3:C11). The headers become the series names.</li>
+    <li><span class="path">Insert → Scatter</span> and pick <b>Scatter</b> (markers only, the first choice).</li>
+  </ol>
+  <div class="shot"><b>Screenshot to come</b>Insert tab → Scatter (X, Y) menu, with "Scatter" (markers only) highlighted.</div>
+  <h3>Check and fix the series: Select Data</h3>
+  <ul>
+    <li>Right-click the chart → <span class="path">Select Data</span>. Each <b>series</b> is one set of points with a name, X values and Y values.</li>
+    <li>Click a series → <b>Edit</b> to fix its ranges. <b>Add</b> makes a new series: set the name (click its header cell), X values and Y values.</li>
+    <li>Two y columns sharing one x column make <b>two series</b> on one chart, as in Lab B.</li>
+  </ul>
+  <div class="mistake"><b>Common mistakes.</b> A Line chart (the curve is distorted, and the x column may even be plotted as a series of its own). Selecting only the y columns: Excel then plots against 1, 2, 3, …. Selecting the header row as data: the y range should start in row 4, not row 3.</div>
+  <div class="desk"><b>Desktop Excel:</b> <span class="path">Insert → Insert Scatter (X, Y) or Bubble Chart → Scatter</span>; Select Data is also on the Chart Design tab.</div>
+</article>
+
+<article class="card lesson" data-lesson="8" hidden>
+  <h2>8 · Chart elements</h2>
+  <p class="goal">Goal: label a chart so a reader understands it without asking you: title, axis titles with units, legend.</p>
+  <h3>Add the elements</h3>
+  <ol>
+    <li>Click the chart. Use the <span class="path">Chart</span> tab (or the Format pane that opens beside the chart) to turn on <b>Chart Title</b>, <b>Axis Titles</b> and <b>Legend</b>.</li>
+    <li>Click each placeholder ("Chart Title", "Axis Title") and type the real text. A placeholder left in place counts as missing.</li>
+  </ol>
+  <div class="shot"><b>Screenshot to come</b>Excel for the web: chart selected, Chart tab with Chart Title, Axis Titles and Legend.</div>
+  <h3>What to write</h3>
+  <ul>
+    <li><b>Axis titles:</b> quantity, then unit in parentheses: <code>Volume (L)</code>, <code>Pressure (atm)</code>, <code>Concentration (M)</code>. Absorbance has no unit: <code>Absorbance</code>.</li>
+    <li><b>Chart title:</b> what the graph shows, e.g. "Pressure vs. volume of a gas at two temperatures".</li>
+    <li><b>Legend:</b> needed when there are two or more series, so readers can tell them apart. The entries come from the series names; if they say "Series1", fix the name in <span class="path">Select Data → Edit → Series name</span> (click the header cell). With <b>one series</b>, turn the legend <b>off</b>; it adds nothing.</li>
+  </ul>
+  <div class="mistake"><b>Common mistake: axis titles without units.</b> "Pressure" alone leaves the reader guessing atm, kPa or mmHg.</div>
+  <div class="desk"><b>Desktop Excel:</b> the <b>+</b> (Chart Elements) button beside the chart turns each element on and off.</div>
+</article>
+
+<article class="card lesson" data-lesson="9" hidden>
+  <h2>9 · Chart text &amp; axes</h2>
+  <p class="goal">Goal: make the chart readable: text big enough to read in a report, and axes that show the data well.</p>
+  <h3>Font size</h3>
+  <p>Excel starts the title at 14 pt, axis titles at 10 pt and the legend at 9 pt. In our labs, the title, axis titles and legend are all <b>12 pt</b>.</p>
+  <ol>
+    <li>Click the chart title (it gets a box around it).</li>
+    <li><span class="path">Home → Font Size → 12</span>.</li>
+    <li>Repeat for each axis title and the legend.</li>
+  </ol>
+  <div class="shot"><b>Screenshot to come</b>Chart title selected, Home → Font Size set to 12.</div>
+  <h3>Axis range (minimum and maximum)</h3>
+  <ul>
+    <li>Double-click (or right-click) the axis numbers → <span class="path">Format Axis → Axis Options → Bounds</span>, and set Minimum and Maximum.</li>
+    <li>Start an axis at 0 when zero is meaningful and you want to show proportions. Leave room above the highest point so it isn't on the edge.</li>
+    <li>In the same pane: <b>Number</b> sets the format of the axis numbers (e.g. 2 decimals), and gridlines can be turned on or off under Chart Elements.</li>
+  </ul>
+  <p class="muted">Axis ranges are part of a good figure but aren't graded in the labs.</p>
+  <div class="mistake"><b>Common mistake: changing the whole chart's font.</b> Selecting the chart frame and changing the size changes the axis numbers too. Select each element by itself.</div>
+</article>
+
+<article class="card lesson" data-lesson="11" hidden>
+  <h2>11 · Capstone 1: Mass vs. Volume</h2>
+  <p class="goal">Goal: a finished, report-ready plot of mass vs. volume, with every element the <a href="#" data-go="ka">Key Assessment</a> asks for.</p>
+  <h3>The six elements</h3>
+  <ol>
+    <li>A <b>descriptive title</b>: say what is plotted, e.g. "Mass vs. Volume of Ethanol".</li>
+    <li>A <b>subtitle with your name</b>, in a <b>smaller font</b> than the title.</li>
+    <li>An <b>x-axis label with units</b>: <code>Volume (mL)</code>.</li>
+    <li>A <b>y-axis label with units</b>: <code>Mass (g)</code>.</li>
+    <li>The <b>data</b>, as an XY (Scatter) plot: mass on y, volume on x.</li>
+    <li>A <b>regression line</b> with its <b>equation</b> and <b>R² value</b>.</li>
+  </ol>
+  <h3>Plot the data</h3>
+  <ol>
+    <li>Select both columns with their headers (A1:B9), then <span class="path">Insert → Scatter</span>. Volume is the left column, so it goes on x (Module 7).</li>
+  </ol>
+  <h3>Title and a subtitle with your name</h3>
+  <ol>
+    <li>Turn on the chart title (Module 8), click it and type the descriptive title.</li>
+    <li>Click at the end of the title text and press <kbd>Enter</kbd> to start a second line. Type your name.</li>
+    <li>Select just the name line, then <span class="path">Home → Font Size</span> and pick a smaller size than the title (for example, title 14 pt, name 11 pt).</li>
+  </ol>
+  <div class="shot"><b>Screenshot to come</b>A chart title with a second, smaller line holding the student's name.</div>
+  <p class="muted">Excel has no separate "subtitle" box: the subtitle is the second line of the chart title. A separate text box isn't attached to the chart and can be lost when you copy it.</p>
+  <h3>Axis labels with units</h3>
+  <p>Add Axis Titles (Module 8) and type <code>Volume (mL)</code> for x and <code>Mass (g)</code> for y.</p>
+  <h3>Regression line, equation and R²</h3>
+  <ol>
+    <li>Click a data point → <span class="path">Chart → Trendline → Linear</span> (Module 10).</li>
+    <li>In <span class="path">Format Trendline</span>, check <b>Display Equation on chart</b> and <b>Display R-squared value on chart</b>.</li>
+    <li>Leave <b>Set Intercept</b> unchecked: the assessment uses standard linear regression (y = mx + b).</li>
+    <li>Drag the equation box to a clear spot so it doesn't cover the points. The slope is the density in g/mL.</li>
+  </ol>
+  <h3>Make it report-ready</h3>
+  <ul>
+    <li>Show measured data as markers; a line joining the points isn't needed (the regression line is the model).</li>
+    <li>No 3-D, shadows or picture backgrounds; keep the text readable.</li>
+  </ul>
+  <h3>Into Word or a PDF</h3>
+  <ol>
+    <li>Click the chart's border to select the whole chart, then copy (<kbd>Ctrl</kbd>/<kbd>⌘</kbd>+<kbd>C</kbd>).</li>
+    <li>Paste into a Word document (Word for the web works too). To hand in a PDF instead, save the Word file as PDF: <span class="path">File → Save As → PDF</span> (desktop) or <span class="path">File → Export → Download as PDF</span> (Word for the web).</li>
+    <li>Download your Excel workbook (<span class="path">File → Create a Copy → Download a Copy</span>) and attach both files to the Blackboard assignment.</li>
+  </ol>
+  <div class="mistake"><b>Common mistakes.</b> A Line chart (its trendline uses 1, 2, 3, … for x, so the equation is wrong). Your name on the same line as the title, or the same size. "Chart Title" or "Axis Title" left in place. Axis labels without units.</div>
+</article>
+
+<article class="card lesson" data-lesson="10" hidden>
+  <h2>10 · Trendlines</h2>
+  <p class="goal">Goal: fit a straight line to calibration data, read the slope and intercept, and use them to find an unknown's concentration.</p>
+  <h3>Add a linear trendline</h3>
+  <ol>
+    <li>Click a data point (or the chart), then <span class="path">Chart → Trendline → Linear</span>.</li>
+    <li>In <span class="path">Format Trendline</span>, check <b>Display Equation on chart</b> and <b>Display R-squared value on chart</b>.</li>
+    <li>Leave <b>Set Intercept</b> unchecked: let the fit find its own intercept.</li>
+  </ol>
+  <div class="shot"><b>Screenshot to come</b>Format Trendline pane: Linear, Display Equation, Display R-squared.</div>
+  <h3>Reading it</h3>
+  <p>For Beer's law, <i>A</i> = <i>εb</i>·<i>c</i>, so a plot of absorbance (y) against concentration (x) is a straight line. In <code>y = 12345x + 0.0034</code>, the slope 12345 M⁻¹ is <i>εb</i>, and the intercept should be close to 0. <b>R²</b> near 1 (e.g. 0.9990) means the points lie close to the line.</p>
+  <h3>The same numbers in cells</h3>
+  <table class="data">
+    <tr><th class="rh"></th><th class="rh">H</th><th class="rh">I</th></tr>
+    <tr><td class="rh">4</td><td>Slope</td><td><code>=SLOPE(B4:B9,A4:A9)</code></td></tr>
+    <tr><td class="rh">5</td><td>Intercept</td><td><code>=INTERCEPT(B4:B9,A4:A9)</code></td></tr>
+    <tr><td class="rh">6</td><td>R²</td><td><code>=RSQ(B4:B9,A4:A9)</code></td></tr>
+  </table>
+  <p><b>Order matters:</b> known y's (absorbance) first, then known x's (concentration). The chart's equation is rounded; these cells keep full precision, so calculate with them, not with numbers copied from the chart.</p>
+  <h3>Finding an unknown</h3>
+  <p>Solve <i>A</i> = <i>m</i>·<i>c</i> + <i>b</i> for <i>c</i>: <i>c</i> = (<i>A</i> − <i>b</i>) ÷ <i>m</i>. With the unknown's absorbance in E4: <code>=(E4-$I$5)/$I$4</code>, then fill down. The <code>$</code> signs keep the slope and intercept fixed (Module 4).</p>
+  <div class="tryit" id="try11"></div>
+  <div class="mistake"><b>Common mistakes.</b> SLOPE with the ranges swapped (x's first). Plotting the unknowns with the standards. Forgetting the intercept: <i>A</i> ÷ <i>m</i> instead of (<i>A</i> − <i>b</i>) ÷ <i>m</i>. An unknown whose absorbance is outside the standards' range is an extrapolation: dilute it and measure again.</div>
+</article>
+<article class="card lesson" data-lesson="12" hidden>
+  <h2>12 · Capstone 2: Ethanol–water solutions</h2>
+  <p class="goal">Goal: find the density of five ethanol–water solutions from mass vs. volume data, tabulate the regressions, and plot density against composition.</p>
+  <h3>Plot 1: all five solutions on one plot</h3>
+  <ol>
+    <li>Select <b>A1:F9</b>: the volume column and all five mass columns, with headers.</li>
+    <li><span class="path">Insert → Scatter</span>. Excel makes <b>five series</b> that share the volumes in column A as x; the headers become the series names (Module 7).</li>
+    <li>Format it as in Capstone 1: a descriptive title, your name as a smaller second line of the title, and axis titles with units (Module 11).</li>
+  </ol>
+  <h3>Color by solution, with a legend</h3>
+  <ul>
+    <li>Excel gives each series its own color automatically. To choose your own: click one solution's points → <span class="path">Format Data Series → Marker → Fill</span> (and Border). With five series, pick colors that are easy to tell apart (a light-to-dark sequence suits 0% → 100%).</li>
+    <li>Keep the <b>legend</b> on; if it says "Series1", fix the name in <span class="path">Select Data → Edit → Series name</span>.</li>
+  </ul>
+  <div class="shot"><b>Screenshot to come</b>Five colored series with a legend and a regression line on each.</div>
+  <h3>A regression line for each solution</h3>
+  <p>Click one solution's points (only that series is selected) → <span class="path">Chart → Trendline → Linear</span>. Repeat for each of the five. Leave Set Intercept unchecked. Equations on the chart are optional; your table holds the numbers.</p>
+  <h3>The table (H1:K6)</h3>
+  <table class="data">
+    <tr><th class="rh"></th><th class="rh">H</th><th class="rh">I</th><th class="rh">J</th><th class="rh">K</th></tr>
+    <tr><td class="rh">1</td><td>% Ethanol</td><td>Slope = Density (g/mL)</td><td>Intercept (g)</td><td>R²</td></tr>
+    <tr><td class="rh">2</td><td>0</td><td><code>=SLOPE(B2:B9,$A$2:$A$9)</code></td><td><code>=INTERCEPT(B2:B9,$A$2:$A$9)</code></td><td><code>=RSQ(B2:B9,$A$2:$A$9)</code></td></tr>
+    <tr><td class="rh">3</td><td>25</td><td colspan="3">same, with C2:C9</td></tr>
+    <tr><td class="rh">4–6</td><td>50, 75, 100</td><td colspan="3">D2:D9, E2:E9, F2:F9</td></tr>
+  </table>
+  <p>Type % ethanol as a plain number (25, not "25%" or "25% ethanol") so Plot 2 can use it. Masses come first in SLOPE (known y's), then the volumes (known x's); the <code>$</code> keeps the volumes fixed if you copy a formula across.</p>
+  <h3>Plot 2: density vs. % ethanol</h3>
+  <ol>
+    <li>Select <b>H1:I6</b> (% ethanol and slope = density, with headers), then <span class="path">Insert → Scatter</span>. % ethanol is the left column, so it goes on x.</li>
+    <li>Add a descriptive title, your name as a smaller second line, and axis titles with units: <code>% Ethanol (by mass)</code> and <code>Density (g/mL)</code>.</li>
+  </ol>
+  <h3>What the plots tell you</h3>
+  <p>Each slope in Plot 1 is a solution's <b>density</b>. In Plot 2 the points don't fall on a straight line between water (about 1.00 g/mL) and ethanol (about 0.79 g/mL): the mixtures are a little denser than that line predicts, because ethanol and water molecules pack together more closely than either liquid alone.</p>
+  <h3>Into Word or a PDF</h3>
+  <p>Copy both plots and the table (select H1:K6, copy) into a Word document, save as PDF if you like, and attach it with your Excel file in Blackboard (Module 11).</p>
+  <div class="mistake"><b>Common mistakes.</b> Selecting only some mass columns. A trendline on only one solution. Two solutions in the same color. The table's SLOPE using the wrong mass column, or the ranges swapped. Typing "25%" in the table, or plotting textbook densities instead of your own slopes in Plot 2.</div>
+</article>
+
+  </div>
+</div>
+</section>
+
+<!-- ================= LABS ================= -->
+<section id="lab" class="tab">
+  <div class="card">
+    <div class="row seg" id="labPick"><button data-lab="A" class="on">Lab A · Titrations</button><button data-lab="B">Lab B · Boyle's law</button><button data-lab="C">Lab C · Beer's law</button></div>
+    <h2 id="labTitle" style="margin:14px 0 4px"></h2>
+    <p id="labIntro"></p>
+    <p><b>Step 1.</b> Type your name exactly as it appears in Blackboard. Your data set is made from your name, so every student's numbers are different.</p>
+    <div class="row"><input type="text" id="labName" placeholder="First Last" autocomplete="name"><button class="btn" id="labGo">Make my data set</button></div>
+    <p class="muted" id="labNameNote"></p>
+  </div>
+  <div id="labOut" hidden>
+    <div class="card">
+      <h3 style="margin-top:0">Step 2 · Get your data into Excel</h3>
+      <p>Open a <b>blank workbook</b> in Excel for the web, click <b>A1</b>, and paste. (Or download a file and open it.)</p>
+      <div class="row"><button class="btn" id="labCopy">Copy data</button><button class="btn ghost" id="labXlsx">Download .xlsx</button><button class="btn ghost" id="labCsv">Download .csv</button></div>
+      <p class="muted" id="labCopyNote"></p>
+      <div id="labBlock" style="overflow-x:auto"></div>
+      <div id="labExtra"></div>
+    </div>
+    <div class="card">
+      <h3 style="margin-top:0">Step 3 · Tasks</h3>
+      <ol id="labTasks"></ol>
+      <p>When you're done: <span class="path">File → Create a Copy → Download a Copy</span>, then upload the file on the <a href="#" data-go="check">Check my workbook</a> tab.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CHECK ================= -->
+<section id="check" class="tab">
+  <div class="card">
+    <h2 style="margin-top:0">Check my workbook</h2>
+    <p>Download your workbook from Excel for the web (<span class="path">File → Create a Copy → Download a Copy</span>), then drop the .xlsx file here. Your file is read in this browser and is never uploaded anywhere.</p>
+    <p class="row">Lab: <select id="checkLab"><option value="">Tell from the file</option><option value="A">Lab A · Titrations</option><option value="B">Lab B · Boyle's law</option><option value="C">Lab C · Beer's law</option></select></p>
+    <label class="drop" id="drop"><input type="file" id="file" accept=".xlsx,.xlsm" hidden><b>Choose your .xlsx file</b><br><span class="muted">or drag it here</span></label>
+  </div>
+  <div class="card" id="checkOut" hidden></div>
+</section>
+
+<!-- ================= KEY ASSESSMENT ================= -->
+<section id="ka" class="tab">
+  <div class="card"><div class="row seg" id="kaPick"><button data-cap="1" class="on">Capstone 1 · Mass vs. Volume</button><button data-cap="2">Capstone 2 · Ethanol–water solutions</button></div></div>
+  <div id="cap1">
+  <div class="card lesson">
+    <h2 style="margin-top:0">Capstone 1 · Mass vs. Volume</h2>
+    <h3>Assessment Instructions</h3>
+    <ul>
+      <li>Obtain data as directed by your instructor.</li>
+      <li>Use Microsoft Excel to create a plot of Mass vs Volume.</li>
+      <li>Your data plot should have the following elements
+        <ol>
+          <li>A descriptive title</li>
+          <li>A subtitle with your name in smaller font</li>
+          <li>x-axis label with units</li>
+          <li>y-axis label with units</li>
+          <li>Data</li>
+          <li>Regression line and regression equation with R² value</li>
+        </ol>
+      </li>
+      <li>Copy an image of your plot into a MSWord or PDF file and attach it along with your MSExcel file to this assignment</li>
+    </ul>
+    <p>Step-by-step help: <a href="#" data-golesson="11">Module 11 · Capstone 1: Mass vs. Volume</a>.</p>
+  </div>
+  <div class="card">
+    <h3 style="margin-top:0">Your data</h3>
+    <p>Mass of ethanol measured in a graduated cylinder at 20 °C (real measurements scatter a little). Open a blank workbook in Excel for the web, click <b>A1</b>, and paste (or download a file).</p>
+    <div class="row"><button class="btn" id="kaCopy">Copy data</button><button class="btn ghost" id="kaXlsx">Download .xlsx</button><button class="btn ghost" id="kaCsv">Download .csv</button></div>
+    <p class="muted" id="kaNote"></p>
+    <div id="kaBlock" style="overflow-x:auto"></div>
+  </div>
+  <div class="card">
+    <h3 style="margin-top:0">Pre-check your plot (optional)</h3>
+    <p>Before you submit, check your Excel file here. Your file is read in this browser and is never uploaded anywhere. This does <b>not</b> submit anything: attach your Excel file and your Word/PDF file in Blackboard.</p>
+    <div class="row"><input type="text" id="kaName" placeholder="Your name, as in Blackboard" autocomplete="name"></div>
+    <p></p>
+    <label class="drop" id="kaDrop"><input type="file" id="kaFile" accept=".xlsx,.xlsm" hidden><b>Choose your .xlsx file</b><br><span class="muted">or drag it here</span></label>
+    <div id="kaOut" style="margin-top:14px"></div>
+  </div>
+  </div>
+  <div id="cap2" hidden>
+  <div class="card lesson">
+    <h2 style="margin-top:0">Capstone 2 · Ethanol–water solutions</h2>
+    <h3>Assessment Instructions</h3>
+    <ul>
+      <li>Obtain data as directed by your instructor.</li>
+      <li>Use Microsoft Excel to create a plot of Mass vs Volume showing the data for all five solutions: 0% (water), 25%, 50%, 75% and 100% ethanol. Your plot should have the following elements
+        <ol>
+          <li>A descriptive title</li>
+          <li>A subtitle with your name in smaller font</li>
+          <li>x-axis label with units</li>
+          <li>y-axis label with units</li>
+          <li>Data for all five solutions</li>
+          <li>Each solution in a different color, with a legend</li>
+          <li>A regression line for each solution</li>
+        </ol>
+      </li>
+      <li>Make a table of the regression results in cells H1:K6, with the headers % Ethanol, Slope = Density (g/mL), Intercept (g), R², and one row per solution (type % ethanol as a number: 0, 25, 50, 75, 100)</li>
+      <li>Make a second plot of Density (y) vs % Ethanol (x), using the slopes from your table. It should have
+        <ol>
+          <li>A descriptive title</li>
+          <li>A subtitle with your name in smaller font</li>
+          <li>x-axis label with units</li>
+          <li>y-axis label with units</li>
+          <li>Data</li>
+        </ol>
+      </li>
+      <li>Copy images of both plots and your table into a MSWord or PDF file and attach it along with your MSExcel file to this assignment</li>
+    </ul>
+    <p>Step-by-step help: <a href="#" data-golesson="12">Module 12 · Capstone 2: Ethanol–water solutions</a>.</p>
+  </div>
+  <div class="card">
+    <h3 style="margin-top:0">Your data</h3>
+    <p>Masses (g) of five ethanol–water solutions measured in a graduated cylinder at 25 °C. % ethanol is by mass (g of ethanol per 100 g of solution). Open a blank workbook in Excel for the web, click <b>A1</b>, and paste (or download a file).</p>
+    <div class="row"><button class="btn" id="ka2Copy">Copy data</button><button class="btn ghost" id="ka2Xlsx">Download .xlsx</button><button class="btn ghost" id="ka2Csv">Download .csv</button></div>
+    <p class="muted" id="ka2Note"></p>
+    <div id="ka2Block" style="overflow-x:auto"></div>
+  </div>
+  <div class="card">
+    <h3 style="margin-top:0">Pre-check your plot (optional)</h3>
+    <p>Before you submit, check your Excel file here. Your file is read in this browser and is never uploaded anywhere. This does <b>not</b> submit anything: attach your Excel file and your Word/PDF file in Blackboard.</p>
+    <div class="row"><input type="text" id="ka2Name" placeholder="Your name, as in Blackboard" autocomplete="name"></div>
+    <p></p>
+    <label class="drop" id="ka2Drop"><input type="file" id="ka2File" accept=".xlsx,.xlsm" hidden><b>Choose your .xlsx file</b><br><span class="muted">or drag it here</span></label>
+    <div id="ka2Out" style="margin-top:14px"></div>
+  </div>
+  </div>
+</section>
+
+<!-- ================= INSTRUCTOR ================= -->
+<section id="instructor" class="tab">
+  <div class="card">
+    <h2 style="margin-top:0">Verify completion codes</h2>
+    <p>Each code belongs to one name and one lab (e.g. <code>A-7K3QX9</code>). Names are compared ignoring capitals and extra spaces.</p>
+    <div class="row"><input type="text" id="vName" placeholder="Student name"><input type="text" id="vCode" placeholder="Code" style="min-width:140px"><button class="btn" id="vGo">Verify</button></div>
+    <p id="vOut"></p>
+    <h3>Verify a whole class</h3>
+    <p class="muted">Paste one student per line: name, then a comma or tab, then the code (e.g. copied from a Blackboard export).</p>
+    <textarea id="vList" rows="6" placeholder="Jordan Smith, A-1ABC23"></textarea>
+    <div class="row"><button class="btn" id="vListGo">Verify list</button></div>
+    <div id="vListOut"></div>
+  </div>
+</section>
+
+</main>
+<script>/*JS*/</script>
+</body>
+</html>

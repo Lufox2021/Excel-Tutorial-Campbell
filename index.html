@@ -1,0 +1,2218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Excel Tutorial &amp; Campbell Key Assessment</title>
+<style>:root{--g:#1d6f42;--g2:#e8f3ec;--ink:#1f2328;--mut:#5b6470;--line:#d8dde3;--bad:#b42318;--badbg:#fdecea;--okbg:#e7f5ec;--warn:#8a5a00;--warnbg:#fff6e0;--bg:#f7f8fa}
+*{box-sizing:border-box}
+body{margin:0;font:16px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:var(--ink);background:var(--bg)}
+header{background:var(--g);color:#fff;padding:14px 20px 0}
+header h1{margin:0;font-size:22px;letter-spacing:.2px}
+header .sub{opacity:.85;font-size:14px;margin:2px 0 10px}
+nav.tabs{display:flex;gap:4px;flex-wrap:wrap}
+nav.tabs button{background:transparent;border:0;color:#fff;opacity:.8;padding:9px 16px;font:inherit;font-weight:600;border-radius:8px 8px 0 0;cursor:pointer}
+nav.tabs button.on{background:var(--bg);color:var(--g);opacity:1}
+.banner{background:var(--warnbg);color:var(--warn);font-size:14px;padding:8px 20px;border-bottom:1px solid #f0dca8}
+main{max-width:1100px;margin:0 auto;padding:20px}
+.tab{display:none}.tab.on{display:block}
+.learn{display:grid;grid-template-columns:230px 1fr;gap:20px}
+@media(max-width:760px){.learn{grid-template-columns:1fr}}
+.mods{display:flex;flex-direction:column;gap:4px}
+.mods button{text-align:left;border:1px solid var(--line);background:#fff;border-radius:8px;padding:8px 10px;font:inherit;font-size:14px;cursor:pointer;color:var(--ink)}
+.mods button.on{border-color:var(--g);background:var(--g2);font-weight:600}
+.mods button:disabled{color:#9aa3ad;cursor:default;background:#f1f3f5}
+.mods .n{display:inline-block;width:22px;color:var(--g);font-weight:700}
+.card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:18px 22px;margin-bottom:16px}
+.lesson h2{margin:0 0 4px;font-size:22px}
+.lesson .goal{color:var(--mut);margin:0 0 14px}
+.lesson h3{font-size:16px;margin:18px 0 6px;color:var(--g)}
+.lesson ol,.lesson ul{padding-left:22px;margin:6px 0}
+.lesson li{margin:3px 0}
+.path{font-weight:600;background:var(--g2);padding:1px 6px;border-radius:5px;white-space:nowrap}
+kbd{font:13px ui-monospace,Menlo,monospace;border:1px solid var(--line);border-bottom-width:2px;border-radius:4px;padding:0 5px;background:#fafbfc}
+code{font:14px ui-monospace,Menlo,Consolas,monospace;background:#f1f3f5;padding:1px 5px;border-radius:4px}
+.shot{border:2px dashed #b9c2cc;border-radius:10px;padding:18px;text-align:center;color:var(--mut);font-size:14px;margin:12px 0;background:#fbfcfd}
+.shot b{display:block;color:var(--ink);margin-bottom:2px}
+.mistake{border-left:4px solid var(--bad);background:var(--badbg);padding:10px 14px;border-radius:0 8px 8px 0;margin:14px 0}
+.mistake b{color:var(--bad)}
+.desk{border-left:4px solid #6b7a8c;background:#f1f4f7;padding:8px 14px;border-radius:0 8px 8px 0;margin:14px 0;font-size:14px}
+.yourself{border-left:4px solid var(--g);background:var(--g2);padding:10px 14px;border-radius:0 8px 8px 0;margin:14px 0}
+details{margin:4px 0}summary{cursor:pointer}
+.btn{background:var(--g);color:#fff;border:0;border-radius:8px;padding:9px 16px;font:inherit;font-weight:600;cursor:pointer}
+.btn:hover{filter:brightness(1.08)}
+.btn.ghost{background:#fff;color:var(--g);border:1px solid var(--g)}
+.btn.small{padding:5px 11px;font-size:14px}
+input[type=text]{font:inherit;padding:8px 10px;border:1px solid var(--line);border-radius:8px;min-width:260px}
+.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+table.data{border-collapse:collapse;font-size:14px;margin:8px 0}
+table.data td,table.data th{border:1px solid var(--line);padding:3px 10px}
+table.data th{background:#f1f3f5;font-weight:600}
+table.data td.n{text-align:right;font-variant-numeric:tabular-nums}
+table.data .rh{background:#f1f3f5;color:var(--mut);text-align:center;font-size:12px}
+.tasks{list-style:none;padding:0;margin:0}
+.tasks li{display:grid;grid-template-columns:28px 1fr;gap:8px;padding:10px 0;border-bottom:1px solid var(--line)}
+.tasks .ic{font-weight:700;font-size:18px;line-height:1.3}
+.tasks .ok .ic{color:var(--g)}.tasks .no .ic{color:var(--bad)}.tasks .skip .ic{color:#9aa3ad}
+.tasks .t{font-weight:600}.tasks .m{color:var(--mut);font-size:14px}
+.tasks .no .m{color:var(--bad)}
+.tasks a{font-size:13px}
+.code{font:700 28px ui-monospace,Menlo,monospace;letter-spacing:2px;color:var(--g);background:var(--okbg);border:2px solid var(--g);display:inline-block;padding:6px 18px;border-radius:10px;margin:6px 0}
+.okbox{background:var(--okbg);border:1px solid #b7dfc5;border-radius:10px;padding:14px 18px}
+.badbox{background:var(--badbg);border:1px solid #f3c2bd;border-radius:10px;padding:12px 16px;color:var(--bad)}
+.drop{display:block;border:2px dashed var(--g);border-radius:12px;padding:26px;text-align:center;background:#fff;cursor:pointer}
+.drop.over{background:var(--g2)}
+.muted{color:var(--mut);font-size:14px}
+textarea{width:100%;font:13px ui-monospace,Menlo,monospace;border:1px solid var(--line);border-radius:8px;padding:8px}
+/* mini grid */
+.mg{border:1px solid var(--line);border-radius:10px;padding:12px;margin:12px 0;background:#fbfcfd}
+.mg-prompt{margin-bottom:8px}
+.mg-bar{display:flex;align-items:center;gap:6px;border:1px solid var(--line);border-radius:6px;background:#fff;padding:3px 6px;margin-bottom:6px}
+.mg-name{font:600 13px ui-monospace,Menlo,monospace;min-width:34px;color:var(--mut);border-right:1px solid var(--line);padding-right:6px}
+.mg-fx{font-style:italic;color:var(--mut);font-size:13px}
+.mg-in{flex:1;border:0;font:14px ui-monospace,Menlo,monospace;outline:none;padding:3px}
+.mg-wrap{overflow-x:auto}
+.mg-t{border-collapse:collapse;font-size:14px;background:#fff}
+.mg-t th{background:#eef1f4;color:var(--mut);font-weight:600;font-size:12px;padding:2px 8px;border:1px solid #cfd5dc}
+.mg-t td{border:1px solid #dfe3e8;min-width:92px;height:26px;padding:2px 6px;cursor:cell;white-space:nowrap}
+.mg-t td.num{text-align:right;font-variant-numeric:tabular-nums}
+.mg-t td.ed{background:#fffef0}
+.mg-t td.sel{outline:2px solid var(--g);outline-offset:-2px}
+.mg-err{color:var(--bad);font-weight:700}
+.mg-btns{display:flex;gap:6px;margin-top:8px}
+.mg-msg{font-size:14px;color:var(--warn);min-height:1.2em;margin-top:6px}
+.mg-goal{font-size:14px;color:var(--mut)}
+.mg-goal.ok{color:var(--g);font-weight:600}
+.seg{gap:0}.seg button{border:1px solid var(--g);background:#fff;color:var(--g);font:inherit;font-weight:600;padding:8px 14px;cursor:pointer}
+.seg button:first-child{border-radius:8px 0 0 8px}.seg button:last-child{border-radius:0 8px 8px 0}.seg button+button{border-left:0}
+.seg button.on{background:var(--g);color:#fff}
+select{font:inherit;padding:6px 8px;border:1px solid var(--line);border-radius:8px}
+.mini{border:1px solid var(--line);border-radius:10px;background:#fff;padding:8px;margin:0;max-width:272px}
+.mini figcaption{font-size:13px;color:var(--mut);text-align:center}
+.mini.bad figcaption{color:var(--bad)}
+.tasks li.grp{display:block;border-bottom:0;padding:14px 0 2px;font-weight:700;color:var(--g)}
+</style>
+</head>
+<body>
+<header>
+  <h1>Excel Tutorial &amp; Campbell Key Assessment</h1>
+  <div class="sub">Campbell University · Learn Excel for the web with chemistry data, then check your own workbook.</div>
+  <nav class="tabs">
+    <button data-tab="learn" class="on">Learn</button>
+    <button data-tab="lab">Labs</button>
+    <button data-tab="check">Check my workbook</button>
+    <button data-tab="ka">Key Assessment</button>
+    <button data-tab="instructor">Instructor</button>
+  </nav>
+</header>
+<div class="banner">Prototype: Modules 1–12, Labs A–C and Key Assessment Capstones 1–2. Screenshots are placeholders until the screenshot session.</div>
+<main>
+
+<!-- ================= LEARN ================= -->
+<section id="learn" class="tab on">
+<div class="learn">
+  <div class="mods" id="mods">
+    <button data-m="1" class="on"><span class="n">1</span>Basics</button>
+    <button data-m="2"><span class="n">2</span>Bringing data in</button>
+    <button data-m="3"><span class="n">3</span>Sorting &amp; filtering</button>
+    <button data-m="4"><span class="n">4</span>Formulas &amp; references</button>
+    <button data-m="5"><span class="n">5</span>Statistics</button>
+    <button data-m="6"><span class="n">6</span>Formatting ranges</button>
+    <button data-m="7"><span class="n">7</span>Making a plot</button>
+    <button data-m="8"><span class="n">8</span>Chart elements</button>
+    <button data-m="9"><span class="n">9</span>Chart text &amp; axes</button>
+    <button data-m="10"><span class="n">10</span>Trendlines</button>
+    <button data-m="11"><span class="n">11</span>Capstone 1: Mass vs. Volume</button>
+    <button data-m="12"><span class="n">12</span>Capstone 2: Ethanol–water</button>
+    <p class="muted">Modules 1–6 → <a href="#" data-golab="A">Lab A</a><br>Modules 7–9 → <a href="#" data-golab="B">Lab B</a><br>Modules 10–11 → <a href="#" data-golab="C">Lab C</a><br>Modules 11, 12 → <a href="#" data-go="ka">Key Assessment</a></p>
+  </div>
+  <div>
+
+<article class="card lesson" data-lesson="1">
+  <h2>1 · Basics</h2>
+  <p class="goal">Goal: find your way around a worksheet, type data, use AutoFill, and label columns with units.</p>
+  <h3>Start Excel for the web</h3>
+  <ol>
+    <li>Go to <b>microsoft365.com</b> and sign in with your Campbell account.</li>
+    <li>Choose <b>Excel</b>, then <b>Blank workbook</b>.</li>
+  </ol>
+  <div class="shot"><b>Screenshot to come</b>Excel for the web: a blank workbook, with the ribbon, Name Box, formula bar and grid labeled.</div>
+  <h3>Words you need</h3>
+  <ul>
+    <li><b>Cell:</b> one box, named by column letter + row number: <code>C4</code>.</li>
+    <li><b>Range:</b> a block of cells, first and last joined by a colon: <code>C4:C6</code> means C4, C5, C6.</li>
+    <li><b>Formula bar:</b> shows what's really in the selected cell (the number you typed, or the formula behind a result).</li>
+  </ul>
+  <h3>Type data</h3>
+  <ol>
+    <li>Click a cell and type. Press <kbd>Enter</kbd> to move down, <kbd>Tab</kbd> to move right.</li>
+    <li>To fix a cell, click it and retype, or double-click it to edit inside it.</li>
+    <li>Put a header in the top row of each column, with the unit in the header: <code>Volume (mL)</code>.</li>
+  </ol>
+  <h3>AutoFill a series</h3>
+  <ol>
+    <li>Type <code>1</code> in one cell and <code>2</code> in the cell below.</li>
+    <li>Select both, then drag the <b>fill handle</b> (the small square at the bottom-right corner of the selection) down. Excel continues 3, 4, 5, ….</li>
+  </ol>
+  <div class="shot"><b>Screenshot to come</b>The fill handle, and a series being dragged down.</div>
+  <div class="mistake"><b>Common mistake: units in the cells.</b> If you type <code>24.15 mL</code>, Excel stores text, not a number, and can't average it. Put units only in the header. Quick check: numbers line up on the <b>right</b> of a cell, text on the <b>left</b>.</div>
+  <div class="yourself"><b>Check yourself:</b> in a blank workbook, type the headers Sample, Trial, Volume (mL) in A1:C1, then AutoFill Trial numbers 1, 2, 3 in B2:B4. Do the numbers sit on the right side of their cells?</div>
+</article>
+
+<article class="card lesson" data-lesson="2" hidden>
+  <h2>2 · Bringing data in</h2>
+  <p class="goal">Goal: get data into Excel without retyping it, and get your workbook back out as a file.</p>
+  <h3>Paste from another page (fastest)</h3>
+  <ol>
+    <li>Copy the data (on the Lab page, the <b>Copy data</b> button does this).</li>
+    <li>In Excel, click the cell where the top-left value should go (for the Lab, <code>A1</code>).</li>
+    <li>Paste: <kbd>Ctrl</kbd>+<kbd>V</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>V</kbd> (Mac). Each value lands in its own cell.</li>
+  </ol>
+  <h3>Open a file</h3>
+  <ul>
+    <li><b>.xlsx</b> is an Excel workbook: data, formulas, formatting and charts.</li>
+    <li><b>.csv</b> ("comma-separated values") is plain text: just the values, separated by commas. No formulas or formatting are saved in it.</li>
+    <li>To open either one in Excel for the web, upload it: on microsoft365.com choose <span class="path">Upload</span> (or drag the file onto the page), then click it to open it in Excel.</li>
+    <li>Do your work in an <b>.xlsx</b>. If you start from a .csv, save your work as an .xlsx so your formulas and formats are kept.</li>
+  </ul>
+  <div class="shot"><b>Screenshot to come</b>Uploading a file on microsoft365.com and opening it in Excel for the web.</div>
+  <h3>Get your workbook out (for the checker)</h3>
+  <ol>
+    <li>Excel for the web saves automatically to OneDrive.</li>
+    <li>To get a file on your computer: <span class="path">File → Create a Copy → Download a Copy</span> (some versions say <span class="path">File → Save As → Download a Copy</span>).</li>
+    <li>The file goes to your Downloads folder as an .xlsx.</li>
+  </ol>
+  <div class="shot"><b>Screenshot to come</b>File menu → Download a Copy.</div>
+  <div class="mistake"><b>Common mistake: pasting in the wrong place.</b> Everything shifts by a row or column, and the Lab's instructions (B1, B2, row 3) no longer match. Press <kbd>Ctrl</kbd>/<kbd>⌘</kbd>+<kbd>Z</kbd> to undo and paste again at A1.</div>
+  <div class="desk"><b>Desktop Excel:</b> <span class="path">File → Open</span> opens .xlsx and .csv directly; <span class="path">Data → From Text/CSV</span> imports a .csv into an existing workbook. Save with <span class="path">File → Save As</span> and choose Excel Workbook (.xlsx).</div>
+</article>
+
+<article class="card lesson" data-lesson="3" hidden>
+  <h2>3 · Sorting &amp; filtering</h2>
+  <p class="goal">Goal: put a table in order without scrambling it, and show only the rows you want.</p>
+  <h3>Sort a whole table by two columns</h3>
+  <ol>
+    <li>Click <b>any one cell inside the table</b> (don't select a single column).</li>
+    <li><span class="path">Data → Custom Sort</span> (also under <span class="path">Home → Sort &amp; Filter → Custom Sort</span>).</li>
+    <li>Make sure <b>My data has headers</b> is checked, so the header row stays on top.</li>
+    <li>Sort by <b>Sample</b>, A to Z. Then <b>Add Level</b>: then by <b>Trial</b>, Smallest to Largest. Click <b>OK</b>.</li>
+  </ol>
+  <div class="shot"><b>Screenshot to come</b>The Custom Sort dialog with two levels: Sample, then Trial.</div>
+  <div class="mistake"><b>Common mistake: sorting one column by itself.</b> If only the Volume column is selected, Excel sorts just those numbers, and every volume ends up next to the wrong sample. The data are now wrong, and nothing looks broken. If Excel asks, choose <b>Expand the selection</b>. If it already happened, undo with <kbd>Ctrl</kbd>/<kbd>⌘</kbd>+<kbd>Z</kbd>.</div>
+  <h3>Filter</h3>
+  <ol>
+    <li>Click inside the table, then <span class="path">Data → Filter</span>. Arrow buttons appear in the header row.</li>
+    <li>Click the arrow on <b>Sample</b>, uncheck <b>Select All</b>, check <b>B</b>, click <b>OK</b>. Only Sample B's rows show.</li>
+    <li>Filtering <b>hides</b> rows; it doesn't delete them. Clear it with the same arrow → <b>Clear Filter</b>, or turn Filter off.</li>
+  </ol>
+  <div class="desk"><b>Keep tables apart.</b> Excel treats every block of touching cells as one table. In the Lab, column E stays empty so that sorting the data in A:D never pulls in the results table in F:I.</div>
+  <div class="yourself"><b>Check yourself:</b> after sorting, pick any row. Is its volume the same one that was beside that sample and trial before you sorted?</div>
+</article>
+
+<article class="card lesson" data-lesson="4" hidden>
+  <h2>4 · Formulas &amp; references</h2>
+  <p class="goal">Goal: let Excel do the arithmetic, and understand what happens to a formula when you copy it down.</p>
+  <h3>Formulas</h3>
+  <ul>
+    <li>Every formula starts with <code>=</code>. Example: <code>=C4/1000</code> changes mL in C4 to L.</li>
+    <li>Operators: <code>+ - * /</code> and <code>^</code> for powers. Use parentheses to control the order.</li>
+    <li>The cell shows the <b>result</b>; the formula bar shows the <b>formula</b>. To see every formula at once: <span class="path">Formulas → Show Formulas</span>.</li>
+  </ul>
+  <h3>Relative references move when you fill down</h3>
+  <p>If D4 holds <code>=C4/1000</code> and you drag the fill handle down, D5 gets <code>=C5/1000</code>, D6 gets <code>=C6/1000</code>, and so on. That's usually what you want: each row uses its own volume.</p>
+  <h3>Fixed references (<code>$</code>) don't move</h3>
+  <p>Moles of NaOH = volume (L) × concentration. The concentration is in one cell, <code>B2</code>, for every row. Write it as <code>$B$2</code> so it stays put when you fill down: <code>=C4/1000*$B$2</code>.</p>
+  <ul><li><code>$B$2</code> fixes both column and row. (<code>B$2</code> fixes only the row, which also works when filling down.)</li></ul>
+  <div class="tryit" id="try4"></div>
+  <div class="mistake"><b>Common mistake: forgetting the <code>$</code>.</b> The first row is right; every row below uses B3, B4, … (blank or wrong cells), so the answers are 0 or wrong.</div>
+  <div class="desk"><b>Shortcut:</b> while typing a reference, press <kbd>F4</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>T</kbd> (Mac desktop) to add the dollar signs. Or just type them.</div>
+</article>
+
+<article class="card lesson" data-lesson="5" hidden>
+  <h2>5 · Statistics</h2>
+  <p class="goal">Goal: summarize replicate measurements with the mean, standard deviation and %CV.</p>
+  <h3>The functions</h3>
+  <table class="data">
+    <tr><th>Function</th><th>What it gives</th></tr>
+    <tr><td><code>=AVERAGE(C4:C6)</code></td><td>mean</td></tr>
+    <tr><td><code>=MEDIAN(C4:C6)</code></td><td>middle value</td></tr>
+    <tr><td><code>=MIN(...)</code>, <code>=MAX(...)</code></td><td>smallest, largest</td></tr>
+    <tr><td><code>=COUNT(...)</code></td><td>how many numbers</td></tr>
+    <tr><td><code>=STDEV.S(C4:C6)</code></td><td>standard deviation of a <b>sample</b> (divides by n − 1)</td></tr>
+    <tr><td><code>=STDEV.P(C4:C6)</code></td><td>standard deviation of a whole <b>population</b> (divides by n)</td></tr>
+  </table>
+  <p class="muted"><code>STDEV</code> is the older name for <code>STDEV.S</code>; it gives the same answer.</p>
+  <h3>STDEV.S or STDEV.P?</h3>
+  <p>Your three trials are a small <b>sample</b> of all the titrations you could run, so use <b>STDEV.S</b>. STDEV.P is only for when you have every member of the group (rare in the lab). With 3 trials, STDEV.P comes out about 18% too small.</p>
+  <h3>%CV: precision on one scale</h3>
+  <p><b>%CV</b> (coefficient of variation, or relative standard deviation) = SD ÷ mean × 100. If the mean is in G4 and the SD in H4: <code>=100*H4/G4</code>. A lower %CV means more precise replicates; it lets you compare samples with different means. %CV has no units, so it's the same whether you use volumes or moles.</p>
+  <h3>The results table in Lab A</h3>
+  <div style="overflow-x:auto"><table class="data">
+    <tr><th class="rh"></th><th class="rh">F</th><th class="rh">G</th><th class="rh">H</th><th class="rh">I</th><th class="rh">J</th><th class="rh">K</th><th class="rh">L</th><th class="rh">M</th></tr>
+    <tr><td class="rh">3</td><td>Sample</td><td>Mean</td><td>SD</td><td>%CV</td><td>Median</td><td>Max</td><td>Min</td><td>n</td></tr>
+    <tr><td class="rh">4</td><td>A</td><td><code>=AVERAGE(D4:D6)</code></td><td><code>=STDEV.S(D4:D6)</code></td><td><code>=100*H4/G4</code></td><td><code>=MEDIAN(D4:D6)</code></td><td><code>=MAX(D4:D6)</code></td><td><code>=MIN(D4:D6)</code></td><td><code>=COUNT(D4:D6)</code></td></tr>
+    <tr><td class="rh">5</td><td>B</td><td colspan="2">same functions on D7:D9</td><td><code>=100*H5/G5</code></td><td colspan="4">same functions on D7:D9</td></tr>
+    <tr><td class="rh">6–8</td><td>C, D, E</td><td colspan="2">D10:D12, D13:D15, D16:D18</td><td>fill down</td><td colspan="4">D10:D12, D13:D15, D16:D18</td></tr>
+  </table></div>
+  <p>Each sample is a block of 3 rows, so the ranges can't be filled down (G5 would become D5:D7). Type each sample's range, or type row 4 and edit the ranges in rows 5–8 (or use FILTER, below). The %CV formula <i>can</i> be filled down from I4 to I8.</p>
+  <h3>Efficient way (optional): FILTER</h3>
+  <p>One formula per column that <i>can</i> be filled down: <code>=AVERAGE(FILTER($D$4:$D$18,$A$4:$A$18=F4))</code>. Use the same pattern with STDEV.S, MEDIAN, MAX, MIN and COUNT.</p>
+  <ol>
+    <li><code>$A$4:$A$18=F4</code> compares every sample letter with the one in F4, giving a list of 15 TRUE/FALSE values (TRUE only on that sample's rows).</li>
+    <li><code>FILTER($D$4:$D$18, …)</code> keeps the moles on the TRUE rows: that sample's three values.</li>
+    <li>AVERAGE (or STDEV.S, …) works on those three values, just as if you'd typed D4:D6.</li>
+  </ol>
+  <p>The ranges are fixed with <code>$</code>; only <code>F4</code> is relative, so filling down to row 5 makes it <code>F5</code> = "B" and picks Sample B's rows. Typed alone in a cell, <code>=FILTER($D$4:$D$18,$A$4:$A$18="B")</code> "spills" its three results into the cells below, a good way to see what it returns. If no letter matches (a typo or a stray space), you get <code>#CALC!</code>. FILTER works in Excel for the web and Microsoft 365, not in Excel 2019 or older.</p>
+  <p><b>n</b> should be 3 for every sample. COUNT counts only cells that hold numbers, so a 2 here means a trial is missing or was typed as text.</p>
+  <div class="tryit" id="try5"></div>
+  <div class="mistake"><b>Common mistake: the wrong rows.</b> <code>=AVERAGE(D4:D18)</code> averages all five samples together, and a range that's off by a few rows mixes two samples. Each sample needs its own three rows: A is D4:D6, B is D7:D9, … E is D16:D18 (after sorting). A %CV far bigger than the others is a hint that its SD range is wrong.</div>
+  <div class="yourself"><b>Check yourself:</b> which sample in your lab data has the lowest %CV? Is that the same as the one with the smallest SD?</div>
+</article>
+
+<article class="card lesson" data-lesson="6" hidden>
+  <h2>6 · Formatting ranges</h2>
+  <p class="goal">Goal: show numbers to the right number of decimals, in scientific notation when they're very small, and make a table easy to read.</p>
+  <h3>Decimal places</h3>
+  <ol>
+    <li>Select the cells (drag across them).</li>
+    <li><span class="path">Home → Increase Decimal</span> or <span class="path">Decrease Decimal</span> (the .0 / .00 buttons) until you see the number of places you want.</li>
+    <li>Or <span class="path">Home → Number Format</span> dropdown → <b>Number</b>, then set the decimal places.</li>
+  </ol>
+  <div class="shot"><b>Screenshot to come</b>The Number group on the Home tab: Number Format dropdown, Increase/Decrease Decimal.</div>
+  <h3>Scientific notation</h3>
+  <ol>
+    <li>Select the cells, then <span class="path">Home → Number Format → Scientific</span>.</li>
+    <li>Adjust the decimals with Increase/Decrease Decimal: <code>2.515E-03</code> has 3 decimals and means 2.515 × 10⁻³.</li>
+  </ol>
+  <h3>Make it readable</h3>
+  <ul>
+    <li>Bold the header row: select it, <span class="path">Home → Bold</span>.</li>
+    <li>Borders: select the table, <span class="path">Home → Borders → All Borders</span>.</li>
+    <li>Column too narrow? You'll see <code>####</code>. Double-click the right edge of the column's letter to fit it.</li>
+  </ul>
+  <div class="mistake"><b>Common mistake: typing rounded numbers.</b> Formatting changes only what you <b>see</b>; Excel keeps the full value for later calculations. If you retype a rounded result, you lose that precision and the cell is no longer a formula.</div>
+  <div class="desk"><b>Lab A formats:</b> moles (D4:D18) and Mean, SD, Median, Max, Min (G4:H8 and J4:L8) in Scientific with 3 decimals; %CV (I4:I8) with 3 decimals; n (M4:M8) as a whole number. Center the results table: <span class="path">Home → Center</span>.</div>
+  <div class="yourself"><b>Check yourself:</b> click a result you formatted to 3 decimals. The cell shows 3 decimals; does the formula bar show the formula?</div>
+</article>
+
+
+<article class="card lesson" data-lesson="7" hidden>
+  <h2>7 · Making a plot</h2>
+  <p class="goal">Goal: make an XY (Scatter) chart of measured data, with the right column on each axis.</p>
+  <h3>Scatter, not Line</h3>
+  <p>For measured data, where x is a number you set or measured, always use <b>Scatter (XY)</b>. A <b>Line</b> chart treats the x values as labels and spaces them evenly, whatever their values. With volumes 0.50, 0.75, 1.00, 1.25, 1.50, 2.00, 3.00, 4.00 L, the jump from 2 to 4 L takes the same width as 0.50 to 0.75 L, and the curve comes out the wrong shape:</p>
+  <div class="row" id="m7pics"></div>
+  <h3>Make the chart</h3>
+  <ol>
+    <li>Put the <b>x column on the left</b> of the y column(s); Excel uses the leftmost selected column as x.</li>
+    <li>Select the data <b>with its header row</b> (for Lab B: A3:C11). The headers become the series names.</li>
+    <li><span class="path">Insert → Scatter</span> and pick <b>Scatter</b> (markers only, the first choice).</li>
+  </ol>
+  <div class="shot"><b>Screenshot to come</b>Insert tab → Scatter (X, Y) menu, with "Scatter" (markers only) highlighted.</div>
+  <h3>Check and fix the series: Select Data</h3>
+  <ul>
+    <li>Right-click the chart → <span class="path">Select Data</span>. Each <b>series</b> is one set of points with a name, X values and Y values.</li>
+    <li>Click a series → <b>Edit</b> to fix its ranges. <b>Add</b> makes a new series: set the name (click its header cell), X values and Y values.</li>
+    <li>Two y columns sharing one x column make <b>two series</b> on one chart, as in Lab B.</li>
+  </ul>
+  <div class="mistake"><b>Common mistakes.</b> A Line chart (the curve is distorted, and the x column may even be plotted as a series of its own). Selecting only the y columns: Excel then plots against 1, 2, 3, …. Selecting the header row as data: the y range should start in row 4, not row 3.</div>
+  <div class="desk"><b>Desktop Excel:</b> <span class="path">Insert → Insert Scatter (X, Y) or Bubble Chart → Scatter</span>; Select Data is also on the Chart Design tab.</div>
+</article>
+
+<article class="card lesson" data-lesson="8" hidden>
+  <h2>8 · Chart elements</h2>
+  <p class="goal">Goal: label a chart so a reader understands it without asking you: title, axis titles with units, legend.</p>
+  <h3>Add the elements</h3>
+  <ol>
+    <li>Click the chart. Use the <span class="path">Chart</span> tab (or the Format pane that opens beside the chart) to turn on <b>Chart Title</b>, <b>Axis Titles</b> and <b>Legend</b>.</li>
+    <li>Click each placeholder ("Chart Title", "Axis Title") and type the real text. A placeholder left in place counts as missing.</li>
+  </ol>
+  <div class="shot"><b>Screenshot to come</b>Excel for the web: chart selected, Chart tab with Chart Title, Axis Titles and Legend.</div>
+  <h3>What to write</h3>
+  <ul>
+    <li><b>Axis titles:</b> quantity, then unit in parentheses: <code>Volume (L)</code>, <code>Pressure (atm)</code>, <code>Concentration (M)</code>. Absorbance has no unit: <code>Absorbance</code>.</li>
+    <li><b>Chart title:</b> what the graph shows, e.g. "Pressure vs. volume of a gas at two temperatures".</li>
+    <li><b>Legend:</b> needed when there are two or more series, so readers can tell them apart. The entries come from the series names; if they say "Series1", fix the name in <span class="path">Select Data → Edit → Series name</span> (click the header cell). With <b>one series</b>, turn the legend <b>off</b>; it adds nothing.</li>
+  </ul>
+  <div class="mistake"><b>Common mistake: axis titles without units.</b> "Pressure" alone leaves the reader guessing atm, kPa or mmHg.</div>
+  <div class="desk"><b>Desktop Excel:</b> the <b>+</b> (Chart Elements) button beside the chart turns each element on and off.</div>
+</article>
+
+<article class="card lesson" data-lesson="9" hidden>
+  <h2>9 · Chart text &amp; axes</h2>
+  <p class="goal">Goal: make the chart readable: text big enough to read in a report, and axes that show the data well.</p>
+  <h3>Font size</h3>
+  <p>Excel starts the title at 14 pt, axis titles at 10 pt and the legend at 9 pt. In our labs, the title, axis titles and legend are all <b>12 pt</b>.</p>
+  <ol>
+    <li>Click the chart title (it gets a box around it).</li>
+    <li><span class="path">Home → Font Size → 12</span>.</li>
+    <li>Repeat for each axis title and the legend.</li>
+  </ol>
+  <div class="shot"><b>Screenshot to come</b>Chart title selected, Home → Font Size set to 12.</div>
+  <h3>Axis range (minimum and maximum)</h3>
+  <ul>
+    <li>Double-click (or right-click) the axis numbers → <span class="path">Format Axis → Axis Options → Bounds</span>, and set Minimum and Maximum.</li>
+    <li>Start an axis at 0 when zero is meaningful and you want to show proportions. Leave room above the highest point so it isn't on the edge.</li>
+    <li>In the same pane: <b>Number</b> sets the format of the axis numbers (e.g. 2 decimals), and gridlines can be turned on or off under Chart Elements.</li>
+  </ul>
+  <p class="muted">Axis ranges are part of a good figure but aren't graded in the labs.</p>
+  <div class="mistake"><b>Common mistake: changing the whole chart's font.</b> Selecting the chart frame and changing the size changes the axis numbers too. Select each element by itself.</div>
+</article>
+
+<article class="card lesson" data-lesson="11" hidden>
+  <h2>11 · Capstone 1: Mass vs. Volume</h2>
+  <p class="goal">Goal: a finished, report-ready plot of mass vs. volume, with every element the <a href="#" data-go="ka">Key Assessment</a> asks for.</p>
+  <h3>The six elements</h3>
+  <ol>
+    <li>A <b>descriptive title</b>: say what is plotted, e.g. "Mass vs. Volume of Ethanol".</li>
+    <li>A <b>subtitle with your name</b>, in a <b>smaller font</b> than the title.</li>
+    <li>An <b>x-axis label with units</b>: <code>Volume (mL)</code>.</li>
+    <li>A <b>y-axis label with units</b>: <code>Mass (g)</code>.</li>
+    <li>The <b>data</b>, as an XY (Scatter) plot: mass on y, volume on x.</li>
+    <li>A <b>regression line</b> with its <b>equation</b> and <b>R² value</b>.</li>
+  </ol>
+  <h3>Plot the data</h3>
+  <ol>
+    <li>Select both columns with their headers (A1:B9), then <span class="path">Insert → Scatter</span>. Volume is the left column, so it goes on x (Module 7).</li>
+  </ol>
+  <h3>Title and a subtitle with your name</h3>
+  <ol>
+    <li>Turn on the chart title (Module 8), click it and type the descriptive title.</li>
+    <li>Click at the end of the title text and press <kbd>Enter</kbd> to start a second line. Type your name.</li>
+    <li>Select just the name line, then <span class="path">Home → Font Size</span> and pick a smaller size than the title (for example, title 14 pt, name 11 pt).</li>
+  </ol>
+  <div class="shot"><b>Screenshot to come</b>A chart title with a second, smaller line holding the student's name.</div>
+  <p class="muted">Excel has no separate "subtitle" box: the subtitle is the second line of the chart title. A separate text box isn't attached to the chart and can be lost when you copy it.</p>
+  <h3>Axis labels with units</h3>
+  <p>Add Axis Titles (Module 8) and type <code>Volume (mL)</code> for x and <code>Mass (g)</code> for y.</p>
+  <h3>Regression line, equation and R²</h3>
+  <ol>
+    <li>Click a data point → <span class="path">Chart → Trendline → Linear</span> (Module 10).</li>
+    <li>In <span class="path">Format Trendline</span>, check <b>Display Equation on chart</b> and <b>Display R-squared value on chart</b>.</li>
+    <li>Leave <b>Set Intercept</b> unchecked: the assessment uses standard linear regression (y = mx + b).</li>
+    <li>Drag the equation box to a clear spot so it doesn't cover the points. The slope is the density in g/mL.</li>
+  </ol>
+  <h3>Make it report-ready</h3>
+  <ul>
+    <li>Show measured data as markers; a line joining the points isn't needed (the regression line is the model).</li>
+    <li>No 3-D, shadows or picture backgrounds; keep the text readable.</li>
+  </ul>
+  <h3>Into Word or a PDF</h3>
+  <ol>
+    <li>Click the chart's border to select the whole chart, then copy (<kbd>Ctrl</kbd>/<kbd>⌘</kbd>+<kbd>C</kbd>).</li>
+    <li>Paste into a Word document (Word for the web works too). To hand in a PDF instead, save the Word file as PDF: <span class="path">File → Save As → PDF</span> (desktop) or <span class="path">File → Export → Download as PDF</span> (Word for the web).</li>
+    <li>Download your Excel workbook (<span class="path">File → Create a Copy → Download a Copy</span>) and attach both files to the Blackboard assignment.</li>
+  </ol>
+  <div class="mistake"><b>Common mistakes.</b> A Line chart (its trendline uses 1, 2, 3, … for x, so the equation is wrong). Your name on the same line as the title, or the same size. "Chart Title" or "Axis Title" left in place. Axis labels without units.</div>
+</article>
+
+<article class="card lesson" data-lesson="10" hidden>
+  <h2>10 · Trendlines</h2>
+  <p class="goal">Goal: fit a straight line to calibration data, read the slope and intercept, and use them to find an unknown's concentration.</p>
+  <h3>Add a linear trendline</h3>
+  <ol>
+    <li>Click a data point (or the chart), then <span class="path">Chart → Trendline → Linear</span>.</li>
+    <li>In <span class="path">Format Trendline</span>, check <b>Display Equation on chart</b> and <b>Display R-squared value on chart</b>.</li>
+    <li>Leave <b>Set Intercept</b> unchecked: let the fit find its own intercept.</li>
+  </ol>
+  <div class="shot"><b>Screenshot to come</b>Format Trendline pane: Linear, Display Equation, Display R-squared.</div>
+  <h3>Reading it</h3>
+  <p>For Beer's law, <i>A</i> = <i>εb</i>·<i>c</i>, so a plot of absorbance (y) against concentration (x) is a straight line. In <code>y = 12345x + 0.0034</code>, the slope 12345 M⁻¹ is <i>εb</i>, and the intercept should be close to 0. <b>R²</b> near 1 (e.g. 0.9990) means the points lie close to the line.</p>
+  <h3>The same numbers in cells</h3>
+  <table class="data">
+    <tr><th class="rh"></th><th class="rh">H</th><th class="rh">I</th></tr>
+    <tr><td class="rh">4</td><td>Slope</td><td><code>=SLOPE(B4:B9,A4:A9)</code></td></tr>
+    <tr><td class="rh">5</td><td>Intercept</td><td><code>=INTERCEPT(B4:B9,A4:A9)</code></td></tr>
+    <tr><td class="rh">6</td><td>R²</td><td><code>=RSQ(B4:B9,A4:A9)</code></td></tr>
+  </table>
+  <p><b>Order matters:</b> known y's (absorbance) first, then known x's (concentration). The chart's equation is rounded; these cells keep full precision, so calculate with them, not with numbers copied from the chart.</p>
+  <h3>Finding an unknown</h3>
+  <p>Solve <i>A</i> = <i>m</i>·<i>c</i> + <i>b</i> for <i>c</i>: <i>c</i> = (<i>A</i> − <i>b</i>) ÷ <i>m</i>. With the unknown's absorbance in E4: <code>=(E4-$I$5)/$I$4</code>, then fill down. The <code>$</code> signs keep the slope and intercept fixed (Module 4).</p>
+  <div class="tryit" id="try11"></div>
+  <div class="mistake"><b>Common mistakes.</b> SLOPE with the ranges swapped (x's first). Plotting the unknowns with the standards. Forgetting the intercept: <i>A</i> ÷ <i>m</i> instead of (<i>A</i> − <i>b</i>) ÷ <i>m</i>. An unknown whose absorbance is outside the standards' range is an extrapolation: dilute it and measure again.</div>
+</article>
+<article class="card lesson" data-lesson="12" hidden>
+  <h2>12 · Capstone 2: Ethanol–water solutions</h2>
+  <p class="goal">Goal: find the density of five ethanol–water solutions from mass vs. volume data, tabulate the regressions, and plot density against composition.</p>
+  <h3>Plot 1: all five solutions on one plot</h3>
+  <ol>
+    <li>Select <b>A1:F9</b>: the volume column and all five mass columns, with headers.</li>
+    <li><span class="path">Insert → Scatter</span>. Excel makes <b>five series</b> that share the volumes in column A as x; the headers become the series names (Module 7).</li>
+    <li>Format it as in Capstone 1: a descriptive title, your name as a smaller second line of the title, and axis titles with units (Module 11).</li>
+  </ol>
+  <h3>Color by solution, with a legend</h3>
+  <ul>
+    <li>Excel gives each series its own color automatically. To choose your own: click one solution's points → <span class="path">Format Data Series → Marker → Fill</span> (and Border). With five series, pick colors that are easy to tell apart (a light-to-dark sequence suits 0% → 100%).</li>
+    <li>Keep the <b>legend</b> on; if it says "Series1", fix the name in <span class="path">Select Data → Edit → Series name</span>.</li>
+  </ul>
+  <div class="shot"><b>Screenshot to come</b>Five colored series with a legend and a regression line on each.</div>
+  <h3>A regression line for each solution</h3>
+  <p>Click one solution's points (only that series is selected) → <span class="path">Chart → Trendline → Linear</span>. Repeat for each of the five. Leave Set Intercept unchecked. Equations on the chart are optional; your table holds the numbers.</p>
+  <h3>The table (H1:K6)</h3>
+  <table class="data">
+    <tr><th class="rh"></th><th class="rh">H</th><th class="rh">I</th><th class="rh">J</th><th class="rh">K</th></tr>
+    <tr><td class="rh">1</td><td>% Ethanol</td><td>Slope = Density (g/mL)</td><td>Intercept (g)</td><td>R²</td></tr>
+    <tr><td class="rh">2</td><td>0</td><td><code>=SLOPE(B2:B9,$A$2:$A$9)</code></td><td><code>=INTERCEPT(B2:B9,$A$2:$A$9)</code></td><td><code>=RSQ(B2:B9,$A$2:$A$9)</code></td></tr>
+    <tr><td class="rh">3</td><td>25</td><td colspan="3">same, with C2:C9</td></tr>
+    <tr><td class="rh">4–6</td><td>50, 75, 100</td><td colspan="3">D2:D9, E2:E9, F2:F9</td></tr>
+  </table>
+  <p>Type % ethanol as a plain number (25, not "25%" or "25% ethanol") so Plot 2 can use it. Masses come first in SLOPE (known y's), then the volumes (known x's); the <code>$</code> keeps the volumes fixed if you copy a formula across.</p>
+  <h3>Plot 2: density vs. % ethanol</h3>
+  <ol>
+    <li>Select <b>H1:I6</b> (% ethanol and slope = density, with headers), then <span class="path">Insert → Scatter</span>. % ethanol is the left column, so it goes on x.</li>
+    <li>Add a descriptive title, your name as a smaller second line, and axis titles with units: <code>% Ethanol (by mass)</code> and <code>Density (g/mL)</code>.</li>
+  </ol>
+  <h3>What the plots tell you</h3>
+  <p>Each slope in Plot 1 is a solution's <b>density</b>. In Plot 2 the points don't fall on a straight line between water (about 1.00 g/mL) and ethanol (about 0.79 g/mL): the mixtures are a little denser than that line predicts, because ethanol and water molecules pack together more closely than either liquid alone.</p>
+  <h3>Into Word or a PDF</h3>
+  <p>Copy both plots and the table (select H1:K6, copy) into a Word document, save as PDF if you like, and attach it with your Excel file in Blackboard (Module 11).</p>
+  <div class="mistake"><b>Common mistakes.</b> Selecting only some mass columns. A trendline on only one solution. Two solutions in the same color. The table's SLOPE using the wrong mass column, or the ranges swapped. Typing "25%" in the table, or plotting textbook densities instead of your own slopes in Plot 2.</div>
+</article>
+
+  </div>
+</div>
+</section>
+
+<!-- ================= LABS ================= -->
+<section id="lab" class="tab">
+  <div class="card">
+    <div class="row seg" id="labPick"><button data-lab="A" class="on">Lab A · Titrations</button><button data-lab="B">Lab B · Boyle's law</button><button data-lab="C">Lab C · Beer's law</button></div>
+    <h2 id="labTitle" style="margin:14px 0 4px"></h2>
+    <p id="labIntro"></p>
+    <p><b>Step 1.</b> Type your name exactly as it appears in Blackboard. Your data set is made from your name, so every student's numbers are different.</p>
+    <div class="row"><input type="text" id="labName" placeholder="First Last" autocomplete="name"><button class="btn" id="labGo">Make my data set</button></div>
+    <p class="muted" id="labNameNote"></p>
+  </div>
+  <div id="labOut" hidden>
+    <div class="card">
+      <h3 style="margin-top:0">Step 2 · Get your data into Excel</h3>
+      <p>Open a <b>blank workbook</b> in Excel for the web, click <b>A1</b>, and paste. (Or download a file and open it.)</p>
+      <div class="row"><button class="btn" id="labCopy">Copy data</button><button class="btn ghost" id="labXlsx">Download .xlsx</button><button class="btn ghost" id="labCsv">Download .csv</button></div>
+      <p class="muted" id="labCopyNote"></p>
+      <div id="labBlock" style="overflow-x:auto"></div>
+      <div id="labExtra"></div>
+    </div>
+    <div class="card">
+      <h3 style="margin-top:0">Step 3 · Tasks</h3>
+      <ol id="labTasks"></ol>
+      <p>When you're done: <span class="path">File → Create a Copy → Download a Copy</span>, then upload the file on the <a href="#" data-go="check">Check my workbook</a> tab.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CHECK ================= -->
+<section id="check" class="tab">
+  <div class="card">
+    <h2 style="margin-top:0">Check my workbook</h2>
+    <p>Download your workbook from Excel for the web (<span class="path">File → Create a Copy → Download a Copy</span>), then drop the .xlsx file here. Your file is read in this browser and is never uploaded anywhere.</p>
+    <p class="row">Lab: <select id="checkLab"><option value="">Tell from the file</option><option value="A">Lab A · Titrations</option><option value="B">Lab B · Boyle's law</option><option value="C">Lab C · Beer's law</option></select></p>
+    <label class="drop" id="drop"><input type="file" id="file" accept=".xlsx,.xlsm" hidden><b>Choose your .xlsx file</b><br><span class="muted">or drag it here</span></label>
+  </div>
+  <div class="card" id="checkOut" hidden></div>
+</section>
+
+<!-- ================= KEY ASSESSMENT ================= -->
+<section id="ka" class="tab">
+  <div class="card"><div class="row seg" id="kaPick"><button data-cap="1" class="on">Capstone 1 · Mass vs. Volume</button><button data-cap="2">Capstone 2 · Ethanol–water solutions</button></div></div>
+  <div id="cap1">
+  <div class="card lesson">
+    <h2 style="margin-top:0">Capstone 1 · Mass vs. Volume</h2>
+    <h3>Assessment Instructions</h3>
+    <ul>
+      <li>Obtain data as directed by your instructor.</li>
+      <li>Use Microsoft Excel to create a plot of Mass vs Volume.</li>
+      <li>Your data plot should have the following elements
+        <ol>
+          <li>A descriptive title</li>
+          <li>A subtitle with your name in smaller font</li>
+          <li>x-axis label with units</li>
+          <li>y-axis label with units</li>
+          <li>Data</li>
+          <li>Regression line and regression equation with R² value</li>
+        </ol>
+      </li>
+      <li>Copy an image of your plot into a MSWord or PDF file and attach it along with your MSExcel file to this assignment</li>
+    </ul>
+    <p>Step-by-step help: <a href="#" data-golesson="11">Module 11 · Capstone 1: Mass vs. Volume</a>.</p>
+  </div>
+  <div class="card">
+    <h3 style="margin-top:0">Your data</h3>
+    <p>Mass of ethanol measured in a graduated cylinder at 20 °C (real measurements scatter a little). Open a blank workbook in Excel for the web, click <b>A1</b>, and paste (or download a file).</p>
+    <div class="row"><button class="btn" id="kaCopy">Copy data</button><button class="btn ghost" id="kaXlsx">Download .xlsx</button><button class="btn ghost" id="kaCsv">Download .csv</button></div>
+    <p class="muted" id="kaNote"></p>
+    <div id="kaBlock" style="overflow-x:auto"></div>
+  </div>
+  <div class="card">
+    <h3 style="margin-top:0">Pre-check your plot (optional)</h3>
+    <p>Before you submit, check your Excel file here. Your file is read in this browser and is never uploaded anywhere. This does <b>not</b> submit anything: attach your Excel file and your Word/PDF file in Blackboard.</p>
+    <div class="row"><input type="text" id="kaName" placeholder="Your name, as in Blackboard" autocomplete="name"></div>
+    <p></p>
+    <label class="drop" id="kaDrop"><input type="file" id="kaFile" accept=".xlsx,.xlsm" hidden><b>Choose your .xlsx file</b><br><span class="muted">or drag it here</span></label>
+    <div id="kaOut" style="margin-top:14px"></div>
+  </div>
+  </div>
+  <div id="cap2" hidden>
+  <div class="card lesson">
+    <h2 style="margin-top:0">Capstone 2 · Ethanol–water solutions</h2>
+    <h3>Assessment Instructions</h3>
+    <ul>
+      <li>Obtain data as directed by your instructor.</li>
+      <li>Use Microsoft Excel to create a plot of Mass vs Volume showing the data for all five solutions: 0% (water), 25%, 50%, 75% and 100% ethanol. Your plot should have the following elements
+        <ol>
+          <li>A descriptive title</li>
+          <li>A subtitle with your name in smaller font</li>
+          <li>x-axis label with units</li>
+          <li>y-axis label with units</li>
+          <li>Data for all five solutions</li>
+          <li>Each solution in a different color, with a legend</li>
+          <li>A regression line for each solution</li>
+        </ol>
+      </li>
+      <li>Make a table of the regression results in cells H1:K6, with the headers % Ethanol, Slope = Density (g/mL), Intercept (g), R², and one row per solution (type % ethanol as a number: 0, 25, 50, 75, 100)</li>
+      <li>Make a second plot of Density (y) vs % Ethanol (x), using the slopes from your table. It should have
+        <ol>
+          <li>A descriptive title</li>
+          <li>A subtitle with your name in smaller font</li>
+          <li>x-axis label with units</li>
+          <li>y-axis label with units</li>
+          <li>Data</li>
+        </ol>
+      </li>
+      <li>Copy images of both plots and your table into a MSWord or PDF file and attach it along with your MSExcel file to this assignment</li>
+    </ul>
+    <p>Step-by-step help: <a href="#" data-golesson="12">Module 12 · Capstone 2: Ethanol–water solutions</a>.</p>
+  </div>
+  <div class="card">
+    <h3 style="margin-top:0">Your data</h3>
+    <p>Masses (g) of five ethanol–water solutions measured in a graduated cylinder at 25 °C. % ethanol is by mass (g of ethanol per 100 g of solution). Open a blank workbook in Excel for the web, click <b>A1</b>, and paste (or download a file).</p>
+    <div class="row"><button class="btn" id="ka2Copy">Copy data</button><button class="btn ghost" id="ka2Xlsx">Download .xlsx</button><button class="btn ghost" id="ka2Csv">Download .csv</button></div>
+    <p class="muted" id="ka2Note"></p>
+    <div id="ka2Block" style="overflow-x:auto"></div>
+  </div>
+  <div class="card">
+    <h3 style="margin-top:0">Pre-check your plot (optional)</h3>
+    <p>Before you submit, check your Excel file here. Your file is read in this browser and is never uploaded anywhere. This does <b>not</b> submit anything: attach your Excel file and your Word/PDF file in Blackboard.</p>
+    <div class="row"><input type="text" id="ka2Name" placeholder="Your name, as in Blackboard" autocomplete="name"></div>
+    <p></p>
+    <label class="drop" id="ka2Drop"><input type="file" id="ka2File" accept=".xlsx,.xlsm" hidden><b>Choose your .xlsx file</b><br><span class="muted">or drag it here</span></label>
+    <div id="ka2Out" style="margin-top:14px"></div>
+  </div>
+  </div>
+</section>
+
+<!-- ================= INSTRUCTOR ================= -->
+<section id="instructor" class="tab">
+  <div class="card">
+    <h2 style="margin-top:0">Verify completion codes</h2>
+    <p>Each code belongs to one name and one lab (e.g. <code>A-7K3QX9</code>). Names are compared ignoring capitals and extra spaces.</p>
+    <div class="row"><input type="text" id="vName" placeholder="Student name"><input type="text" id="vCode" placeholder="Code" style="min-width:140px"><button class="btn" id="vGo">Verify</button></div>
+    <p id="vOut"></p>
+    <h3>Verify a whole class</h3>
+    <p class="muted">Paste one student per line: name, then a comma or tab, then the code (e.g. copied from a Blackboard export).</p>
+    <textarea id="vList" rows="6" placeholder="Jordan Smith, A-1ABC23"></textarea>
+    <div class="row"><button class="btn" id="vListGo">Verify list</button></div>
+    <div id="vListOut"></div>
+  </div>
+</section>
+
+</main>
+<script>/* Excel Workbench — engine: seeded data, zip/xlsx read & write, Lab A checker, codes.
+   No libraries. Runs in the browser (uses DOMParser, DecompressionStream, TextEncoder). */
+
+// ---------- hashing, seeded random numbers ----------
+function cyrb53(str, seed = 0) {
+  let h1 = 0xdeadbeef ^ seed, h2 = 0x41c6ce57 ^ seed;
+  for (let i = 0; i < str.length; i++) {
+    const ch = str.charCodeAt(i);
+    h1 = Math.imul(h1 ^ ch, 2654435761);
+    h2 = Math.imul(h2 ^ ch, 1597334677);
+  }
+  h1 = Math.imul(h1 ^ (h1 >>> 16), 2246822507);
+  h1 ^= Math.imul(h2 ^ (h2 >>> 13), 3266489909);
+  h2 = Math.imul(h2 ^ (h2 >>> 16), 2246822507);
+  h2 ^= Math.imul(h1 ^ (h1 >>> 13), 3266489909);
+  return 4294967296 * (2097151 & h2) + (h1 >>> 0);
+}
+function mulberry32(a) {
+  return function () {
+    a |= 0; a = (a + 0x6D2B79F5) | 0;
+    let t = Math.imul(a ^ (a >>> 15), 1 | a);
+    t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
+    return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+  };
+}
+function gauss(r) { let u = 0; while (u === 0) u = r(); const v = r(); return Math.sqrt(-2 * Math.log(u)) * Math.cos(2 * Math.PI * v); }
+const normName = s => String(s == null ? '' : s).trim().replace(/\s+/g, ' ').toLowerCase();
+
+// ---------- completion codes ----------
+const CODE_SALT = 'CKA|2026|lufox'; // differs from the general Excel Workbench, so its codes don't work here
+function completionCode(name, lab) {
+  const h = cyrb53(normName(name) + '|' + lab + '|' + CODE_SALT);
+  const s = (h % 2176782336).toString(36).toUpperCase().padStart(6, '0'); // 36^6
+  return lab + '-' + s;
+}
+function verifyCode(name, code) {
+  const c = String(code || '').trim().toUpperCase();
+  const lab = c.split('-')[0];
+  if (!['A', 'B', 'C'].includes(lab)) return false;
+  return completionCode(name, lab) === c;
+}
+
+// ---------- statistics ----------
+const mean = a => a.reduce((s, x) => s + x, 0) / a.length;
+function sdS(a) { const m = mean(a); return Math.sqrt(a.reduce((s, x) => s + (x - m) ** 2, 0) / (a.length - 1)); }
+function sdP(a) { const m = mean(a); return Math.sqrt(a.reduce((s, x) => s + (x - m) ** 2, 0) / a.length); }
+function median(a) { const b = [...a].sort((x, y) => x - y), n = b.length; return n % 2 ? b[(n - 1) / 2] : (b[n / 2 - 1] + b[n / 2]) / 2; }
+
+// ---------- Lab A data set ----------
+const LAB_A_SAMPLES = ['A', 'B', 'C', 'D', 'E'];
+function labAData(name) {
+  const r = mulberry32(cyrb53(normName(name) + '|labA') >>> 0);
+  const conc = Math.round((0.0950 + r() * 0.0300) * 10000) / 10000;
+  const rows = [];
+  for (const s of LAB_A_SAMPLES) {
+    const base = 18 + r() * 14, spread = 0.03 + r() * 0.12;
+    let vals;
+    do { vals = [1, 2, 3].map(() => Math.round((base + spread * gauss(r)) * 100) / 100); }
+    while (new Set(vals).size < 3);
+    vals.forEach((v, i) => rows.push({ sample: s, trial: i + 1, vol: v }));
+  }
+  // samples A–D are handed out scrambled; E is typed by hand
+  const given = rows.filter(x => x.sample !== 'E');
+  for (let i = given.length - 1; i > 0; i--) { const j = Math.floor(r() * (i + 1)); [given[i], given[j]] = [given[j], given[i]]; }
+  if (given.every((x, i) => i === 0 || given[i - 1].sample <= x.sample)) given.reverse();
+  const typed = rows.filter(x => x.sample === 'E');
+  const stats = {};
+  for (const s of LAB_A_SAMPLES) {
+    const v = rows.filter(x => x.sample === s).map(x => x.vol);
+    const n = v.map(x => x / 1000 * conc);            // moles of NaOH (column D)
+    const m = mean(n), S = sdS(n), P = sdP(n);
+    stats[s] = { mean: m, sdS: S, sdP: P, cv: S / m * 100, cvP: P / m * 100, median: median(n), max: Math.max(...n), min: Math.min(...n),
+      vMean: mean(v), vSdS: sdS(v), vMedian: median(v), vMax: Math.max(...v), vMin: Math.min(...v) };
+  }
+  return { name, conc, rows, given, typed, stats };
+}
+// The block students paste at A1 / get in the .csv/.xlsx (rows 1–15)
+function labABlock(d) {
+  const out = [['Name', ''], ['NaOH concentration (M)', d.conc.toFixed(4)], ['Sample', 'Trial', 'Volume (mL)']];
+  d.given.forEach(x => out.push([x.sample, String(x.trial), x.vol.toFixed(2)]));
+  return out;
+}
+
+// ---------- cell-address helpers ----------
+function colToNum(c) { let n = 0; for (const ch of c) n = n * 26 + (ch.charCodeAt(0) - 64); return n; }
+function numToCol(n) { let s = ''; while (n > 0) { const m = (n - 1) % 26; s = String.fromCharCode(65 + m) + s; n = Math.floor((n - 1) / 26); } return s; }
+function splitRef(ref) { const m = /^\$?([A-Z]+)\$?(\d+)$/.exec(ref); return m ? { col: colToNum(m[1]), row: +m[2] } : null; }
+const addr = (col, row) => numToCol(col) + row;
+
+// ---------- zip writer (stored, no compression) ----------
+const CRC_TABLE = (() => { const t = new Uint32Array(256); for (let n = 0; n < 256; n++) { let c = n; for (let k = 0; k < 8; k++) c = c & 1 ? 0xEDB88320 ^ (c >>> 1) : c >>> 1; t[n] = c >>> 0; } return t; })();
+function crc32(b) { let c = 0xFFFFFFFF; for (let i = 0; i < b.length; i++) c = CRC_TABLE[(c ^ b[i]) & 0xFF] ^ (c >>> 8); return (c ^ 0xFFFFFFFF) >>> 0; }
+function zipStore(files) {
+  const enc = new TextEncoder(), parts = [], central = [];
+  let offset = 0;
+  for (const f of files) {
+    const data = enc.encode(f.text), nm = enc.encode(f.name), crc = crc32(data);
+    const lh = new Uint8Array(30 + nm.length), dv = new DataView(lh.buffer);
+    dv.setUint32(0, 0x04034b50, true); dv.setUint16(4, 20, true); dv.setUint16(8, 0, true);
+    dv.setUint16(12, 0x0021, true); dv.setUint32(14, crc, true); dv.setUint32(18, data.length, true);
+    dv.setUint32(22, data.length, true); dv.setUint16(26, nm.length, true); lh.set(nm, 30);
+    const ch = new Uint8Array(46 + nm.length), cv = new DataView(ch.buffer);
+    cv.setUint32(0, 0x02014b50, true); cv.setUint16(4, 20, true); cv.setUint16(6, 20, true);
+    cv.setUint16(14, 0x0021, true); cv.setUint32(16, crc, true); cv.setUint32(20, data.length, true);
+    cv.setUint32(24, data.length, true); cv.setUint16(28, nm.length, true); cv.setUint32(42, offset, true); ch.set(nm, 46);
+    parts.push(lh, data); central.push(ch); offset += lh.length + data.length;
+  }
+  const cdSize = central.reduce((s, c) => s + c.length, 0);
+  const end = new Uint8Array(22), ev = new DataView(end.buffer);
+  ev.setUint32(0, 0x06054b50, true); ev.setUint16(8, files.length, true); ev.setUint16(10, files.length, true);
+  ev.setUint32(12, cdSize, true); ev.setUint32(16, offset, true);
+  return new Blob([...parts, ...central, end], { type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' });
+}
+const xmlEsc = s => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+// rows: array of arrays of strings; numeric-looking strings become numbers
+function makeXlsx(rows, sheetName) {
+  const NS = 'http://schemas.openxmlformats.org/spreadsheetml/2006/main';
+  const RNS = 'http://schemas.openxmlformats.org/officeDocument/2006/relationships';
+  let sd = '';
+  rows.forEach((row, i) => {
+    sd += `<row r="${i + 1}">`;
+    row.forEach((v, j) => {
+      if (v === '' || v == null) return;
+      const ref = addr(j + 1, i + 1);
+      sd += /^-?\d+(\.\d+)?([eE][+-]?\d+)?$/.test(v) ? `<c r="${ref}"><v>${v}</v></c>` : `<c r="${ref}" t="inlineStr"><is><t>${xmlEsc(v)}</t></is></c>`;
+    });
+    sd += '</row>';
+  });
+  const hdr = '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>\n';
+  return zipStore([
+    { name: '[Content_Types].xml', text: hdr + '<Types xmlns="http://schemas.openxmlformats.org/package/2006/content-types"><Default Extension="rels" ContentType="application/vnd.openxmlformats-package.relationships+xml"/><Default Extension="xml" ContentType="application/xml"/><Override PartName="/xl/workbook.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet.main+xml"/><Override PartName="/xl/worksheets/sheet1.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.worksheet+xml"/></Types>' },
+    { name: '_rels/.rels', text: hdr + '<Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships"><Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument" Target="xl/workbook.xml"/></Relationships>' },
+    { name: 'xl/workbook.xml', text: hdr + `<workbook xmlns="${NS}" xmlns:r="${RNS}"><sheets><sheet name="${xmlEsc(sheetName)}" sheetId="1" r:id="rId1"/></sheets></workbook>` },
+    { name: 'xl/_rels/workbook.xml.rels', text: hdr + '<Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships"><Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/worksheet" Target="worksheets/sheet1.xml"/></Relationships>' },
+    { name: 'xl/worksheets/sheet1.xml', text: hdr + `<worksheet xmlns="${NS}"><sheetData>${sd}</sheetData></worksheet>` }
+  ]);
+}
+function makeCsv(rows) { return rows.map(r => r.map(v => /[",\n]/.test(v) ? '"' + v.replace(/"/g, '""') + '"' : v).join(',')).join('\r\n') + '\r\n'; }
+
+// ---------- zip / xlsx reader ----------
+function readZip(buf) {
+  const dv = new DataView(buf), dec = new TextDecoder();
+  let eocd = -1;
+  for (let i = buf.byteLength - 22; i >= Math.max(0, buf.byteLength - 65557); i--) if (dv.getUint32(i, true) === 0x06054b50) { eocd = i; break; }
+  if (eocd < 0) throw new Error('NOTZIP');
+  const n = dv.getUint16(eocd + 10, true); let p = dv.getUint32(eocd + 16, true);
+  const files = {};
+  for (let k = 0; k < n; k++) {
+    if (dv.getUint32(p, true) !== 0x02014b50) throw new Error('NOTZIP');
+    const method = dv.getUint16(p + 10, true), csize = dv.getUint32(p + 20, true);
+    const nl = dv.getUint16(p + 28, true), el = dv.getUint16(p + 30, true), cl = dv.getUint16(p + 32, true), off = dv.getUint32(p + 42, true);
+    const name = dec.decode(new Uint8Array(buf, p + 46, nl));
+    const start = off + 30 + dv.getUint16(off + 26, true) + dv.getUint16(off + 28, true);
+    files[name] = { method, data: new Uint8Array(buf, start, csize) };
+    p += 46 + nl + el + cl;
+  }
+  return files;
+}
+async function unzipEntry(f) {
+  if (f.method === 0) return f.data;
+  if (f.method !== 8) throw new Error('ZIPMETHOD');
+  const stream = new Blob([f.data]).stream().pipeThrough(new DecompressionStream('deflate-raw'));
+  return new Uint8Array(await new Response(stream).arrayBuffer());
+}
+const BUILTIN_FMT = { 0: 'General', 1: '0', 2: '0.00', 3: '#,##0', 4: '#,##0.00', 9: '0%', 10: '0.00%', 11: '0.00E+00', 12: '# ?/?', 13: '# ??/??', 48: '##0.0E+0', 49: '@' };
+function fmtInfo(code) {
+  code = code || 'General';
+  if (/^general$/i.test(code)) return { code, general: true, dec: null, sci: false, pct: false };
+  let c = code.replace(/"[^"]*"/g, '').replace(/\\./g, '').replace(/\[[^\]]*\]/g, '');
+  c = c.split(';')[0];
+  const m = /\.([0#?]+)/.exec(c);
+  return { code, general: false, dec: m ? m[1].length : 0, sci: /E[+-]/i.test(c), pct: c.includes('%') };
+}
+function resolvePath(fromFile, target) {
+  if (target.startsWith('/')) return target.slice(1);
+  const parts = fromFile.split('/'); parts.pop();
+  for (const seg of target.split('/')) { if (seg === '..') parts.pop(); else if (seg !== '.' && seg !== '') parts.push(seg); }
+  return parts.join('/');
+}
+// Read the parts of a DrawingML chart the labs care about.
+function parseChart(doc) {
+  const kids = (e, n) => e ? Array.from(e.children).filter(x => x.localName === n) : [];
+  const kid = (e, n) => kids(e, n)[0] || null;
+  const all = (e, n) => e ? Array.from(e.getElementsByTagNameNS('*', n)) : [];
+  const val = e => e ? e.getAttribute('val') : null;
+  const yes = e => !!e && (val(e) === '1' || val(e) === 'true' || val(e) === null);
+  const space = doc.documentElement, chart = kid(space, 'chart'), plot = kid(chart, 'plotArea');
+  const firstSz = el => { const d = all(el, 'defRPr').map(e => e.getAttribute('sz')).filter(Boolean); return d.length ? +d[0] : null; };
+  const spaceSz = firstSz(kid(space, 'txPr'));
+  // font sizes (in 1/100 pt) that apply to the text of an element
+  function sizes(el) {
+    if (!el) return [];
+    let s = all(el, 'rPr').map(e => e.getAttribute('sz')).filter(Boolean);
+    if (!s.length) s = all(el, 'defRPr').map(e => e.getAttribute('sz')).filter(Boolean);
+    if (!s.length && spaceSz) s = [spaceSz];
+    return s.map(Number);
+  }
+  function textOf(t) {
+    const tx = kid(t, 'tx'); if (!tx) return null;
+    const rich = kid(tx, 'rich');
+    if (rich) return all(rich, 'p').map(p => all(p, 't').map(x => x.textContent).join('')).join(' ').replace(/\s+/g, ' ').trim();
+    const sr = kid(tx, 'strRef'); if (sr) return all(sr, 'v').map(x => x.textContent).join(' ').trim();
+    return null;
+  }
+  const refOf = e => { if (!e) return null; const r = kid(e, 'numRef') || kid(e, 'strRef'); const f = r && kid(r, 'f'); return f ? { f: f.textContent, str: r.localName === 'strRef' } : null; };
+  const groups = plot ? Array.from(plot.children).filter(x => /Chart$/.test(x.localName)) : [];
+  const axisById = {};
+  if (plot) for (const ax of Array.from(plot.children).filter(x => /Ax$/.test(x.localName))) axisById[val(kid(ax, 'axId'))] = ax;
+  const series = [];
+  for (const g of groups) for (const sEl of kids(g, 'ser')) {
+    const tx = kid(sEl, 'tx'), sr = tx && kid(tx, 'strRef');
+    const spPr = kid(sEl, 'spPr'), ln = kid(spPr, 'ln'), marker = kid(sEl, 'marker'), tl = kid(sEl, 'trendline');
+    const style = val(kid(g, 'scatterStyle'));
+    // series colour: marker fill, else line/fill colour; null = Excel's automatic colour for this series index
+    const colorOf = sp => {
+      if (!sp) return null;
+      const f = kid(sp, 'solidFill') || (kid(sp, 'ln') && kid(kid(sp, 'ln'), 'solidFill'));
+      const c = f && Array.from(f.children)[0];
+      if (!c) return null;
+      return c.localName + ':' + (c.getAttribute('val') || c.getAttribute('lastClr') || '') + Array.from(c.children).map(m => '|' + m.localName + '=' + m.getAttribute('val')).join('');
+    };
+    series.push({
+      type: g.localName, idx: val(kid(sEl, 'idx')),
+      color: colorOf(kid(marker, 'spPr')) || colorOf(spPr),
+      name: tx ? (all(tx, 'v').map(x => x.textContent).join('') || null) : null,
+      nameRef: sr && kid(sr, 'f') ? kid(sr, 'f').textContent : null,
+      x: refOf(kid(sEl, 'xVal') || kid(sEl, 'cat')), y: refOf(kid(sEl, 'yVal') || kid(sEl, 'val')),
+      noLine: ln ? !!kid(ln, 'noFill') : style === 'marker' || style === 'none',
+      noMarker: !!marker && val(kid(marker, 'symbol')) === 'none',
+      trend: tl ? { type: val(kid(tl, 'trendlineType')), eq: yes(kid(tl, 'dispEq')) && !!kid(tl, 'dispEq'), r2: yes(kid(tl, 'dispRSqr')) && !!kid(tl, 'dispRSqr'), forced: !!kid(tl, 'intercept') } : null
+    });
+  }
+  const axis = id => {
+    const ax = axisById[id]; if (!ax) return null;
+    const t = kid(ax, 'title'), sc = kid(ax, 'scaling');
+    return { kind: ax.localName, deleted: val(kid(ax, 'delete')) === '1', title: t ? { text: textOf(t), sizes: sizes(t) } : null,
+      min: sc && kid(sc, 'min') ? +val(kid(sc, 'min')) : null, max: sc && kid(sc, 'max') ? +val(kid(sc, 'max')) : null };
+  };
+  // chart title split into lines (paragraphs or line breaks), each with the font sizes of its text (null = Excel default)
+  function titleLines(t) {
+    const tx = kid(t, 'tx'), rich = tx && kid(tx, 'rich'); if (!rich) return [];
+    const tSz = firstSz(kid(t, 'txPr')) || firstSz(kid(rich, 'lstStyle')) || spaceSz;
+    const out = [];
+    for (const p of kids(rich, 'p')) {
+      const pPr = kid(p, 'pPr'), d = pPr && kid(pPr, 'defRPr'), pSz = d && d.getAttribute('sz') ? +d.getAttribute('sz') : tSz;
+      let cur = { text: '', sizes: [] }; out.push(cur);
+      for (const ch of Array.from(p.children)) {
+        if (ch.localName === 'r' || ch.localName === 'fld') {
+          const rPr = kid(ch, 'rPr'), tt = kid(ch, 't'), sz = rPr && rPr.getAttribute('sz') ? +rPr.getAttribute('sz') : (pSz || null);
+          (tt ? tt.textContent : '').split(/\r?\n/).forEach((txt, k) => {
+            if (k > 0) { cur = { text: '', sizes: [] }; out.push(cur); }   // a newline inside the text also starts a new line
+            if (txt.trim()) cur.sizes.push(sz);
+            cur.text += txt;
+          });
+        } else if (ch.localName === 'br') { cur = { text: '', sizes: [] }; out.push(cur); }
+      }
+    }
+    return out.map(l => ({ text: l.text.replace(/\s+/g, ' ').trim(), sizes: l.sizes })).filter(l => l.text);
+  }
+  const g0 = groups[0], ids = g0 ? kids(g0, 'axId').map(val) : [];
+  const tEl = kid(chart, 'title'), lEl = kid(chart, 'legend');
+  return {
+    types: groups.map(g => g.localName), series,
+    title: tEl ? { text: textOf(tEl), sizes: sizes(tEl), lines: titleLines(tEl) } : null,
+    x: axis(ids[0]), y: axis(ids[1]),
+    legend: lEl ? { sizes: sizes(lEl) } : null
+  };
+}
+async function readXlsx(buf) {
+  const files = readZip(buf);
+  const keys = Object.keys(files);
+  const get = async path => {
+    const k = keys.find(x => x.toLowerCase() === path.toLowerCase());
+    return k ? new TextDecoder().decode(await unzipEntry(files[k])) : null;
+  };
+  const parse = s => new DOMParser().parseFromString(s, 'application/xml');
+  const els = (d, n) => Array.from(d.getElementsByTagNameNS('*', n));
+  const kid = (e, n) => Array.from(e.children).find(x => x.localName === n);
+  const wbText = await get('xl/workbook.xml');
+  if (!wbText) throw new Error('NOTXLSX');
+  const wb = parse(wbText);
+  const rels = {};
+  const relText = await get('xl/_rels/workbook.xml.rels');
+  if (relText) els(parse(relText), 'Relationship').forEach(r => rels[r.getAttribute('Id')] = r.getAttribute('Target'));
+  const sst = [];
+  const sstText = await get('xl/sharedStrings.xml');
+  if (sstText) els(parse(sstText), 'si').forEach(si => sst.push(els(si, 't').filter(t => t.parentNode.localName !== 'rPh').map(t => t.textContent).join('')));
+  const xfFmt = [], fmts = { ...BUILTIN_FMT };
+  const stText = await get('xl/styles.xml');
+  if (stText) {
+    const st = parse(stText);
+    els(st, 'numFmt').forEach(f => fmts[+f.getAttribute('numFmtId')] = f.getAttribute('formatCode'));
+    const cx = els(st, 'cellXfs')[0];
+    if (cx) Array.from(cx.children).filter(x => x.localName === 'xf').forEach(x => xfFmt.push(+(x.getAttribute('numFmtId') || 0)));
+  }
+  const sheets = [];
+  for (const sh of els(wb, 'sheet')) {
+    const rid = sh.getAttributeNS('http://schemas.openxmlformats.org/officeDocument/2006/relationships', 'id') || sh.getAttribute('r:id');
+    let t = rels[rid]; if (!t) continue;
+    t = t.startsWith('/') ? t.slice(1) : 'xl/' + t.replace(/^\.\//, '');
+    const txt = await get(t); if (!txt) continue;
+    const doc = parse(txt), cells = {};
+    for (const c of els(doc, 'c')) {
+      const ref = c.getAttribute('r'); if (!ref) continue;
+      const type = c.getAttribute('t') || 'n', s = +(c.getAttribute('s') || 0);
+      const fEl = kid(c, 'f'), vEl = kid(c, 'v'), isEl = kid(c, 'is');
+      let v = null;
+      if (type === 's' && vEl) v = sst[+vEl.textContent] ?? '';
+      else if (type === 'inlineStr' && isEl) v = els(isEl, 't').map(x => x.textContent).join('');
+      else if (type === 'str' || type === 'e') v = vEl ? vEl.textContent : '';
+      else if (type === 'b') v = vEl ? vEl.textContent === '1' : null;
+      else if (vEl && vEl.textContent !== '') v = Number(vEl.textContent);
+      const numFmtId = xfFmt[s] ?? 0;
+      cells[ref] = { ref, v, type, formula: !!fEl, ftext: fEl ? fEl.textContent : '', fmt: fmtInfo(fmts[numFmtId]) };
+    }
+    // charts placed on this sheet: sheet rels → drawing → drawing rels → chart
+    const charts = [];
+    const relsOf = async path => { const i = path.lastIndexOf('/'); const x = await get(path.slice(0, i) + '/_rels/' + path.slice(i + 1) + '.rels'); return x ? els(parse(x), 'Relationship') : []; };
+    for (const rel of await relsOf(t)) {
+      if (!/\/drawing$/.test(rel.getAttribute('Type') || '')) continue;
+      const dPath = resolvePath(t, rel.getAttribute('Target'));
+      for (const cr of await relsOf(dPath)) {
+        if (!/\/chart$/.test(cr.getAttribute('Type') || '')) continue;
+        const cx = await get(resolvePath(dPath, cr.getAttribute('Target')));
+        if (cx) { try { charts.push(parseChart(parse(cx))); } catch (e) { charts.push({ error: true, types: [], series: [] }); } }
+      }
+    }
+    sheets.push({ name: sh.getAttribute('name'), cells, charts });
+  }
+  return { sheets, fileNames: keys };
+}
+
+// ---------- Lab A checker ----------
+const near = (v, e) => typeof v === 'number' && Math.abs(v - e) <= 1e-7 * Math.abs(e) + 1e-12;
+const fmtList = arr => arr.length <= 1 ? arr.join('') : arr.slice(0, -1).join(', ') + ' and ' + arr[arr.length - 1];
+
+function checkLabA(wbk) {
+  const T = [];
+  const task = (id, title, module) => { const t = { id, title, module, ok: false, msg: '' }; T.push(t); return t; };
+  const text = c => c && c.v != null ? String(c.v).trim() : '';
+  // pick the sheet with the data table
+  let sheet = null, hr = 0, col = {};
+  for (const sh of wbk.sheets) {
+    for (let r = 1; r <= 15 && !sheet; r++) {
+      const hdr = {};
+      for (let c = 1; c <= 12; c++) {
+        const t = text(sh.cells[addr(c, r)]).toLowerCase();
+        if (t === 'sample' && !hdr.sample) hdr.sample = c;
+        else if (t.startsWith('trial') && !hdr.trial) hdr.trial = c;
+        else if (t.startsWith('volume') && !hdr.vol) hdr.vol = c;
+        else if (/mol/.test(t) && !/volume/.test(t) && !hdr.mol) hdr.mol = c;
+      }
+      if (hdr.sample && hdr.trial && hdr.vol) { sheet = sh; hr = r; col = hdr; }
+    }
+    if (sheet) break;
+  }
+  const tName = task('name', 'Your name is in cell B1', 1);
+  if (!sheet) sheet = wbk.sheets[0] || { cells: {} };
+  const cells = sheet.cells;
+  const name = text(cells.B1);
+  if (!name) { tName.msg = 'Cell B1 is empty. Type your name in B1, exactly as you typed it on the Lab page.'; return { tasks: T, name: '', done: false }; }
+  if (/^name$/i.test(name)) { tName.msg = 'B1 says "Name". Your name goes in B1, next to the "Name" label in A1.'; return { tasks: T, name: '', done: false }; }
+  tName.ok = true; tName.msg = `Checking the data set for "${name}".`;
+  const d = labAData(name);
+
+  const tData = task('data', 'All 15 measurements are in the table', 2);
+  if (!hr) { tData.msg = 'I couldn\'t find the data table. Row 3 should have the headers Sample, Trial and Volume (mL), as in the data you pasted.'; return { tasks: T, name, done: false }; }
+  // read data rows
+  const rows = [];
+  for (let r = hr + 1; r < hr + 60; r++) {
+    const s = text(cells[addr(col.sample, r)]);
+    if (!s) break;
+    const tc = cells[addr(col.trial, r)], vc = cells[addr(col.vol, r)];
+    rows.push({ r, sample: s.toUpperCase(), trial: tc ? Number(tc.v) : NaN, vol: vc ? vc.v : null, volCell: vc });
+  }
+  const expKey = x => `${x.sample}|${x.trial}|${Number(x.vol).toFixed(2)}`;
+  const pool = {}; d.rows.forEach(x => pool[expKey(x)] = (pool[expKey(x)] || 0) + 1);
+  let matched = 0; const rowOK = rows.map(x => { const k = expKey(x); if (typeof x.vol === 'number' && pool[k] > 0) { pool[k]--; matched++; return true; } return false; });
+  if (matched === 0 && rows.length) {
+    tData.msg = `None of these measurements belong to the data set for "${name}". Make sure B1 has exactly the name you typed on the Lab page (the data set is made from that name).`;
+    return { tasks: T, name, done: false };
+  }
+  const pairs = new Set(rows.map(x => x.sample + '|' + x.trial));
+  const missing = d.rows.filter(x => !pairs.has(x.sample + '|' + x.trial)).map(x => `${x.sample} trial ${x.trial}`);
+  const eRows = rows.filter(x => x.sample === 'E');
+  const textVols = rows.filter(x => x.volCell && typeof x.volCell.v === 'string');
+  if (textVols.length) tData.msg = `Some volumes are stored as text, not numbers (row ${textVols.map(x => x.r).join(', ')}). Re-type them without units; units belong only in the header.`;
+  else if (!eRows.length) tData.msg = 'Sample E is missing. Type its three trials (shown on the Lab page) into the rows just below the pasted data.';
+  else if (missing.length) tData.msg = `Missing: ${fmtList(missing)}.`;
+  else if (rows.length !== 15) tData.msg = `The table has ${rows.length} rows; it should have 15 (5 samples × 3 trials). Check for duplicates or a blank row.`;
+  else if (rows.some((x, i) => !rowOK[i] && x.sample !== 'E')) { tData.ok = true; tData.msg = '15 rows found.'; }
+  else {
+    const badE = d.typed.filter(x => !rows.some(y => y.sample === 'E' && y.trial === x.trial && near(y.vol, x.vol)));
+    if (badE.length) tData.msg = `Check what you typed for ${fmtList(badE.map(x => 'E trial ' + x.trial))}; it doesn't match the Lab page.`;
+    else { tData.ok = true; tData.msg = '15 rows found.'; }
+  }
+
+  const tTog = task('together', 'Rows stayed together when you sorted', 3);
+  const broken = rows.filter((x, i) => !rowOK[i] && x.sample !== 'E');
+  if (!tData.ok && !rows.length) tTog.msg = 'No data to check.';
+  else if (broken.length) tTog.msg = `${broken.length} row(s) have a volume that doesn't belong with that sample and trial (e.g. row ${broken[0].r}). This happens when one column is sorted by itself. Undo, or paste the data again, then select the whole table before sorting.`;
+  else { tTog.ok = true; tTog.msg = 'Every volume is still beside its own sample and trial.'; }
+
+  const tSort = task('sorted', 'Sorted by Sample, then by Trial', 3);
+  const inOrder = rows.every((x, i) => i === 0 || rows[i - 1].sample < x.sample || (rows[i - 1].sample === x.sample && rows[i - 1].trial < x.trial));
+  if (inOrder) { tSort.ok = true; tSort.msg = 'A1, A2, A3, B1 … E3.'; }
+  else {
+    const bySample = rows.every((x, i) => i === 0 || rows[i - 1].sample <= x.sample);
+    tSort.msg = bySample ? 'Sorted by Sample, but the trials within a sample are out of order. In Custom Sort, add a second level: Then by Trial, Smallest to Largest.'
+      : 'The rows are not in order by Sample. Use Custom Sort on the whole table: Sort by Sample (A to Z), then by Trial (Smallest to Largest).';
+  }
+
+  const tMol = task('moles', 'NaOH (mol) calculated with a fixed reference to B2', 4);
+  const b2 = cells.B2;
+  const conc = b2 && typeof b2.v === 'number' ? b2.v : NaN;
+  const molCells = [];
+  if (!near(conc, d.conc)) tMol.msg = `B2 should hold the NaOH concentration from the Lab page (${d.conc.toFixed(4)} M). Put it back and don't overwrite it.`;
+  else if (!col.mol) tMol.msg = 'Add a column D with the header "NaOH (mol)" and calculate moles in each row: volume in liters × concentration.';
+  else {
+    const res = rows.map(x => { const c = cells[addr(col.mol, x.r)]; if (c) molCells.push(c); return { x, c, ok: c && typeof x.vol === 'number' && near(c.v, x.vol / 1000 * conc) }; });
+    const typedNums = res.filter(o => o.c && !o.c.formula && typeof o.c.v === 'number');
+    const bad = res.filter(o => !o.ok);
+    if (!res.some(o => o.c)) tMol.msg = 'Column D is empty. In D4 type =C4/1000*$B$2 and fill it down to the last row.';
+    else if (typedNums.length) tMol.msg = `Some moles are typed numbers, not formulas (row ${typedNums.map(o => o.x.r).join(', ')}). Use a formula so Excel does the math.`;
+    else if (!bad.length) { tMol.ok = true; tMol.msg = 'Every row is right.'; }
+    else if (res[0].ok) tMol.msg = `Row ${res[0].x.r} is right but the rows below are not. When you filled down, the reference to B2 moved to B3, B4, …. Make it fixed with dollar signs: $B$2.`;
+    else if (res.every(o => o.c && near(o.c.v, o.x.vol * conc))) tMol.msg = 'The values are 1000× too big: change mL to L by dividing the volume by 1000.';
+    else tMol.msg = `Row ${bad[0].x.r} is not volume (L) × concentration. The formula in D4 should be =C4/1000*$B$2.`;
+  }
+  const tMolF = task('molfmt', 'NaOH (mol) shown in scientific notation, 3 decimals', 6);
+  if (!molCells.length) tMolF.msg = 'No moles column to check yet.';
+  else {
+    const off = molCells.filter(c => !(c.fmt.sci && c.fmt.dec === 3));
+    if (!off.length) { tMolF.ok = true; tMolF.msg = 'Like 2.515E-03.'; }
+    else if (off.every(c => c.fmt.sci)) tMolF.msg = 'Scientific notation is on, but use 3 decimal places (e.g. 2.515E-03). Use Increase/Decrease Decimal.';
+    else tMolF.msg = `${off.length} cell(s) in the moles column are not in scientific notation (e.g. ${off[0].ref}). Select D4:D18 → Number Format → Scientific, then set 3 decimals.`;
+  }
+
+  // ---------- results table: F3:M8, statistics on the moles in column D ----------
+  const HDR = [['Sample', /^sample$/i], ['Mean', /^mean\b/i], ['SD', /^(sd|st\.?\s*dev|standard deviation)\b/i], ['%CV', /cv/i],
+    ['Median', /^median\b/i], ['Max', /^max(imum)?\b/i], ['Min', /^min(imum)?\b/i], ['n', /^(n|count)\b/i]];
+  const HDR_TEXT = HDR.map(h => h[0]).join(', ');
+  const tTab = task('table', 'Results table in F3:M8 (' + HDR_TEXT + '), column E empty', 5);
+  const badHdr = HDR.map((h, i) => ({ ref: addr(6 + i, 3), want: h[0], ok: h[1].test(text(cells[addr(6 + i, 3)])) })).filter(h => !h.ok);
+  const labelsOK = LAB_A_SAMPLES.every((s, i) => text(cells[addr(6, 4 + i)]).toUpperCase() === s);
+  const eUsed = [3, 4, 5, 6, 7, 8].map(r => 'E' + r).filter(r => text(cells[r]) !== '');
+  if (badHdr.length && badHdr[0].ref === 'F3') {
+    let where = null;
+    for (const c of Object.values(cells)) {
+      if (!/^sample$/i.test(text(c)) || c.ref === addr(col.sample, hr)) continue;
+      const q = splitRef(c.ref);
+      if (/^mean/i.test(text(cells[addr(q.col + 1, q.row)]))) { where = c.ref; break; }
+    }
+    tTab.msg = where ? `Your results table starts at ${where}. Move it so the headers ${HDR_TEXT} are in F3:M3, with column E left empty.`
+      : `Put the headers ${HDR_TEXT} in F3:M3, and leave column E empty.`;
+  } else if (badHdr.length) tTab.msg = `Headers F3:M3 should read ${HDR_TEXT}. Check ${fmtList(badHdr.map(h => `${h.ref} (${h.want})`))}.`;
+  else if (!labelsOK) tTab.msg = 'Put the sample letters A, B, C, D, E in F4:F8, one per row.';
+  else if (eUsed.length) tTab.msg = `Leave column E empty (${eUsed.join(', ')} has something in it). The empty column keeps Excel from treating the data and the results as one table when you sort.`;
+  else { tTab.ok = true; tTab.msg = 'Headers in F3:M3 and samples A–E in F4:F8.'; }
+  if (!tTab.ok) return { tasks: T, name, done: false };
+
+  const rangeOf = c => { const m = c && /\$?([A-Z]+)\$?(\d+):\$?([A-Z]+)\$?(\d+)/.exec(c.ftext || ''); return m ? `${m[1]}${m[2]}:${m[3]}${m[4]}` : null; };
+  const molRange = s => { const r = rows.filter(x => x.sample === s).map(x => x.r); if (!r.length) return null; const lo = Math.min(...r), hi = Math.max(...r); return hi - lo === r.length - 1 ? `D${lo}:D${hi}` : null; };
+  const rounded = (v, e) => typeof v === 'number' && Math.abs(v - e) <= 0.0006 * Math.abs(e); // a typed, rounded copy
+  const GROUP = {
+    empty: 'empty. Each needs a formula.',
+    notnum: 'showing an error or text instead of a number.',
+    typed: 'typed numbers. Use formulas, so the results update if the data change.',
+    vol: 'using the volumes in column C. Use the moles in column D (A is D4:D6, B is D7:D9, … E is D16:D18).',
+    pop: 'using STDEV.P (population). Three trials are a sample of all the titrations you could run: use STDEV.S (or STDEV).',
+    no100: 'missing the × 100. %CV = 100 × SD ÷ mean.',
+    follows: 'calculated from a mean or SD in the same row that isn\'t right yet. Fix that first.',
+    swap: 'holding the other one: MAX goes in the Max column (K) and MIN in the Min column (L).',
+    unsorted: 'not checkable yet: sort the data first, so each sample\'s three rows are together.'
+  };
+  // diagnose one cell: null when right, else {kind, ref, msg}
+  function diag(c, ref, exp, s, what, alt) {
+    const rng = molRange(s), K = kind => ({ kind, ref });
+    if (!c || c.v === null || c.v === '') return K('empty');
+    if (typeof c.v !== 'number') return K('notnum');
+    if (near(c.v, exp)) return c.formula ? null : K('typed');
+    if (!rng) return K('unsorted');
+    if (alt.vol != null && near(c.v, alt.vol)) return K('vol');
+    if (alt.pop != null && near(c.v, alt.pop)) return K('pop');
+    if (alt.swap != null && near(c.v, alt.swap)) return K('swap');
+    if (alt.no100 != null && near(c.v, alt.no100)) return c.fmt.pct ? null : K('no100');
+    if (alt.follows) return K('follows');
+    const got = rangeOf(c);
+    if (c.formula && got && got !== rng) return { kind: 'range', ref, msg: `${ref} uses ${got}, but sample ${s}'s moles are in ${rng}.` };
+    if (!c.formula && rounded(c.v, exp)) return K('typed');
+    return { kind: 'other', ref, msg: `${ref} isn't the ${what} of sample ${s} (${rng}).` };
+  }
+  // specs: [{col, what, exp(s), alt(s, i)}]
+  const statTask = (id, title, specs) => {
+    const t = task(id, title, 5), found = [];
+    for (const sp of specs) LAB_A_SAMPLES.forEach((s, i) => { const ref = addr(sp.col, 4 + i); const m = diag(cells[ref], ref, sp.exp(s), s, sp.what, sp.alt ? sp.alt(s, i) : {}); if (m) found.push(m); });
+    if (!found.length) { t.ok = true; t.msg = specs.map(sp => `${addr(sp.col, 4)}:${addr(sp.col, 8)}`).join(', ') + ' all right.'; return t; }
+    const parts = [];
+    for (const k of Object.keys(GROUP)) { const refs = found.filter(f => f.kind === k).map(f => f.ref); if (refs.length) parts.push(`${fmtList(refs)} ${refs.length > 1 ? 'are' : 'is'} ${GROUP[k]}`); }
+    found.filter(f => f.msg).forEach(f => parts.push(f.msg));
+    t.msg = parts.slice(0, 3).join(' ') + (parts.length > 3 ? ' (and more)' : '');
+    return t;
+  };
+  const st = s => d.stats[s];
+  const tMean = statTask('mean', 'Mean of each sample (G4:G8), by formula', [{ col: 7, what: 'mean', exp: s => st(s).mean, alt: s => ({ vol: st(s).vMean }) }]);
+  const tSD = statTask('sd', 'Standard deviation of each sample (H4:H8), using STDEV.S', [{ col: 8, what: 'standard deviation', exp: s => st(s).sdS, alt: s => ({ vol: st(s).vSdS, pop: st(s).sdP }) }]);
+  statTask('cv', '%CV of each sample (I4:I8), by formula', [{ col: 9, what: '%CV', exp: s => st(s).cv, alt: (s, i) => {
+    const bad = [!tMean.ok && !near((cells[addr(7, 4 + i)] || {}).v, st(s).mean) ? 'G' + (4 + i) : null, !tSD.ok && !near((cells[addr(8, 4 + i)] || {}).v, st(s).sdS) ? 'H' + (4 + i) : null].filter(Boolean);
+    return { no100: st(s).cv / 100, pop: st(s).cvP, follows: bad.length ? bad.join(' and ') : null };
+  } }]);
+  statTask('mmm', 'Median, Max and Min of each sample (J4:L8), by formula', [
+    { col: 10, what: 'median', exp: s => st(s).median, alt: s => ({ vol: st(s).vMedian }) },
+    { col: 11, what: 'maximum', exp: s => st(s).max, alt: s => ({ vol: st(s).vMax, swap: st(s).min }) },
+    { col: 12, what: 'minimum', exp: s => st(s).min, alt: s => ({ vol: st(s).vMin, swap: st(s).max }) }]);
+  // n: COUNT gives 3 for any three rows, so check the range written in the formula too
+  { const t = task('n', 'n (number of trials) of each sample (M4:M8), by COUNT', 5), msgs = [], typedN = [];
+    LAB_A_SAMPLES.forEach((s, i) => {
+      const ref = addr(13, 4 + i), c = cells[ref], rng = molRange(s);
+      if (!c || c.v === null || c.v === '') { msgs.push(`${ref} is empty: use =COUNT(${rng || 'D…'}).`); return; }
+      if (typeof c.v !== 'number') { msgs.push(`${ref} shows "${c.v}", not a number.`); return; }
+      if (c.v !== 3) { msgs.push(`${ref} counts ${c.v} values; sample ${s} has 3 trials${rng ? ' (' + rng + ')' : ''}.`); return; }
+      if (!c.formula) { typedN.push(ref); return; }
+      const got = rangeOf(c);
+      // only question a plain 3-row block (e.g. =COUNT(D4:D6)); FILTER, COUNTIF, etc. pick the rows themselves
+      const g = got && /^([A-Z]+)(\d+):([A-Z]+)(\d+)$/.exec(got);
+      if (g && rng && +g[4] - +g[2] === 2 && got !== rng && got !== rng.replace(/D/g, 'C')) msgs.push(`${ref} counts ${got}, but sample ${s} is in ${rng}.`);
+    });
+    if (typedN.length) msgs.unshift(`${fmtList(typedN)} ${typedN.length > 1 ? 'are typed numbers' : 'is a typed number'}. Use =COUNT(D4:D6) for A, =COUNT(D7:D9) for B, and so on, so Excel counts the trials.`);
+    if (!msgs.length) { t.ok = true; t.msg = 'M4:M8 all right.'; } else t.msg = msgs.slice(0, 3).join(' ') + (msgs.length > 3 ? ' (and more)' : ''); }
+  const tFmt = task('statfmt', 'Results formatted: scientific 3 decimals; %CV 3 decimals; n whole number', 6);
+  { const off = [];
+    for (let i = 0; i < 5; i++) {
+      for (const cn of [7, 8, 10, 11, 12]) { const c = cells[addr(cn, 4 + i)]; if (c && !(c.fmt.sci && c.fmt.dec === 3)) off.push(c.ref); }
+      let c = cells[addr(9, 4 + i)]; if (c && !(c.fmt.dec === 3 && !c.fmt.general)) off.push(c.ref);
+      c = cells[addr(13, 4 + i)]; if (c && !(c.fmt.general || (c.fmt.dec === 0 && !c.fmt.sci))) off.push(c.ref);
+    }
+    if (!off.length) { tFmt.ok = true; tFmt.msg = 'Mean, SD, Median, Max, Min like 3.126E-03; %CV with 3 decimals; n as 3.'; }
+    else tFmt.msg = `Check the number format of ${fmtList(off.slice(0, 5))}${off.length > 5 ? ' and others' : ''}. Mean, SD, Median, Max, Min: Scientific, 3 decimals (3.126E-03). %CV: 3 decimals (0.194 or 1.938E-01). n: a whole number (3).`;
+  }
+  const done = T.every(t => t.ok);
+  return { tasks: T, name, done, code: done ? completionCode(name, 'A') : null };
+}
+
+if (typeof module !== 'undefined') module.exports = { labAData, labABlock, completionCode, verifyCode, normName, makeCsv };
+
+/* Excel Workbench — Labs B (Boyle's law plot) and C (Beer's law calibration), lab detection, task lists. */
+
+// ---------- task lists (titles shown by the checker; order = display order) ----------
+const LAB_TASKS = {
+  A: [['name', 'Your name is in cell B1', 1], ['data', 'All 15 measurements are in the table', 2], ['together', 'Rows stayed together when you sorted', 3],
+    ['sorted', 'Sorted by Sample, then by Trial', 3], ['moles', 'NaOH (mol) calculated with a fixed reference to B2', 4], ['molfmt', 'NaOH (mol) shown in scientific notation, 3 decimals', 6],
+    ['table', 'Results table in F3:M8 (Sample, Mean, SD, %CV, Median, Max, Min, n), column E empty', 5], ['mean', 'Mean of each sample (G4:G8), by formula', 5],
+    ['sd', 'Standard deviation of each sample (H4:H8), using STDEV.S', 5], ['cv', '%CV of each sample (I4:I8), by formula', 5],
+    ['mmm', 'Median, Max and Min of each sample (J4:L8), by formula', 5], ['n', 'n (number of trials) of each sample (M4:M8), by COUNT', 5],
+    ['statfmt', 'Results formatted: scientific 3 decimals; %CV 3 decimals; n whole number', 6]],
+  B: [['name', 'Your name is in cell B1', 1], ['data', 'Data in A3:C11, unchanged', 2], ['chart', 'A chart on the same sheet as the data', 7],
+    ['scatter', 'Chart type is Scatter (XY), not Line', 7], ['series', 'Two series: x = Volume (A4:A11), y = each pressure column', 7],
+    ['names', 'Series named from the headers (B3, C3)', 8], ['markers', 'Data shown as markers only, no connecting lines', 11],
+    ['title', 'Chart title', 8], ['axtitles', 'Axis titles with units', 8], ['legend', 'Legend shown', 8], ['fonts', 'Title, axis titles and legend at 12 pt', 9]],
+  C: [['name', 'Your name is in cell B1', 1], ['data', 'Standards (A3:B9) and unknowns (D3:E6) unchanged', 2], ['chart', 'A Scatter chart of the standards', 7],
+    ['series', 'One series: x = Concentration (A4:A9), y = Absorbance (B4:B9)', 7], ['markers', 'Data shown as markers only, no connecting lines', 11],
+    ['labels', 'Chart title and axis titles; no legend', 8], ['fonts', 'Title and axis titles at 12 pt', 9],
+    ['trend', 'Linear trendline showing the equation and R²', 10], ['fit', 'Slope, Intercept and R² in I4:I6 by formula', 10],
+    ['unknowns', 'Unknown concentrations in F4:F6 by formula', 10], ['fmt', 'Formats: scientific 3 decimals; R² 4 decimals', 6]]
+};
+function taskMaker(lab) {
+  const T = [];
+  const task = id => { const row = LAB_TASKS[lab].find(t => t[0] === id); const t = { id, title: row[1], module: row[2], ok: false, msg: '' }; T.push(t); return t; };
+  return { T, task };
+}
+const cellText = c => c && c.v != null ? String(c.v).trim() : '';
+// 'Lab B'!$A$4:$A$11 -> {col:'A', r1:4, r2:11, text:'A4:A11'} (single column ranges only)
+function parseRef(f) {
+  if (!f) return null;
+  const m = /!?\$?([A-Z]+)\$?(\d+)(?::\$?([A-Z]+)\$?(\d+))?$/.exec(f.replace(/^.*!/, '!'));
+  if (!m) return null;
+  return { col: m[1], col2: m[3] || m[1], r1: +m[2], r2: +(m[4] || m[2]), text: m[3] ? `${m[1]}${m[2]}:${m[3]}${m[4]}` : `${m[1]}${m[2]}` };
+}
+const pt = sz => (sz / 100).toString().replace(/\.0$/, '') + ' pt';
+function sizeProblem(label, sizes, want = 1200) {
+  if (!sizes || !sizes.length) return `${label} is still at Excel's default size`;
+  const off = [...new Set(sizes.filter(s => s !== want))];
+  return off.length ? `${label} is ${off.map(pt).join('/')}` : '';
+}
+function findChartSheet(wbk, headerTest) {
+  for (const sh of wbk.sheets) for (let r = 1; r <= 6; r++) if (headerTest(sh.cells, r)) return { sheet: sh, hr: r };
+  return { sheet: wbk.sheets[0] || { cells: {}, charts: [] }, hr: 0 };
+}
+function allCharts(wbk, sheet) {
+  const own = (sheet.charts || []).filter(c => !c.error);
+  if (own.length) return { charts: own, elsewhere: false };
+  const other = wbk.sheets.flatMap(s => s.charts || []).filter(c => !c.error);
+  return { charts: other, elsewhere: other.length > 0 };
+}
+function chartKind(types) {
+  const n = { scatterChart: 'Scatter', lineChart: 'Line', barChart: 'Bar/Column', areaChart: 'Area', pieChart: 'Pie', bubbleChart: 'Bubble', radarChart: 'Radar' };
+  return types.map(t => n[t] || t.replace(/Chart$/, '')).join(' + ');
+}
+// least squares y = m x + b
+function linfit(x, y) {
+  const n = x.length, mx = mean(x), my = mean(y);
+  let sxx = 0, syy = 0, sxy = 0;
+  for (let i = 0; i < n; i++) { sxx += (x[i] - mx) ** 2; syy += (y[i] - my) ** 2; sxy += (x[i] - mx) * (y[i] - my); }
+  const m = sxy / sxx;
+  return { m, b: my - m * mx, r2: sxy * sxy / (sxx * syy), mSwap: sxy / syy, bSwap: mx - (sxy / syy) * my };
+}
+
+// ---------- Lab B: Boyle's law at two temperatures ----------
+const LAB_B_V = [0.50, 0.75, 1.00, 1.25, 1.50, 2.00, 3.00, 4.00];
+const LAB_B_T = [298, 348];
+function labBData(name) {
+  const r = mulberry32(cyrb53(normName(name) + '|labB') >>> 0);
+  const n = 0.040 + r() * 0.040;
+  const rows = LAB_B_V.map(v => ({ v, p: LAB_B_T.map(T => Math.round(n * 0.08206 * T / v * (1 + 0.004 * gauss(r)) * 1000) / 1000) }));
+  return { name, n, rows };
+}
+function labBBlock(d) {
+  const out = [['Name', ''], ['', ''], ['Volume (L)', `P at ${LAB_B_T[0]} K (atm)`, `P at ${LAB_B_T[1]} K (atm)`]];
+  d.rows.forEach(x => out.push([x.v.toFixed(2), x.p[0].toFixed(3), x.p[1].toFixed(3)]));
+  return out;
+}
+function checkLabB(wbk) {
+  const { T, task } = taskMaker('B');
+  const { sheet } = findChartSheet(wbk, (c, r) => /^volume\s*\(l\)/i.test(cellText(c['A' + r])));
+  const cells = sheet.cells;
+  const tName = task('name'), name = cellText(cells.B1);
+  if (!name || /^name$/i.test(name)) { tName.msg = 'Type your name in B1, exactly as you typed it on the Lab page.'; return { lab: 'B', tasks: T, name: '', done: false }; }
+  tName.ok = true; tName.msg = `Checking the data set for "${name}".`;
+  const d = labBData(name);
+  const tData = task('data');
+  const hdr = labBBlock(d)[2], badH = hdr.map((h, j) => cellText(cells[addr(j + 1, 3)]) === h ? null : addr(j + 1, 3)).filter(Boolean);
+  const bad = [];
+  d.rows.forEach((x, i) => [x.v, x.p[0], x.p[1]].forEach((e, j) => { const c = cells[addr(j + 1, 4 + i)]; if (!c || !near(c.v, e)) bad.push(addr(j + 1, 4 + i)); }));
+  if (bad.length === 24) { tData.msg = `A4:C11 doesn't hold the data set for "${name}". Paste the data from the Lab page at A1, and make sure B1 has exactly the name you typed there.`; return { lab: 'B', tasks: T, name, done: false }; }
+  if (badH.length) tData.msg = `Header ${fmtList(badH)} was changed. Row 3 should read: ${hdr.join(' | ')}.`;
+  else if (bad.length) tData.msg = `${fmtList(bad.slice(0, 6))}${bad.length > 6 ? ' and others' : ''} ${bad.length > 1 ? "don't" : "doesn't"} match the Lab data. Paste the data again at A1.`;
+  else { tData.ok = true; tData.msg = '24 values and 3 headers in place.'; }
+
+  const tChart = task('chart'), { charts, elsewhere } = allCharts(wbk, sheet);
+  if (!charts.length) { tChart.msg = 'No chart found. Select A3:C11, then Insert → Scatter (markers only).'; return { lab: 'B', tasks: T, name, done: false }; }
+  // prefer a scatter chart with the most series
+  const ch = charts.slice().sort((a, b) => (b.types.includes('scatterChart') - a.types.includes('scatterChart')) || (b.series.length - a.series.length))[0];
+  tChart.ok = true; tChart.msg = elsewhere ? "Found a chart (on a different sheet; that's fine)." : (charts.length > 1 ? `Found ${charts.length} charts; checking the Scatter chart.` : 'Found it.');
+  const tSc = task('scatter');
+  if (ch.types.length === 1 && ch.types[0] === 'scatterChart') { tSc.ok = true; tSc.msg = 'Scatter (XY).'; }
+  else tSc.msg = `This is a ${chartKind(ch.types)} chart. ${ch.types.includes('lineChart') ? 'A Line chart spaces the volumes evenly as labels (0.50, 0.75, … 4.00 all one step apart), which bends the curve. ' : ''}Delete it, select A3:C11 and use Insert → Scatter.`;
+
+  const tSer = task('series'), sMsg = [];
+  const want = [{ col: 'B', name: hdr[1], ref: 'B3' }, { col: 'C', name: hdr[2], ref: 'C3' }];
+  const ser = ch.series, matched = [];
+  const swappedCols = [];
+  for (const w of want) {
+    const s = ser.find(q => { const y = parseRef(q.y && q.y.f); return y && y.col === w.col; });
+    if (!s) {
+      const swapped = ser.find(q => { const x = parseRef(q.x && q.x.f); return x && x.col === w.col; });
+      if (swapped) { swappedCols.push(w.col); matched.push({ s: swapped, w, swapped: true }); }
+      else sMsg.push(`No series plots column ${w.col} (${w.name}). Select Data → Add a series with X values A4:A11 and Y values ${w.col}4:${w.col}11.`);
+      continue;
+    }
+    matched.push({ s, w });
+    const y = parseRef(s.y.f), x = s.x && parseRef(s.x.f);
+    if (!x) sMsg.push(`The ${w.name} series has no x values, so Excel plotted it against 1, 2, 3, …. Select Data → Edit it and set X values to A4:A11.`);
+    else if (x.col !== 'A') sMsg.push(`The ${w.name} series uses ${x.text} for x; it should be A4:A11 (Volume).`);
+    else if (x.r1 !== 4 || x.r2 !== 11) sMsg.push(`The ${w.name} series' x values are ${x.text}; they should be A4:A11${x.r1 === 3 ? ' (the header row is not data)' : ''}.`);
+    if (y.r1 !== 4 || y.r2 !== 11) sMsg.push(`The ${w.name} series' y values are ${y.text}; they should be ${w.col}4:${w.col}11${y.r1 === 3 ? ' (the header row is not data)' : ''}.`);
+  }
+  if (swappedCols.length) sMsg.unshift(`The axes are swapped: pressure (${swappedCols.join(' and ')}) is on the x axis and volume on y. Volume (A) goes on x: in Select Data, edit ${swappedCols.length > 1 ? 'each series' : 'the series'} and swap the X and Y ranges.`);
+  const empty = ser.filter(q => !q.y && !matched.some(m => m.s === q));
+  if (empty.length) sMsg.push(`${empty.length > 1 ? 'Some series have' : 'A series has'} no data. Remove ${empty.length > 1 ? 'them' : 'it'} in Select Data.`);
+  const extra = ser.filter(q => q.y && !matched.some(m => m.s === q));
+  if (extra.length) {
+    const volAsSeries = extra.some(q => { const y = parseRef(q.y && q.y.f); return y && y.col === 'A'; });
+    sMsg.push(volAsSeries ? 'Volume (column A) is plotted as its own series. It belongs on the x axis: this happens when the chart isn\'t a Scatter chart, or when A isn\'t used as the X values.' : `There ${extra.length > 1 ? 'are' : 'is'} ${extra.length} extra series. Remove ${extra.length > 1 ? 'them' : 'it'} in Select Data.`);
+  }
+  if (!sMsg.length) { tSer.ok = true; tSer.msg = 'Both pressure columns against volume.'; } else tSer.msg = sMsg.slice(0, 3).join(' ');
+
+  const tNames = task('names'), nMsg = [];
+  for (const { s, w, swapped } of matched) {
+    if (swapped) continue;
+    const ref = s.nameRef && parseRef(s.nameRef);
+    const ok = (ref && ref.text === w.ref) || (s.name && s.name.trim().toLowerCase() === w.name.toLowerCase());
+    if (!ok) nMsg.push(s.name || s.nameRef ? `The ${w.col}-column series is named "${s.name || s.nameRef.replace(/^.*!/, '')}"; name it from ${w.ref} ("${w.name}").` : `The ${w.col}-column series has no name, so the legend says "Series${w.col === 'B' ? 1 : 2}". Name it from ${w.ref} ("${w.name}").`);
+  }
+  if (!matched.length || swappedCols.length) tNames.msg = 'Fix the series first.';
+  else if (!nMsg.length) { tNames.ok = true; tNames.msg = 'The legend reads the column headers.'; } else tNames.msg = nMsg.join(' ') + ' (Select Data → Edit → Series name: click the header cell. Including row 3 when you select the data does this for you.)';
+
+  const tMk = task('markers');
+  const lined = ser.filter(q => !q.noLine), nomk = ser.filter(q => q.noMarker);
+  if (lined.length) tMk.msg = `${lined.length === ser.length ? 'The points are' : 'Some points are'} joined by lines. For measured data, show markers only: pick the Scatter type with markers only, or Format the series → Line → No line.`;
+  else if (nomk.length) tMk.msg = 'The markers are turned off, so the data points are invisible. Format the series → Marker → Automatic.';
+  else { tMk.ok = true; tMk.msg = 'Markers, no lines.'; }
+
+  labelTasks(task, ch, { title: true, x: [/volume/i, 'Volume (L)'], y: [/pressure/i, 'Pressure (atm)'], legend: true });
+  const done = T.every(t => t.ok);
+  return { lab: 'B', tasks: T, name, done, code: done ? completionCode(name, 'B') : null };
+}
+// shared chart-label checks for Labs B and C
+function labelTasks(task, ch, o) {
+  const isPlaceholder = t => !t || /^(chart|axis) title$/i.test(t);
+  const tTitle = task(o.legend ? 'title' : 'labels'), msgs = [];
+  if (!ch.title) msgs.push('There\'s no chart title. Add one that says what the graph shows (Chart → Chart Title, or the + / Chart Elements button).');
+  else if (isPlaceholder(ch.title.text)) msgs.push(`The chart title still says "${ch.title.text || 'Chart Title'}". Click it and type a real title.`);
+  let axMsgs = [];
+  for (const [k, label] of [['x', 'horizontal (x)'], ['y', 'vertical (y)']]) {
+    const ax = ch[k], [re, example] = o[k];
+    if (!ax || !ax.title) axMsgs.push(`The ${label} axis has no title. Add Axis Titles and type "${example}".`);
+    else if (isPlaceholder(ax.title.text)) axMsgs.push(`The ${label} axis title still says "Axis Title"; type "${example}".`);
+    else if (!re.test(ax.title.text)) axMsgs.push(`The ${label} axis title "${ax.title.text}" should name the quantity: e.g. "${example}".`);
+    else if (o[k][2] !== false && !/\(.+\)/.test(ax.title.text)) axMsgs.push(`Add the unit in parentheses to the ${label} axis title: "${example}".`);
+  }
+  if (o.legend) {
+    if (!msgs.length) { tTitle.ok = true; tTitle.msg = `"${ch.title.text}"`; } else tTitle.msg = msgs.join(' ');
+    const tAx = task('axtitles');
+    if (!axMsgs.length) { tAx.ok = true; tAx.msg = `"${ch.x.title.text}" and "${ch.y.title.text}".`; } else tAx.msg = axMsgs.join(' ');
+    const tLeg = task('legend');
+    if (ch.legend) { tLeg.ok = true; tLeg.msg = 'Shown, so readers can tell the two temperatures apart.'; } else tLeg.msg = 'Turn the legend on (Chart Elements → Legend): with two series, readers need it to tell them apart.';
+  } else {
+    const all = msgs.concat(axMsgs);
+    if (ch.legend) all.push('Turn the legend off: with only one series it adds nothing.');
+    if (!all.length) { tTitle.ok = true; tTitle.msg = `"${ch.title.text}", "${ch.x.title.text}", "${ch.y.title.text}".`; } else tTitle.msg = all.slice(0, 3).join(' ');
+  }
+  const tF = task('fonts'), fm = [];
+  if (ch.title) fm.push(sizeProblem('the title', ch.title.sizes));
+  if (ch.x && ch.x.title) fm.push(sizeProblem('the x-axis title', ch.x.title.sizes));
+  if (ch.y && ch.y.title) fm.push(sizeProblem('the y-axis title', ch.y.title.sizes));
+  if (o.legend && ch.legend) fm.push(sizeProblem('the legend', ch.legend.sizes));
+  const fp = fm.filter(Boolean);
+  const missing = !ch.title || !(ch.x && ch.x.title) || !(ch.y && ch.y.title) || (o.legend && !ch.legend);
+  if (!fp.length && !missing) { tF.ok = true; tF.msg = 'All 12 pt.'; }
+  else if (!fp.length) tF.msg = 'Add the missing labels first; then their size is checked.';
+  else tF.msg = fp.join('; ').replace(/^./, c => c.toUpperCase()) + '. Select each one and set the font size to 12 (Home → Font Size).';
+}
+
+// ---------- Lab C: Beer's law calibration ----------
+const LAB_C_STD = [0, 1, 2, 3, 4, 5].map(k => k * 1e-5);
+function labCData(name) {
+  const r = mulberry32(cyrb53(normName(name) + '|labC') >>> 0);
+  const eps = 8000 + r() * 7000, b0 = 0.002 + r() * 0.006;
+  const absorb = c => Math.max(0, Math.round((eps * c + b0 + 0.004 * gauss(r)) * 1000) / 1000);
+  const stds = LAB_C_STD.map(c => ({ c, a: absorb(c) }));
+  const unk = [1, 2, 3].map(k => { const c = (0.8 + r() * 3.8) * 1e-5; return { label: 'U' + k, a: absorb(c) }; });
+  const fit = linfit(stds.map(s => s.c), stds.map(s => s.a));
+  unk.forEach(u => u.c = (u.a - fit.b) / fit.m);
+  return { name, eps, stds, unk, fit };
+}
+function labCBlock(d) {
+  const out = [['Name', ''], ['', ''], ['Concentration (M)', 'Absorbance', '', 'Unknown', 'Absorbance']];
+  d.stds.forEach((s, i) => out.push([s.c.toExponential(2).toUpperCase().replace(/E([+-])(\d)$/, 'E$10$2'), s.a.toFixed(3), '', d.unk[i] ? d.unk[i].label : '', d.unk[i] ? d.unk[i].a.toFixed(3) : '']));
+  return out;
+}
+function checkLabC(wbk) {
+  const { T, task } = taskMaker('C');
+  const { sheet } = findChartSheet(wbk, (c, r) => /^concentration/i.test(cellText(c['A' + r])) && /^absorbance/i.test(cellText(c['B' + r])));
+  const cells = sheet.cells;
+  const tName = task('name'), name = cellText(cells.B1);
+  if (!name || /^name$/i.test(name)) { tName.msg = 'Type your name in B1, exactly as you typed it on the Lab page.'; return { lab: 'C', tasks: T, name: '', done: false }; }
+  tName.ok = true; tName.msg = `Checking the data set for "${name}".`;
+  const d = labCData(name);
+  const tData = task('data'), bad = [];
+  d.stds.forEach((s, i) => { if (!cells['A' + (4 + i)] || !near(cells['A' + (4 + i)].v, s.c)) bad.push('A' + (4 + i)); if (!cells['B' + (4 + i)] || !near(cells['B' + (4 + i)].v, s.a)) bad.push('B' + (4 + i)); });
+  d.unk.forEach((u, i) => { if (!cells['E' + (4 + i)] || !near(cells['E' + (4 + i)].v, u.a)) bad.push('E' + (4 + i)); });
+  if (bad.length >= 12) { tData.msg = `This doesn't hold the data set for "${name}". Paste the data from the Lab page at A1, and make sure B1 has exactly the name you typed there.`; return { lab: 'C', tasks: T, name, done: false }; }
+  if (bad.length) tData.msg = `${fmtList(bad.slice(0, 6))} ${bad.length > 1 ? "don't" : "doesn't"} match the Lab data. Paste the data again at A1.`;
+  else { tData.ok = true; tData.msg = '6 standards and 3 unknowns in place.'; }
+
+  const tChart = task('chart'), { charts } = allCharts(wbk, sheet);
+  if (!charts.length) { tChart.msg = 'No chart found. Select A3:B9, then Insert → Scatter (markers only).'; return { lab: 'C', tasks: T, name, done: false }; }
+  const ch = charts.slice().sort((a, b) => b.types.includes('scatterChart') - a.types.includes('scatterChart'))[0];
+  if (ch.types.length === 1 && ch.types[0] === 'scatterChart') { tChart.ok = true; tChart.msg = 'Scatter (XY).'; }
+  else tChart.msg = `This is a ${chartKind(ch.types)} chart. A calibration curve needs a Scatter chart, so the concentrations sit at their true positions on the x axis. Select A3:B9 → Insert → Scatter.`;
+
+  const tSer = task('series'), sMsg = [];
+  const ser = ch.series, s0 = ser.find(q => { const y = parseRef(q.y && q.y.f); return y && y.col === 'B'; });
+  if (!s0) {
+    const sw = ser.find(q => { const x = parseRef(q.x && q.x.f); return x && x.col === 'B'; });
+    sMsg.push(sw ? 'Absorbance is on the x axis. Concentration (A) goes on x and absorbance (B) on y: in Select Data, swap the X and Y ranges. (With the axes swapped, the slope is upside down.)' : 'No series plots Absorbance (B4:B9) against Concentration (A4:A9).');
+  } else {
+    const x = s0.x && parseRef(s0.x.f), y = parseRef(s0.y.f);
+    if (!x) sMsg.push('The series has no x values, so Excel plotted it against 1, 2, 3, …. Select Data → Edit → X values = A4:A9.');
+    else if (x.col !== 'A' || x.r1 !== 4 || x.r2 !== 9) sMsg.push(`X values are ${x.text}; they should be A4:A9${x.r1 === 3 ? ' (the header row is not data)' : ''}.`);
+    if (y.r1 !== 4 || y.r2 !== 9) sMsg.push(`Y values are ${y.text}; they should be B4:B9${y.r1 === 3 ? ' (the header row is not data)' : ''}.`);
+  }
+  const others = s0 ? ser.filter(q => q !== s0) : [];
+  if (others.length) {
+    const unkPlotted = others.some(q => { const y = parseRef(q.y && q.y.f), x = parseRef(q.x && q.x.f); return (y && /[DEF]/.test(y.col)) || (x && /[DEF]/.test(x.col)); });
+    sMsg.push(unkPlotted ? 'The unknowns are plotted too. The calibration curve uses the standards only; you find the unknowns from the line, in F4:F6.' : 'Only one series belongs on this chart: remove the extra one in Select Data.');
+  }
+  if (!sMsg.length) { tSer.ok = true; tSer.msg = 'Absorbance against concentration, standards only.'; } else tSer.msg = sMsg.join(' ');
+
+  const tMk = task('markers');
+  if (!s0) tMk.msg = 'Fix the series first.';
+  else if (!s0.noLine) tMk.msg = 'The standards are joined by lines. Show markers only; the trendline is the only line a calibration curve needs. Format the series → Line → No line.';
+  else if (s0.noMarker) tMk.msg = 'The markers are turned off. Format the series → Marker → Automatic.';
+  else { tMk.ok = true; tMk.msg = 'Markers, no lines.'; }
+
+  labelTasks(task, ch, { x: [/conc/i, 'Concentration (M)'], y: [/absorb/i, 'Absorbance', false], legend: false });
+
+  const tTr = task('trend');
+  const tl = s0 && s0.trend;
+  if (!s0) tTr.msg = 'Fix the series first.';
+  else if (!tl) tTr.msg = 'Add a trendline: click a data point → Add Trendline → Linear, then check Display Equation on chart and Display R-squared value on chart.';
+  else if (tl.type !== 'linear') tTr.msg = `The trendline is ${tl.type}. Beer's law is a straight line: choose Linear.`;
+  else if (tl.forced) tTr.msg = 'The trendline is forced through zero (Set Intercept is checked). Uncheck it: let the fit find its own intercept, as SLOPE and INTERCEPT do.';
+  else if (!tl.eq || !tl.r2) tTr.msg = `Show ${!tl.eq && !tl.r2 ? 'the equation and R²' : !tl.eq ? 'the equation' : 'R²'} on the chart: Format Trendline → ${!tl.eq ? 'Display Equation on chart' : ''}${!tl.eq && !tl.r2 ? ' and ' : ''}${!tl.r2 ? 'Display R-squared value on chart' : ''}.`;
+  else { tTr.ok = true; tTr.msg = 'Linear, with the equation and R² shown.'; }
+
+  // fit cells I4:I6 with labels in H4:H6
+  const tFit = task('fit'), f = d.fit, fMsg = [];
+  const lab = ['H4', 'H5', 'H6'].map(r => cellText(cells[r]));
+  if (!/slope/i.test(lab[0]) || !/intercept/i.test(lab[1]) || !/r\s*(²|\^?2)|r-?sq/i.test(lab[2])) fMsg.push('Label H4:H6 as Slope, Intercept, R².');
+  const fitCell = (ref, exp, what, alts) => {
+    const c = cells[ref];
+    if (!c || c.v == null || c.v === '') return `${ref} is empty: use =${what}(B4:B9,A4:A9).`;
+    if (typeof c.v !== 'number') return `${ref} shows "${c.v}", not a number.`;
+    if (near(c.v, exp)) return c.formula ? '' : `${ref} is a typed number; use =${what}(B4:B9,A4:A9).`;
+    for (const [v, m] of alts) if (v != null && near(c.v, v)) return `${ref}: ${m}`;
+    if (Math.abs(c.v - exp) <= 0.01 * Math.abs(exp)) return `${ref} is close but not exact: it looks copied from the chart's equation. Use =${what}(B4:B9,A4:A9).`;
+    return `${ref} isn't the ${what.toLowerCase()} of the standards: =${what}(B4:B9,A4:A9).`;
+  };
+  const swapMsg = 'the ranges are swapped. The order is known y\'s (absorbance, B4:B9) first, then known x\'s (concentration, A4:A9).';
+  fMsg.push(fitCell('I4', f.m, 'SLOPE', [[f.mSwap, swapMsg]]), fitCell('I5', f.b, 'INTERCEPT', [[f.bSwap, swapMsg]]),
+    fitCell('I6', f.r2, 'RSQ', [[Math.sqrt(f.r2), 'this is r (CORREL). R² is its square: use =RSQ(B4:B9,A4:A9).']]));
+  const fm = fMsg.filter(Boolean);
+  if (!fm.length) { tFit.ok = true; tFit.msg = 'Slope, intercept and R² match the standards.'; } else tFit.msg = fm.slice(0, 3).join(' ');
+
+  const tU = task('unknowns'), uMsg = [];
+  if (!/conc/i.test(cellText(cells.F3))) uMsg.push('Put the header "Concentration (M)" in F3.');
+  const uc = d.unk.map((u, i) => ({ u, ref: 'F' + (4 + i), c: cells['F' + (4 + i)] }));
+  const K = {};
+  const add = (k, ref) => (K[k] = K[k] || []).push(ref);
+  uc.forEach(({ u, ref, c }) => {
+    if (!c || c.v == null || c.v === '') return add('empty', ref);
+    if (typeof c.v !== 'number') return add('notnum', ref);
+    if (near(c.v, u.c)) { if (!c.formula) add('typed', ref); else if (/\d\.\d{3,}/.test(c.ftext) && !/\$?I\$?[45]\b/i.test(c.ftext)) add('chartnums', ref); return; }
+    if (!c.formula) return add(Math.abs(c.v - u.c) <= 0.002 * Math.abs(u.c) ? 'typed' : 'other', ref);
+    if (!tFit.ok && /\$?I\$?[45]\b/i.test(c.ftext)) return add('fitfirst', ref);
+    if (near(c.v, u.a / f.m)) return add('noint', ref);
+    if (near(c.v, (u.a + f.b) / f.m)) return add('plusint', ref);
+    if (near(c.v, f.m * u.a + f.b) || near(c.v, f.m * u.a)) return add('absorb', ref);
+    if (Math.abs(c.v - u.c) <= 0.01 * Math.abs(u.c)) return add('chartnums', ref);
+    add('other', ref);
+  });
+  const UMSG = {
+    empty: 'empty.', notnum: 'showing an error or text instead of a number.',
+    typed: 'typed numbers. Use a formula: =(E4-$I$5)/$I$4, filled down.',
+    chartnums: 'using numbers copied from the chart\'s equation (rounded). Refer to the slope and intercept cells instead: =(E4-$I$5)/$I$4.',
+    fitfirst: 'calculated from the slope or intercept in I4:I5, which aren\'t right yet. Fix those first.',
+    noint: 'leaving out the intercept: c = (A − b) ÷ m.', plusint: 'adding the intercept; subtract it: c = (A − b) ÷ m.',
+    absorb: 'calculating an absorbance, not a concentration. Solve A = m·c + b for c: c = (A − b) ÷ m.',
+    other: 'not (A − b) ÷ m for their unknowns.'
+  };
+  const firstOK = uc[0].c && uc[0].c.formula && near(uc[0].c.v, d.unk[0].c);
+  if (firstOK && K.other && K.other.length === 2 && !K.other.includes('F4')) uMsg.push('F4 is right but F5 and F6 are not. When you filled down, the slope and intercept references moved to I5, I6, …. Make them fixed: =(E4-$I$5)/$I$4.');
+  else for (const k of Object.keys(UMSG)) if (K[k]) uMsg.push(`${fmtList(K[k])} ${K[k].length > 1 ? 'are' : 'is'} ${UMSG[k]}`);
+  if (!uMsg.length) { tU.ok = true; tU.msg = 'All three unknowns right.'; } else tU.msg = uMsg.slice(0, 3).join(' ');
+
+  const tFmt = task('fmt'), off = [];
+  for (const r of ['I4', 'I5', 'F4', 'F5', 'F6']) { const c = cells[r]; if (c && typeof c.v === 'number' && !(c.fmt.sci && c.fmt.dec === 3)) off.push(r); }
+  { const c = cells.I6; if (c && typeof c.v === 'number' && !(!c.fmt.sci && !c.fmt.general && c.fmt.dec === 4)) off.push('I6'); }
+  if (!['I4', 'I5', 'I6', 'F4', 'F5', 'F6'].every(r => cells[r] && typeof cells[r].v === 'number')) tFmt.msg = 'Finish I4:I6 and F4:F6 first; then their format is checked.';
+  else if (!off.length) { tFmt.ok = true; tFmt.msg = 'Slope, intercept and concentrations like 1.234E+04; R² like 0.9987.'; }
+  else tFmt.msg = `Check the number format of ${fmtList(off)}. Slope, intercept and concentrations: Scientific, 3 decimals. R²: Number, 4 decimals.`;
+
+  const done = T.every(t => t.ok);
+  return { lab: 'C', tasks: T, name, done, code: done ? completionCode(name, 'C') : null };
+}
+
+// ---------- which lab is this workbook? ----------
+function detectLab(wbk) {
+  for (const sh of wbk.sheets) if (/^volume\s*\(ml\)/i.test(cellText(sh.cells.A1)) && /^mass|water|ethanol/i.test(cellText(sh.cells.B1))) return 'K';
+  for (const sh of wbk.sheets) for (let r = 1; r <= 8; r++) {
+    const a = cellText(sh.cells['A' + r]).toLowerCase(), b = cellText(sh.cells['B' + r]).toLowerCase(), c = cellText(sh.cells['C' + r]).toLowerCase();
+    if (a === 'sample' && b.startsWith('trial')) return 'A';
+    if (a.startsWith('volume (l)') && b.startsWith('p at')) return 'B';
+    if (a.startsWith('concentration') && b.startsWith('absorbance')) return 'C';
+    if (c.startsWith('volume (ml)')) return 'A';
+  }
+  return null;
+}
+function checkWorkbook(wbk, lab) {
+  lab = lab || detectLab(wbk);
+  if (lab === 'A') { const r = checkLabA(wbk); r.lab = 'A'; return r; }
+  if (lab === 'B') return checkLabB(wbk);
+  if (lab === 'C') return checkLabC(wbk);
+  if (lab === 'K') return { lab: 'K', tasks: [], name: '', done: false };
+  return { lab: null, tasks: [], name: '', done: false };
+}
+
+/* Campbell Key Assessment: Mass vs Volume plot (same data for every student). */
+const KA = {
+  V: [5.0, 10.0, 15.0, 20.0, 25.0, 30.0, 35.0, 40.0],
+  M: [4.12, 7.94, 12.34, 16.79, 18.98, 24.36, 27.88, 31.01],   // ethanol, 0.789 g/mL, with 3% CV noise
+  hdr: ['Volume (mL)', 'Mass (g)']
+};
+const kaBlock = () => [KA.hdr].concat(KA.V.map((v, i) => [v.toFixed(1), KA.M[i].toFixed(2)]));
+const KA_TASKS = [['chart', 'A chart of the data'], ['title', '1. A descriptive title'], ['subtitle', '2. A subtitle with your name, in a smaller font'],
+  ['xaxis', '3. x-axis label with units'], ['yaxis', '4. y-axis label with units'], ['data', '5. Data: mass vs. volume as an XY (Scatter) plot'],
+  ['trend', '6. Regression line with its equation and R² value']];
+const KA_DEFAULT_TITLE_SZ = 1400; // Excel's default chart-title size
+const ptOf = s => (s / 100).toString() + ' pt';
+
+// values of a chart range like 'Sheet1'!$A$2:$A$9 (null if it can't be read)
+function rangeValues(wbk, homeSheet, f) {
+  if (!f) return null;
+  const m = /^(?:'?(.*?)'?!)?\$?([A-Z]+)\$?(\d+)(?::\$?([A-Z]+)\$?(\d+))?$/.exec(f.trim());
+  if (!m) return null;
+  const sh = (m[1] && wbk.sheets.find(s => s.name === m[1].replace(/''/g, "'"))) || homeSheet;
+  const c1 = colToNum(m[2]), c2 = colToNum(m[4] || m[2]), r1 = +m[3], r2 = +(m[5] || m[3]), out = [];
+  for (let r = r1; r <= r2; r++) for (let c = c1; c <= c2; c++) { const cell = sh.cells[addr(c, r)]; out.push(cell ? cell.v : null); }
+  return { values: out, text: (m[4] ? `${m[2]}${m[3]}:${m[4]}${m[5]}` : `${m[2]}${m[3]}`) };
+}
+const sameSet = (got, want) => got && got.length === want.length && want.every(w => got.some(g => typeof g === 'number' && Math.abs(g - w) < 0.005));
+
+// title, subtitle with name, axis titles: the elements both capstones share
+const MASS_VOL_AXES = { x: [/vol/i, /mass/i, 'Volume (mL)'], y: [/mass/i, /vol/i, 'Mass (g)'] };
+function plotElements(task, ch, studentName, eg, axes = MASS_VOL_AXES) {
+  const placeholder = t => !t || /^(chart|axis) title$/i.test(t.trim());
+  const lines = ch.title ? ch.title.lines : [];
+  const nm = normName(studentName);
+  const hasName = t => nm && normName(t).includes(nm);
+
+  // 1. title: the first line, without the name if the name was typed on it
+  const tT = task('title');
+  const stripName = t => nm ? t.replace(new RegExp(studentName.trim().replace(/[.*+?^${}()|[\]\\]/g, '\\$&').replace(/\s+/g, '\\s+'), 'i'), '').replace(/^[\s,–—:-]+|[\s,–—:-]+$/g, '') : t;
+  const first = lines[0], titleText = first ? stripName(first.text) : '';
+  if (!ch.title) tT.msg = `There's no chart title. Add one (Chart → Chart Title) that says what the plot shows, e.g. "${eg}".`;
+  else if (!lines.length || placeholder(ch.title.text)) tT.msg = `The title still says "Chart Title". Click it and type a descriptive title, e.g. "${eg}".`;
+  else if (!titleText) tT.msg = 'The first line of the title is only your name. Put a descriptive title on the first line and your name on a second, smaller line.';
+  else if (titleText.split(/\s+/).length < 3) tT.msg = `"${titleText}" is too short to be descriptive. Say what is plotted, e.g. "${eg}".`;
+  else { tT.ok = true; tT.msg = `"${titleText}"`; }
+
+  // 2. subtitle: a later line of the title with the name, smaller than the first line
+  const tS = task('subtitle');
+  const subIdx = lines.findIndex((l, i) => i > 0 && hasName(l.text));
+  if (!nm) tS.msg = 'Type your name above (as in Blackboard) so the subtitle can be checked.';
+  else if (!ch.title || !lines.length || placeholder(ch.title.text)) tS.msg = 'Add the chart title first; your name goes on a second line of it.';
+  else if (subIdx < 0 && hasName(lines[0].text) && lines.length > 1 && !stripName(lines[0].text)) tS.msg = 'Your name is above the title. Swap them: the descriptive title goes first, and your name on the second, smaller line.';
+  else if (subIdx < 0 && hasName(lines[0].text)) tS.msg = 'Your name is on the same line as the title. Put it on its own line: click just before your name and press Enter, then make that line smaller.';
+  else if (subIdx < 0) tS.msg = lines.length > 1 ? `The second line of the title, "${lines[1].text}", should include your name, "${studentName.trim()}", as typed above.` : 'Add a subtitle: click at the end of the title, press Enter, type your name, then make that line smaller (select it → Home → Font Size).';
+  else {
+    const tSizes = lines[0].sizes.map(x => x || KA_DEFAULT_TITLE_SZ), sSizes = lines[subIdx].sizes.map(x => x || KA_DEFAULT_TITLE_SZ);
+    const tMin = Math.min(...tSizes), sMax = Math.max(...sSizes);
+    if (!(sMax < tMin)) tS.msg = `Your name line is ${ptOf(sMax)} and the title is ${ptOf(tMin)}. Make the name line smaller: select just that line → Home → Font Size (e.g. 2–4 pt smaller than the title).`;
+    else { tS.ok = true; tS.msg = `"${lines[subIdx].text}" at ${ptOf(sMax)}, under a ${ptOf(tMin)} title.`; }
+  }
+
+  // 3–4. axis titles
+  const unit = t => /\(.+\)/.test(t) || /%/.test(t) || /\b(mL|g|L|cm3|cm³|kg|mg|g\/mL)\b/.test(t);
+  const axisTask = (id, ax, label, re, other, example) => {
+    const t = task(id);
+    if (!ax || !ax.title) t.msg = `There's no ${label} axis title. Add Axis Titles and type "${example}".`;
+    else if (placeholder(ax.title.text)) t.msg = `The ${label} axis title still says "Axis Title"; type "${example}".`;
+    else if (!re.test(ax.title.text) && other.test(ax.title.text)) t.msg = `The ${label} axis title "${ax.title.text}" names the wrong quantity: the ${label} axis is ${example.split(' (')[0].toLowerCase()} (check the data too).`;
+    else if (!re.test(ax.title.text)) t.msg = `The ${label} axis title "${ax.title.text}" should name the quantity: e.g. "${example}".`;
+    else if (!unit(ax.title.text)) t.msg = `Add the unit to the ${label} axis title: "${example}".`;
+    else { t.ok = true; t.msg = `"${ax.title.text}"`; }
+  };
+  axisTask('xaxis', ch.x, 'x', ...axes.x);
+  axisTask('yaxis', ch.y, 'y', ...axes.y);
+
+}
+
+function checkKeyAssessment(wbk, studentName) {
+  const T = [];
+  const task = id => { const row = KA_TASKS.find(t => t[0] === id); const t = { id, title: row[1], module: 11, ok: false, msg: '' }; T.push(t); return t; };
+  const tChart = task('chart');
+  let home = wbk.sheets[0], ch = null;
+  for (const sh of wbk.sheets) { const c = (sh.charts || []).find(x => !x.error); if (c) { home = sh; ch = c; break; } }
+  if (!ch) { tChart.msg = 'No chart found in this workbook. Select the data (both columns, with headers) and Insert → Scatter.'; return { tasks: T, done: false }; }
+  tChart.ok = true; tChart.msg = `Found it (on sheet "${home.name}").`;
+  plotElements(task, ch, studentName, 'Mass vs. Volume of Ethanol');
+
+  // 5. data
+  const tD = task('data'), dm = [];
+  if (!(ch.types.length === 1 && ch.types[0] === 'scatterChart')) dm.push(`This is a ${chartKind(ch.types)} chart. Use Scatter (XY)${ch.types.includes('lineChart') ? ': a Line chart treats the volumes as labels 1, 2, 3, …, so its regression equation is wrong' : ''}. Select the data → Insert → Scatter.`);
+  const ser = ch.series.filter(s => s.y);
+  if (!ser.length) dm.push('The chart has no data series.');
+  else {
+    if (ser.length > 1) dm.push(`The chart has ${ser.length} series; it should have one (mass vs. volume). Remove the others in Select Data.`);
+    const s = ser[0], xv = s.x && rangeValues(wbk, home, s.x.f), yv = rangeValues(wbk, home, s.y.f);
+    const xs = xv && xv.values.filter(v => typeof v === 'number'), ys = yv && yv.values.filter(v => typeof v === 'number');
+    if (!s.x) dm.push('The series has no x values, so Excel plotted the masses against 1, 2, 3, …. Select Data → Edit → X values = the volume column.');
+    else if ((xv && xv.values.some(v => typeof v === 'string')) || yv.values.some(v => typeof v === 'string')) dm.push(`The ${xv && xv.values.some(v => typeof v === 'string') ? 'x' : 'y'} range (${(xv && xv.values.some(v => typeof v === 'string') ? xv : yv).text}) includes the header row, so the points are shifted. In Select Data, start both ranges at row 2.`);
+    else if (xs.length !== ys.length) dm.push(`The x range (${xv.text}) and y range (${yv.text}) are different lengths, so the points don't pair up. Use the same rows for both.`);
+    else if (sameSet(xs, KA.M) && sameSet(ys, KA.V)) dm.push('The axes are swapped: mass is on x and volume on y. Mass vs. Volume means mass on the y axis: in Select Data, swap the X and Y ranges (and the axis titles).');
+    else {
+      if (!sameSet(xs, KA.V)) dm.push(`The x values (${xv ? xv.text : '?'}) aren't the 8 volumes from the data.`);
+      if (!sameSet(ys, KA.M)) dm.push(`The y values (${yv ? yv.text : '?'}) aren't the 8 masses from the data.`);
+      if (sameSet(xs, KA.V) && sameSet(ys, KA.M)) {
+        const pairs = xs.map((x, i) => [x, ys[i]]), ok = pairs.every(([x, y]) => KA.V.some((v, k) => Math.abs(v - x) < 0.005 && Math.abs(KA.M[k] - y) < 0.005));
+        if (!ok) dm.push('Some masses are no longer beside their volumes (was one column sorted by itself?). Paste the data again.');
+      }
+    }
+  }
+  if (!dm.length) { tD.ok = true; tD.msg = 'Mass (y) against volume (x), all 8 points.'; } else tD.msg = dm.slice(0, 3).join(' ');
+
+  // 6. regression line
+  const tR = task('trend'), tl = ser[0] && ser[0].trend;
+  if (!ser.length) tR.msg = 'Plot the data first.';
+  else if (!tl) tR.msg = 'Add the regression line: Chart → Trendline → Linear, then turn on Display Equation on chart and Display R-squared value on chart.';
+  else if (tl.type !== 'linear') tR.msg = `The trendline is ${tl.type === 'poly' ? 'polynomial' : tl.type}. Mass is proportional to volume: choose Linear.`;
+  else if (tl.forced) tR.msg = 'The line is forced through zero (Set Intercept is checked). Use standard linear regression: uncheck Set Intercept in Format Trendline.';
+  else if (!tl.eq || !tl.r2) tR.msg = `Show ${!tl.eq && !tl.r2 ? 'the equation and R²' : !tl.eq ? 'the equation' : 'the R² value'} on the chart: Format Trendline → ${[!tl.eq && 'Display Equation on chart', !tl.r2 && 'Display R-squared value on chart'].filter(Boolean).join(' and ')}.`;
+  else { tR.ok = true; tR.msg = 'Standard linear regression, with the equation and R² shown.'; }
+
+  return { tasks: T, done: T.every(t => t.ok) };
+}
+
+/* ---------- Capstone 2: five ethanol–water solutions, two plots (same data for every student) ----------
+   Densities at 25 °C by mass % ethanol (Engineering ToolBox; 25 and 75 % interpolated), 3% CV noise. */
+const KA2 = {
+  V: KA.V,
+  sols: [
+    { pct: 0, label: '0% ethanol (water)', rho: 0.997, M: [4.80, 9.56, 14.41, 20.87, 24.66, 29.34, 34.21, 39.97] },
+    { pct: 25, label: '25% ethanol', rho: 0.959, M: [4.82, 8.99, 14.07, 19.34, 24.61, 29.14, 32.84, 38.28] },
+    { pct: 50, label: '50% ethanol', rho: 0.910, M: [4.44, 9.03, 13.95, 18.50, 21.67, 26.81, 30.52, 37.75] },
+    { pct: 75, label: '75% ethanol', rho: 0.851, M: [4.24, 8.65, 12.88, 17.58, 20.87, 27.25, 29.11, 34.15] },
+    { pct: 100, label: '100% ethanol', rho: 0.785, M: [3.94, 7.65, 12.18, 15.97, 20.44, 22.73, 26.98, 32.23] }
+  ]
+};
+KA2.sols.forEach(s => { s.fit = linfit(KA2.V, s.M); });
+const ka2Block = () => [['Volume (mL)'].concat(KA2.sols.map(s => s.label))].concat(KA2.V.map((v, i) => [v.toFixed(1)].concat(KA2.sols.map(s => s.M[i].toFixed(2)))));
+const KA2_TASKS = [
+  ['p1chart', 'Plot 1 · mass vs. volume: a chart of the data', 12, 'Plot 1 · Mass vs. Volume'],
+  ['p1title', '1. A descriptive title', 11], ['p1subtitle', '2. A subtitle with your name, in a smaller font', 11],
+  ['p1xaxis', '3. x-axis label with units', 11], ['p1yaxis', '4. y-axis label with units', 11],
+  ['p1data', '5. Data for all five solutions on one XY (Scatter) plot', 12], ['p1colors', '6. Each solution in its own color, with a legend', 12],
+  ['p1trend', '7. A regression line for each solution', 12],
+  ['table', '8. Table of % ethanol, slope (density), intercept and R² in H1:K6', 12, 'Table'],
+  ['p2chart', 'Plot 2 · density vs. % ethanol: a second chart', 12, 'Plot 2 · Density vs. % Ethanol'],
+  ['p2title', '9. A descriptive title', 11], ['p2subtitle', '10. A subtitle with your name, in a smaller font', 11],
+  ['p2xaxis', '11. x-axis label with units', 11], ['p2yaxis', '12. y-axis label with units', 11],
+  ['p2data', '13. Data: density (y) vs. % ethanol (x), from your table', 12]
+];
+// which solution (by % ethanol) does a label name?
+function pctOf(text) {
+  const t = String(text == null ? '' : text).toLowerCase();
+  if (/water/.test(t) && !/ethanol/.test(t)) return 0;
+  const m = /(\d+)\s*%/.exec(t);
+  if (m && KA2.sols.some(s => s.pct === +m[1])) return +m[1];
+  if (/ethanol/.test(t) && !/water/.test(t) && !m) return 100;
+  return null;
+}
+const solByPct = p => KA2.sols.find(s => s.pct === p);
+const PCT_AXES = { x: [/ethanol|%/i, /density/i, '% Ethanol (by mass)'], y: [/density/i, /ethanol|%/i, 'Density (g/mL)'] };
+
+function checkCapstone2(wbk, studentName) {
+  const T = [];
+  const task = id => { const row = KA2_TASKS.find(t => t[0] === id); const t = { id, title: row[1], module: row[2], group: row[3] || null, ok: false, msg: '' }; T.push(t); return t; };
+  const all = wbk.sheets.flatMap(sh => (sh.charts || []).filter(c => !c.error).map(c => ({ sh, c })));
+  const ysOf = (sh, s) => { const r = s.y && rangeValues(wbk, sh, s.y.f); return r ? r.values.filter(v => typeof v === 'number') : []; };
+  const xsOf = (sh, s) => { const r = s.x && rangeValues(wbk, sh, s.x.f); return r ? r.values.filter(v => typeof v === 'number') : []; };
+  const pctSet = xs => sameSet(xs, KA2.sols.map(s => s.pct)) ? 1 : sameSet(xs.map(x => x * 100), KA2.sols.map(s => s.pct)) ? 100 : 0;
+  const massScore = ({ sh, c }) => c.series.filter(s => { const y = ysOf(sh, s), x = xsOf(sh, s); return KA2.sols.some(q => sameSet(y, q.M) || sameSet(x, q.M)); }).length;
+  const densScore = ({ sh, c }) => c.series.filter(s => { const y = ysOf(sh, s), x = xsOf(sh, s); return pctSet(x) || pctSet(y) || (y.length === 5 && y.every(v => v > 0.7 && v < 1.1)); }).length;
+  const p1 = all.filter(o => massScore(o) > 0).sort((a, b) => massScore(b) - massScore(a))[0] || (all.length === 1 && !densScore(all[0]) ? all[0] : null);
+  const p2 = all.filter(o => o !== p1 && densScore(o) > 0)[0] || all.find(o => o !== p1) || null;
+
+  // ---------- Plot 1 ----------
+  const t1 = task('p1chart');
+  if (!p1) t1.msg = 'No mass-vs-volume chart found. Select A1:F9 (all six columns, with headers) and Insert → Scatter.';
+  else {
+    t1.ok = true; t1.msg = `Found it (on sheet "${p1.sh.name}").`;
+    const { sh, c: ch } = p1;
+    plotElements(id => task('p1' + id), ch, studentName, 'Mass vs. Volume of Ethanol–Water Solutions');
+    const tD = task('p1data'), dm = [], matched = {}, extra = [];
+    if (!(ch.types.length === 1 && ch.types[0] === 'scatterChart')) dm.push(`This is a ${chartKind(ch.types)} chart. Use Scatter (XY)${ch.types.includes('lineChart') ? ': a Line chart treats the volumes as labels 1, 2, 3, …, so its regressions are wrong' : ''}. Select A1:F9 → Insert → Scatter.`);
+    for (const s of ch.series.filter(q => q.y)) {
+      const xv = s.x && rangeValues(wbk, sh, s.x.f), yv = rangeValues(wbk, sh, s.y.f), xs = xsOf(sh, s), ys = ysOf(sh, s);
+      const sol = KA2.sols.find(q => sameSet(ys, q.M)), solX = KA2.sols.find(q => sameSet(xs, q.M));
+      if (sol && !matched[sol.pct]) {
+        matched[sol.pct] = s;
+        if (!s.x) dm.push(`The ${sol.label} series has no x values, so Excel plotted it against 1, 2, 3, …. Select Data → Edit → X values = A2:A9.`);
+        else if (xv.values.some(v => typeof v === 'string') || yv.values.some(v => typeof v === 'string')) dm.push(`The ${sol.label} series includes the header row in its range, so its points are shifted. Start its ranges at row 2.`);
+        else if (!sameSet(xs, KA2.V)) dm.push(`The ${sol.label} series uses ${xv.text} for x; it should be the volumes, A2:A9.`);
+        else if (!xs.every((x, i) => KA2.V.some((v, k) => Math.abs(v - x) < 0.005 && Math.abs(sol.M[k] - ys[i]) < 0.005))) dm.push(`Some ${sol.label} masses are no longer beside their volumes. Paste the data again.`);
+      } else if (solX && sameSet(ys, KA2.V) && !matched[solX.pct]) { matched[solX.pct] = s; dm.push(`The ${solX.label} series has its axes swapped (mass on x, volume on y). In Select Data, swap its X and Y ranges.`); }
+      else extra.push(s);
+    }
+    const missing = KA2.sols.filter(q => !matched[q.pct]);
+    if (missing.length) dm.push(`Not plotted: ${fmtList(missing.map(q => q.label))}. ${Object.keys(matched).length <= 1 ? 'Select all six columns (A1:F9) before inserting the chart, or u' : 'U'}se Select Data → Add: X values A2:A9, Y values that solution's column.`);
+    if (extra.length) dm.push(`${extra.length} extra series ${extra.length > 1 ? "don't" : "doesn't"} match any solution's data (e.g. Volume plotted as a series). Remove ${extra.length > 1 ? 'them' : 'it'} in Select Data.`);
+    if (!dm.length) { tD.ok = true; tD.msg = 'All five solutions, mass (y) against volume (x).'; } else tD.msg = dm.slice(0, 3).join(' ');
+
+    const tC = task('p1colors'), cm = [], got = KA2.sols.filter(q => matched[q.pct]);
+    if (got.length < 2) cm.push('Plot the solutions first.');
+    else {
+      const col = q => matched[q.pct].color || ('auto:' + matched[q.pct].idx);
+      const groups = {};
+      got.forEach(q => (groups[col(q)] = groups[col(q)] || []).push(q.label));
+      Object.values(groups).filter(g => g.length > 1).forEach(g => cm.push(`${fmtList(g)} are the same color. Give each solution its own color: click a series → Format Data Series → Marker → Fill (and Border).`));
+      if (!ch.legend) cm.push('Turn the legend on (Chart Elements → Legend) so readers can tell which color is which solution.');
+      else {
+        const bad = got.filter(q => { const s = matched[q.pct]; let n = s.name; if (!n && s.nameRef) { const r = rangeValues(wbk, sh, s.nameRef); n = r && r.values[0]; } return pctOf(n) !== q.pct; });
+        if (bad.length) cm.push(`The legend doesn't name ${fmtList(bad.map(q => q.label))} (it shows "Series…" or another name). Select Data → Edit → Series name: click that solution's header cell in row 1.`);
+      }
+    }
+    if (!cm.length) { tC.ok = true; tC.msg = `${got.length} colors, and the legend names each solution.`; } else tC.msg = cm.join(' ');
+
+    const tR = task('p1trend'), rm = [];
+    if (!got.length) rm.push('Plot the data first.');
+    const noLine = got.filter(q => !matched[q.pct].trend);
+    if (noLine.length) rm.push(`${fmtList(noLine.map(q => q.label))} ${noLine.length > 1 ? 'have' : 'has'} no regression line. Click that solution's points → Add Trendline → Linear (one solution at a time).`);
+    for (const q of got) {
+      const tl = matched[q.pct].trend; if (!tl) continue;
+      if (tl.type !== 'linear') rm.push(`The ${q.label} trendline is ${tl.type === 'poly' ? 'polynomial' : tl.type}; choose Linear.`);
+      else if (tl.forced) rm.push(`The ${q.label} line is forced through zero; uncheck Set Intercept (standard linear regression).`);
+    }
+    if (got.length && got.length < 5) rm.push('Plot all five solutions, each with its own line.');
+    if (!rm.length) { tR.ok = true; tR.msg = 'Five linear regression lines.'; } else tR.msg = rm.join(' ');
+  }
+
+  // ---------- Table H1:K6 ----------
+  const tT = task('table'), tm = [];
+  const tsh = (p1 || p2 || { sh: wbk.sheets[0] }).sh, cells = tsh.cells, txt = r => cellText(cells[r]);
+  if (!(/ethanol|%/i.test(txt('H1')) && /slope|density/i.test(txt('I1')) && /intercept/i.test(txt('J1')) && /r\s*(²|\^?2)|r-?sq/i.test(txt('K1'))))
+    tm.push('Put the headers % Ethanol, Slope = Density (g/mL), Intercept (g), R² in H1:K1.');
+  const seen = {};
+  for (const r of [2, 3, 4, 5, 6]) {
+    const hc = cells['H' + r];
+    let p = null;
+    if (hc && typeof hc.v === 'number') { const v = hc.fmt.pct || (hc.v > 0 && hc.v <= 1 && !Number.isInteger(hc.v)) ? Math.round(hc.v * 100) : hc.v; if (KA2.sols.some(s => s.pct === v)) p = v; }
+    if (p === null) { tm.push(hc && typeof hc.v === 'string' && pctOf(hc.v) !== null ? `H${r} is text ("${hc.v}"); type just the number (e.g. ${pctOf(hc.v)}) so Plot 2 can use it.` : `H${r} should be one of the % ethanol values: 0, 25, 50, 75 or 100.`); continue; }
+    if (seen[p]) { tm.push(`${p}% ethanol appears twice (H${seen[p]} and H${r}).`); continue; }
+    seen[p] = r;
+    const sol = solByPct(p), f = sol.fit, others = KA2.sols.filter(q => q !== sol);
+    const one = (ref, exp, what, fn, swapV, otherV) => {
+      const c = cells[ref];
+      if (!c || c.v == null || c.v === '') return `${ref} is empty: =${fn}(…).`;
+      if (typeof c.v !== 'number') return `${ref} shows "${c.v}", not a number.`;
+      if (near(c.v, exp)) return c.formula ? '' : `${ref} is a typed number; use =${fn}(…).`;
+      if (!c.formula && Math.abs(c.v - exp) <= 0.01 * Math.abs(exp) + 1e-4) return `${ref} is a typed, rounded number; use =${fn}(…) so the table keeps full precision.`;
+      if (swapV != null && near(c.v, swapV)) return `${ref}: the ranges are swapped. ${fn}(known y's = masses, known x's = volumes $A$2:$A$9).`;
+      if (fn === 'RSQ' && near(c.v, Math.sqrt(exp))) return `${ref} is r (CORREL); R² is its square: =RSQ(…).`;
+      if (fn === 'SLOPE' && Math.abs(c.v - sol.rho) < 0.0015 && !near(c.v, exp)) return `${ref} looks like a textbook density; use your data's slope: =SLOPE(…).`;
+      const o = others.find(q => near(c.v, otherV(q)));
+      if (o) return `${ref} is the ${what} for ${o.label}, not ${sol.label}: check which mass column the formula uses.`;
+      if (Math.abs(c.v - exp) <= 0.01 * Math.abs(exp) + 1e-4) return `${ref} is close but not exact: it looks copied from the chart. Use =${fn}(…) so the table keeps full precision.`;
+      return `${ref} isn't the ${what} for ${sol.label}.`;
+    };
+    tm.push(one('I' + r, f.m, 'slope', 'SLOPE', f.mSwap, q => q.fit.m), one('J' + r, f.b, 'intercept', 'INTERCEPT', f.bSwap, q => q.fit.b), one('K' + r, f.r2, 'R²', 'RSQ', null, q => q.fit.r2));
+  }
+  const byRest = new Map();
+  for (const m of tm.filter(Boolean)) {
+    const g = /^([A-K]\d) ?(:)?(.*)$/.exec(m);
+    if (!g) { byRest.set(m, null); continue; }
+    const rest = g[3].trim();
+    if (!byRest.has(rest)) byRest.set(rest, { refs: [], rest, colon: !!g[2] });
+    byRest.get(rest).refs.push(g[1]);
+  }
+  const tmm = [...byRest].map(([k, v]) => !v ? k : v.refs.length === 1 ? `${v.refs[0]}${v.colon ? ':' : ''} ${v.rest}` : `${fmtList(v.refs)}${v.colon ? ':' : ''} ${v.colon ? v.rest : v.rest.replace(/^is (a |the )?/, 'are ').replace(/number;/, 'numbers;')}`);
+  if (!tmm.length) { tT.ok = true; tT.msg = 'Slope (density), intercept and R² for all five solutions.'; } else tT.msg = tmm.slice(0, 3).join(' ') + (tmm.length > 3 ? ' (and more)' : '');
+
+  // ---------- Plot 2 ----------
+  const t2 = task('p2chart');
+  if (!p2) t2.msg = 'No second chart found. Select H1:I6 (% ethanol and slope = density, with headers) and Insert → Scatter.';
+  else {
+    t2.ok = true; t2.msg = `Found it (on sheet "${p2.sh.name}").`;
+    const { sh, c: ch } = p2;
+    plotElements(id => task('p2' + id), ch, studentName, 'Density of Ethanol–Water Solutions vs. % Ethanol', PCT_AXES);
+    const tD = task('p2data'), dm = [];
+    if (!(ch.types.length === 1 && ch.types[0] === 'scatterChart')) dm.push(`This is a ${chartKind(ch.types)} chart. Use Scatter (XY), so the % ethanol values sit at their true positions. Select H1:I6 → Insert → Scatter.`);
+    const ser = ch.series.filter(q => q.y);
+    if (!ser.length) dm.push('The chart has no data series.');
+    else {
+      if (ser.length > 1) dm.push(`The chart has ${ser.length} series; it should have one (density vs. % ethanol). Remove the others in Select Data.`);
+      const s = ser[0], xv = s.x && rangeValues(wbk, sh, s.x.f), yv = rangeValues(wbk, sh, s.y.f), xs = xsOf(sh, s), ys = ysOf(sh, s);
+      const scale = pctSet(xs);
+      if (!s.x) dm.push('The series has no x values, so Excel plotted the densities against 1, 2, 3, …. Select Data → Edit → X values = H2:H6.');
+      else if (xv.values.some(v => typeof v === 'string') || yv.values.some(v => typeof v === 'string')) dm.push('A range includes the header row, so the points are shifted. In Select Data, start both ranges at row 2.');
+      else if (pctSet(ys) && !scale) dm.push('The axes are swapped: % ethanol is on y. Density goes on y and % ethanol on x: in Select Data, swap the X and Y ranges.');
+      else if (!scale) dm.push(`The x values (${xv.text}) aren't the % ethanol values 0, 25, 50, 75, 100 (H2:H6).`);
+      else {
+        const pairs = xs.map((x, i) => [Math.round(x * scale), ys[i]]);
+        const slopesOK = pairs.every(([p, y]) => solByPct(p) && near(y, solByPct(p).fit.m));
+        const textbook = pairs.every(([p, y]) => solByPct(p) && Math.abs(y - solByPct(p).rho) < 0.0015);
+        if (!slopesOK && !tT.ok && /^I2:I6$/.test(yv.text)) dm.push('Plot 2 uses the slopes in your table (I2:I6), which aren\'t right yet. Fix the table first; the plot updates by itself.');
+        else if (!slopesOK) dm.push(textbook ? 'The densities look like textbook values. Plot your own: the slopes in your table (I2:I6).'
+          : pairs.every(([p, y]) => solByPct(p) && near(y, solByPct(p).fit.b)) ? 'The y values are the intercepts. Density is the slope: use I2:I6.'
+          : `The y values (${yv.text}) aren't each solution's slope (density) from your table. Use I2:I6, with % ethanol in H2:H6 beside them.`);
+      }
+    }
+    if (!dm.length) { tD.ok = true; tD.msg = 'Density (your slopes) against % ethanol, all five solutions.'; } else tD.msg = dm.slice(0, 3).join(' ');
+  }
+  return { tasks: T, done: T.every(t => t.ok) };
+}
+
+/* "Try it" mini grid: a tiny formula sandbox (not a fake Excel).
+   Supports numbers, + - * / ^, parentheses, cell refs with $, ranges, and
+   SUM AVERAGE MEDIAN MIN MAX COUNT STDEV.S STDEV.P STDEV. */
+
+function mgTokenize(s) {
+  const out = []; let i = 0;
+  while (i < s.length) {
+    const ch = s[i];
+    if (/\s/.test(ch)) { i++; continue; }
+    let m;
+    if ((m = /^\d+(\.\d+)?([eE][+-]?\d+)?|^\.\d+/.exec(s.slice(i)))) { out.push({ t: 'num', v: parseFloat(m[0]) }); i += m[0].length; continue; }
+    if ((m = /^[A-Za-z][A-Za-z0-9.]*(?=\s*\()/.exec(s.slice(i)))) { out.push({ t: 'fn', v: m[0].toUpperCase() }); i += m[0].length; continue; }
+    if ((m = /^\$?[A-Za-z]{1,2}\$?\d+/.exec(s.slice(i)))) { out.push({ t: 'ref', v: m[0].toUpperCase().replace(/\$/g, '') }); i += m[0].length; continue; }
+    if ('+-*/^(),:'.includes(ch)) { out.push({ t: ch }); i++; continue; }
+    throw new Error(`I don't understand "${s.slice(i)}"`);
+  }
+  return out;
+}
+const MG_FN = {
+  SUM: a => a.reduce((s, x) => s + x, 0),
+  AVERAGE: a => { if (!a.length) throw new Error('#DIV/0!'); return a.reduce((s, x) => s + x, 0) / a.length; },
+  MEDIAN: a => median(a), MIN: a => Math.min(...a), MAX: a => Math.max(...a), COUNT: a => a.length,
+  'STDEV.S': a => { if (a.length < 2) throw new Error('#DIV/0!'); return sdS(a); }, STDEV: a => { if (a.length < 2) throw new Error('#DIV/0!'); return sdS(a); },
+  'STDEV.P': a => sdP(a)
+};
+const MG_FN2 = {
+  SLOPE: (y, x) => linfit(x, y).m, INTERCEPT: (y, x) => linfit(x, y).b, RSQ: (y, x) => linfit(x, y).r2,
+  CORREL: (y, x) => { const f = linfit(x, y); return Math.sign(f.m) * Math.sqrt(f.r2); }
+};
+function mgEval(src, getVal) {
+  const tk = mgTokenize(src); let p = 0;
+  const peek = () => tk[p], eat = t => { if (!tk[p] || tk[p].t !== t) throw new Error('Check the formula near "' + (tk[p] ? (tk[p].v ?? tk[p].t) : 'the end') + '"'); return tk[p++]; };
+  const num = v => { if (Array.isArray(v)) throw new Error('A range like A1:A3 only works inside a function, e.g. =AVERAGE(A1:A3)'); return v; };
+  function range(a, b) {
+    const A = splitRef(a), B = splitRef(b), out = [];
+    for (let r = Math.min(A.row, B.row); r <= Math.max(A.row, B.row); r++)
+      for (let c = Math.min(A.col, B.col); c <= Math.max(A.col, B.col); c++) { const v = getVal(addr(c, r)); if (typeof v === 'number') out.push(v); }
+    return out;
+  }
+  function primary() {
+    const t = peek(); if (!t) throw new Error('The formula ends too soon');
+    if (t.t === 'num') { p++; return t.v; }
+    if (t.t === '(') { p++; const v = expr(); eat(')'); return v; }
+    if (t.t === 'ref') { p++; if (peek() && peek().t === ':') { p++; const b = eat('ref'); return range(t.v, b.v); } const v = getVal(t.v); if (typeof v === 'string' && v !== '') throw new Error(t.v + ' holds text, not a number'); return typeof v === 'number' ? v : 0; }
+    if (t.t === 'fn') {
+      p++; const f = MG_FN[t.v], f2 = MG_FN2[t.v]; if (!f && !f2) throw new Error(`#NAME? (${t.v} isn't available here)`);
+      eat('('); const raw = [];
+      if (peek() && peek().t !== ')') { do { raw.push(expr()); } while (peek() && peek().t === ',' && ++p); }
+      eat(')');
+      if (f2) { if (raw.length !== 2 || !Array.isArray(raw[0]) || !Array.isArray(raw[1]) || raw[0].length !== raw[1].length || raw[0].length < 2) throw new Error(`${t.v} needs two ranges of the same size: ${t.v}(known_y's, known_x's)`); return f2(raw[0], raw[1]); }
+      return f(raw.flatMap(v => Array.isArray(v) ? v : [v]));
+    }
+    throw new Error('Check the formula near "' + (t.v ?? t.t) + '"');
+  }
+  function unary() { if (peek() && peek().t === '-') { p++; return -num(unary()); } if (peek() && peek().t === '+') { p++; return num(unary()); } return primary(); }
+  function power() { let v = unary(); while (peek() && peek().t === '^') { p++; v = Math.pow(num(v), num(unary())); } return v; }
+  function term() { let v = power(); while (peek() && (peek().t === '*' || peek().t === '/')) { const op = tk[p++].t, b = num(power()); v = num(v); if (op === '/' && b === 0) throw new Error('#DIV/0!'); v = op === '*' ? v * b : v / b; } return v; }
+  function expr() { let v = term(); while (peek() && (peek().t === '+' || peek().t === '-')) { const op = tk[p++].t, b = num(term()); v = op === '+' ? num(v) + b : num(v) - b; } return v; }
+  const v = expr(); if (p < tk.length) throw new Error('Check the formula near "' + (tk[p].v ?? tk[p].t) + '"');
+  return num(v);
+}
+// shift relative row references by dr (what Fill down does)
+function mgShift(f, dr) {
+  return f.replace(/(\$?)([A-Za-z]{1,2})(\$?)(\d+)(?![\d(A-Za-z])/g, (m, cd, c, rd, r, off, str) => {
+    if (/[A-Za-z.]/.test(str[off - 1] || '')) return m; // part of a function name
+    return cd + c + rd + (rd ? r : String(+r + dr));
+  });
+}
+
+/* MiniGrid({mount, cols, rows, cells:{A1:'text'|number|'=f'}, editable:[refs], fillRows:{from,to}, goal(fn)->{ok,msg}, prompt}) */
+function MiniGrid(o) {
+  const st = { cells: { ...o.cells }, sel: o.editable[0], showF: false };
+  const root = document.createElement('div'); root.className = 'mg';
+  o.mount.appendChild(root);
+  const isF = v => typeof v === 'string' && v.startsWith('=');
+  const val = (ref, seen = new Set()) => {
+    const raw = st.cells[ref];
+    if (!isF(raw)) return raw === undefined || raw === '' ? null : (typeof raw === 'number' || isNaN(Number(raw)) ? raw : Number(raw));
+    if (seen.has(ref)) throw new Error('Circular reference');
+    seen.add(ref);
+    const v = mgEval(raw.slice(1), r => val(r, seen)); seen.delete(ref); return v;
+  };
+  const show = ref => { try { const v = val(ref); return v === null ? '' : typeof v === 'number' ? (+v.toPrecision(10)).toString() : v; } catch (e) { return '⚠'; } };
+  function render() {
+    let h = `<div class="mg-prompt">${o.prompt}</div><div class="mg-bar"><span class="mg-name">${st.sel}</span><span class="mg-fx">fx</span><input class="mg-in" spellcheck="false" aria-label="Formula bar"></div><div class="mg-wrap"><table class="mg-t"><tr><th></th>`;
+    for (let c = 1; c <= o.cols; c++) h += `<th>${numToCol(c)}</th>`;
+    h += '</tr>';
+    for (let r = 1; r <= o.rows; r++) {
+      h += `<tr><th>${r}</th>`;
+      for (let c = 1; c <= o.cols; c++) {
+        const ref = addr(c, r), raw = st.cells[ref], ed = o.editable.includes(ref);
+        const disp = st.showF && isF(raw) ? raw : show(ref);
+        const num = !isF(raw) && typeof val(ref) === 'number' || isF(raw) && !st.showF;
+        h += `<td data-ref="${ref}" class="${ed ? 'ed' : ''} ${ref === st.sel ? 'sel' : ''} ${num ? 'num' : ''}">${disp === '⚠' ? '<span class="mg-err">!</span>' : esc(String(disp))}</td>`;
+      }
+      h += '</tr>';
+    }
+    h += `</table></div><div class="mg-btns">${o.fill ? '<button class="btn small mg-fill">Fill down ↓</button>' : ''}<button class="btn small ghost mg-showf">${st.showF ? 'Show values' : 'Show formulas'}</button><button class="btn small ghost mg-reset">Reset</button></div><div class="mg-msg"></div><div class="mg-goal"></div>`;
+    root.innerHTML = h;
+    const inp = root.querySelector('.mg-in');
+    inp.value = st.cells[st.sel] ?? ''; inp.readOnly = !o.editable.includes(st.sel);
+    inp.addEventListener('keydown', e => { if (e.key === 'Enter') { commit(inp.value); } });
+    inp.addEventListener('change', () => commit(inp.value));
+    root.querySelectorAll('td').forEach(td => td.addEventListener('click', () => { st.sel = td.dataset.ref; render(); const i = root.querySelector('.mg-in'); if (!i.readOnly) i.focus(); }));
+    root.querySelector('.mg-showf').onclick = () => { st.showF = !st.showF; render(); };
+    root.querySelector('.mg-reset').onclick = () => { st.cells = { ...o.cells }; st.sel = o.editable[0]; render(); };
+    if (o.fill) root.querySelector('.mg-fill').onclick = fillDown;
+    status();
+  }
+  function commit(v) {
+    if (!o.editable.includes(st.sel)) return;
+    v = v.trim(); st.cells[st.sel] = v === '' ? '' : isF(v) ? v : (isNaN(Number(v)) ? v : Number(v));
+    render();
+  }
+  function fillDown() {
+    const src = st.sel, s = splitRef(src), raw = st.cells[src];
+    const msg = root.querySelector('.mg-msg');
+    if (!o.fill.cols.includes(numToCol(s.col)) || s.row !== o.fill.from) { msg.textContent = `Select ${o.fill.cols.map(c => c + o.fill.from).join(' or ')} first, then Fill down.`; return; }
+    if (!isF(raw)) { msg.textContent = 'Type a formula in this cell first (start with =).'; return; }
+    for (let r = s.row + 1; r <= o.fill.to; r++) st.cells[addr(s.col, r)] = '=' + mgShift(raw.slice(1), r - s.row);
+    render();
+    root.querySelector('.mg-msg').textContent = `Copied ${src} down to ${addr(s.col, o.fill.to)}. Click the filled cells (or Show formulas) to see how each reference changed.`;
+  }
+  function status() {
+    const msg = root.querySelector('.mg-msg');
+    try { val(st.sel); } catch (e) { msg.textContent = st.sel + ': ' + e.message; }
+    if (o.goal) {
+      const g = o.goal(ref => { try { return val(ref); } catch (e) { return null; } }, st.cells);
+      const el = root.querySelector('.mg-goal'); el.className = 'mg-goal ' + (g.ok ? 'ok' : ''); el.innerHTML = g.msg;
+    }
+  }
+  render();
+}
+
+/* Excel Workbench — page wiring */
+const $ = s => document.querySelector(s), $$ = s => Array.from(document.querySelectorAll(s));
+const esc = s => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+
+// ---------- tabs and lessons ----------
+function showTab(id) {
+  $$('nav.tabs button').forEach(b => b.classList.toggle('on', b.dataset.tab === id));
+  $$('.tab').forEach(t => t.classList.toggle('on', t.id === id));
+  window.scrollTo(0, 0);
+}
+function showLesson(n) {
+  $$('#mods button[data-m]').forEach(b => b.classList.toggle('on', b.dataset.m === String(n)));
+  $$('[data-lesson]').forEach(a => a.hidden = a.dataset.lesson !== String(n));
+  showTab('learn');
+}
+$$('nav.tabs button').forEach(b => b.onclick = () => showTab(b.dataset.tab));
+$$('#mods button[data-m]').forEach(b => b.onclick = () => showLesson(+b.dataset.m));
+document.addEventListener('click', e => {
+  const g = e.target.closest('[data-go]'); if (g) { e.preventDefault(); showTab(g.dataset.go); }
+  const l = e.target.closest('[data-golesson]'); if (l) { e.preventDefault(); showLesson(+l.dataset.golesson); }
+});
+
+// ---------- downloads (normal page, with a fallback) ----------
+// In the claude.ai preview, downloads go through the viewer's download capability;
+// on GitHub Pages (or a local file) a normal browser download is used.
+let dlCap = null;
+try { if (window.claude && window.claude.use) window.claude.use('downloads').then(d => dlCap = d).catch(() => {}); } catch (e) {}
+async function download(blob, filename) {
+  if (dlCap) {
+    try { await dlCap.save({ filename, data: blob }); return true; }
+    catch (e) { return e && e.code === 'declined'; }
+  }
+  try {
+    const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = filename;
+    document.body.appendChild(a); a.click(); setTimeout(() => { URL.revokeObjectURL(a.href); a.remove(); }, 1500);
+    return true;
+  } catch (e) { return false; }
+}
+
+// ---------- Try-it grids ----------
+MiniGrid({
+  mount: $('#try4'), cols: 5, rows: 7,
+  prompt: '<b>Try it.</b> Click <b>B2</b>, type <code>=A2/1000*E2</code> in the formula bar, press Enter, then <b>Fill down</b>. Look at B3–B6. Then change B2 to <code>=A2/1000*$E$2</code> and fill down again.',
+  cells: { A1: 'Volume (mL)', B1: 'NaOH (mol)', D1: '', E1: 'Conc (M)', E2: 0.1000, A2: 24.15, A3: 24.32, A4: 24.08, A5: 21.67, A6: 21.80 },
+  editable: ['B2', 'B3', 'B4', 'B5', 'B6'], fill: { cols: ['B'], from: 2, to: 6 },
+  goal: (v, cells) => {
+    const ok = [2, 3, 4, 5, 6].every(r => { const x = v('B' + r); return typeof x === 'number' && Math.abs(x - v('A' + r) / 1000 * 0.1) < 1e-12; });
+    if (ok) return { ok: true, msg: '✓ Every row is right: the fixed reference $E$2 stayed on the concentration.' };
+    if (typeof v('B2') === 'number' && Math.abs(v('B2') - 0.002415) < 1e-12 && v('B3') === 0) return { ok: false, msg: 'B2 is right, but B3–B6 are 0: after filling down they point to E3, E4, … which are empty. That\'s the missing $.' };
+    return { ok: false, msg: 'Goal: B2:B6 = volume in L × the concentration in E2.' };
+  }
+});
+MiniGrid({
+  mount: $('#try5'), cols: 4, rows: 7,
+  prompt: '<b>Try it.</b> Three trials are in A2:A4. In D2 find the mean, in D3 the sample SD, in D4 the population SD, and in D5 the %CV (use the sample SD).',
+  cells: { A1: 'Volume (mL)', A2: 24.15, A3: 24.32, A4: 24.08, C2: 'Mean', C3: 'SD (STDEV.S)', C4: 'SD (STDEV.P)', C5: '%CV' },
+  editable: ['D2', 'D3', 'D4', 'D5'],
+  goal: v => {
+    const a = [24.15, 24.32, 24.08], m = mean(a), S = sdS(a), P = sdP(a), cv = S / m * 100;
+    const n = (x, e) => typeof x === 'number' && Math.abs(x - e) < 1e-9;
+    const got = [n(v('D2'), m), n(v('D3'), S), n(v('D4'), P), n(v('D5'), cv)];
+    if (got.every(Boolean)) return { ok: true, msg: `✓ All four right. Notice STDEV.P (${P.toFixed(4)}) is smaller than STDEV.S (${S.toFixed(4)}).` };
+    if (n(v('D5'), cv / 100)) return { ok: false, msg: 'D5 is SD ÷ mean, but %CV also needs × 100.' };
+    if (n(v('D5'), P / m * 100)) return { ok: false, msg: 'D5 used the population SD; use D3 (STDEV.S).' };
+    const names = ['mean', 'STDEV.S', 'STDEV.P', '%CV'];
+    return { ok: false, msg: 'Still to do: ' + names.filter((x, i) => !got[i]).join(', ') + '.' };
+  }
+});
+
+// ---------- Module 7: Scatter vs Line picture ----------
+(function () {
+  const V = [0.5, 0.75, 1, 1.25, 1.5, 2, 3, 4], P = V.map(v => 1.5 / v), W = 250, H = 160, L = 34, B = 26, Tm = 10, R = 10;
+  const sx = (x, even) => even ? L + (W - L - R) * (V.indexOf(x) + 0.5) / V.length : L + (W - L - R) * x / 4.2;
+  const sy = y => Tm + (H - Tm - B) * (1 - y / 3.2);
+  function svg(even) {
+    let g = `<svg width="${W}" height="${H}" role="img" aria-label="${even ? 'Line chart' : 'Scatter chart'} of pressure vs volume"><line x1="${L}" y1="${H - B}" x2="${W - R}" y2="${H - B}" stroke="#888"/><line x1="${L}" y1="${Tm}" x2="${L}" y2="${H - B}" stroke="#888"/>`;
+    const ticks = even ? V : [0, 1, 2, 3, 4];
+    ticks.forEach(t => g += `<text x="${sx(t, even)}" y="${H - B + 13}" font-size="9" text-anchor="middle" fill="#5b6470">${even ? t.toFixed(2) : t}</text>`);
+    [0, 1, 2, 3].forEach(t => g += `<text x="${L - 5}" y="${sy(t) + 3}" font-size="9" text-anchor="end" fill="#5b6470">${t}</text>`);
+    if (even) g += `<polyline fill="none" stroke="#b42318" stroke-width="1.5" points="${V.map((v, i) => sx(v, 1) + ',' + sy(P[i])).join(' ')}"/>`;
+    V.forEach((v, i) => g += `<circle cx="${sx(v, even)}" cy="${sy(P[i])}" r="3.5" fill="${even ? '#b42318' : '#1d6f42'}"/>`);
+    return g + `<text x="${(L + W) / 2}" y="${H - 2}" font-size="10" text-anchor="middle" fill="#1f2328">Volume (L)</text></svg>`;
+  }
+  $('#m7pics').innerHTML = `<figure class="mini"><div>${svg(false)}</div><figcaption>Scatter: volumes at their true positions. P ∝ 1/V shows as a smooth curve.</figcaption></figure><figure class="mini bad"><div>${svg(true)}</div><figcaption>Line: volumes spaced evenly as labels. The curve is the wrong shape.</figcaption></figure>`;
+})();
+MiniGrid({
+  mount: $('#try11'), cols: 6, rows: 6,
+  prompt: '<b>Try it.</b> Five standards are in A2:B6 and an unknown\'s absorbance in D2. In F2 find the slope, in F3 the intercept, and in F4 the unknown\'s concentration from them.',
+  cells: { A1: 'Conc (M)', B1: 'Absorbance', A2: 0.00001, A3: 0.00002, A4: 0.00003, A5: 0.00004, A6: 0.00005, B2: 0.128, B3: 0.251, B4: 0.372, B5: 0.497, B6: 0.618, D1: 'Unknown A', D2: 0.300, E2: 'Slope', E3: 'Intercept', E4: 'Conc (M)' },
+  editable: ['F2', 'F3', 'F4'],
+  goal: v => {
+    const x = [1, 2, 3, 4, 5].map(k => k * 1e-5), y = [0.128, 0.251, 0.372, 0.497, 0.618], f = linfit(x, y), c = (0.3 - f.b) / f.m;
+    const n = (a, e) => typeof a === 'number' && Math.abs(a - e) <= 1e-9 * Math.max(1, Math.abs(e));
+    if (n(v('F2'), f.m) && n(v('F3'), f.b) && n(v('F4'), c)) return { ok: true, msg: `✓ Slope ${f.m.toFixed(0)} M⁻¹, intercept ${f.b.toFixed(4)}, unknown ${c.toExponential(3)} M.` };
+    if (n(v('F2'), f.mSwap)) return { ok: false, msg: 'F2 has the ranges swapped: =SLOPE(known y\'s, known x\'s) = SLOPE(B2:B6,A2:A6).' };
+    if (n(v('F4'), 0.3 / f.m)) return { ok: false, msg: 'F4 leaves out the intercept: c = (A − b) ÷ m, so =(D2-F3)/F2.' };
+    const todo = [['F2', n(v('F2'), f.m), 'slope'], ['F3', n(v('F3'), f.b), 'intercept'], ['F4', n(v('F4'), c), 'concentration']].filter(t => !t[1]).map(t => `${t[0]} (${t[2]})`);
+    return { ok: false, msg: 'Still to do: ' + todo.join(', ') + '. Hint: =SLOPE(B2:B6,A2:A6), =INTERCEPT(B2:B6,A2:A6).' };
+  }
+});
+
+// ---------- Labs ----------
+function tableHTML(rows, startRow) {
+  const nc = Math.max(...rows.map(r => r.length));
+  let h = '<table class="data"><tr><th class="rh"></th>' + Array.from({ length: nc }, (_, c) => `<th class="rh">${numToCol(c + 1)}</th>`).join('') + '</tr>';
+  rows.forEach((r, i) => {
+    h += `<tr><td class="rh">${startRow + i}</td>`;
+    for (let c = 0; c < nc; c++) { const v = r[c] ?? ''; h += `<td class="${/^-?[\d.]+(E[+-]\d+)?$/i.test(v) ? 'n' : ''}">${esc(v)}</td>`; }
+    h += '</tr>';
+  });
+  return h + '</table>';
+}
+const LABS = {
+  A: { title: 'Lab A · Replicate titrations', modules: '1–6',
+    intro: 'You titrated five acid samples (A–E) with NaOH, three trials each. Your job: get the data into Excel, organize it, convert volumes to moles, and summarize each sample\'s precision.',
+    data: labAData, block: labABlock,
+    extra: d => `<h3>Sample E: type these yourself</h3><p>These trials came in late, from the lab notebook. Type them into rows 16–18 (Sample, Trial, Volume):</p>${tableHTML(d.typed.map(x => [x.sample, String(x.trial), x.vol.toFixed(2)]), 16)}`,
+    tasks: [
+      [1, 'Paste the data at <b>A1</b>. Type your name in <b>B1</b>, exactly as above.'],
+      [1, 'Type Sample E\'s three trials into <b>rows 16–18</b>.'],
+      [3, 'Sort the table A3:C18 by <b>Sample</b>, then by <b>Trial</b>, keeping every row together.'],
+      [4, 'In <b>D3</b> type the header <code>NaOH (mol)</code>. In D4 calculate moles of NaOH (volume in L × concentration in B2) with a <b>fixed reference</b> to B2, and fill down to D18.'],
+      [6, 'Show the moles in <b>scientific notation with 3 decimals</b>.'],
+      [5, 'Leave <b>column E empty</b>. Make a results table with the headers <b>Sample, Mean, SD, %CV, Median, Max, Min, n</b> in <b>F3:M3</b> and the samples A–E in <b>F4:F8</b>.'],
+      [5, 'In G4:M8 use formulas on the <b>moles in column D</b> for each sample: <b>mean</b> (AVERAGE), <b>SD</b> (STDEV.S), <b>%CV</b> = 100 × SD ÷ mean, <b>median</b> (MEDIAN), <b>max</b> (MAX), <b>min</b> (MIN) and <b>n</b> (COUNT). Sample A is D4:D6, B is D7:D9, and so on.'],
+      [6, 'Format the results: Mean, SD, Median, Max and Min in <b>scientific notation with 3 decimals</b>; %CV with <b>3 decimals</b>; n as a <b>whole number</b>. Center the results table.']] },
+  B: { title: 'Lab B · Boyle\'s law', modules: '7–9',
+    intro: 'You measured the pressure of a fixed amount of gas at eight volumes, once at 298 K and once at 348 K. Your job: plot both data sets on one well-labeled XY chart.',
+    data: labBData, block: labBBlock, extra: () => '',
+    tasks: [
+      [1, 'Paste the data at <b>A1</b>. Type your name in <b>B1</b>, exactly as above.'],
+      [7, 'Select <b>A3:C11</b> (headers included) and <span class="path">Insert → Scatter</span> (markers only). You should get <b>two series</b>, with Volume on the x axis.'],
+      [8, 'Check that the legend shows the two headers ("P at 298 K (atm)", "P at 348 K (atm)"), not "Series1".'],
+      [8, 'Add a <b>chart title</b>, and <b>axis titles</b> with units: <code>Volume (L)</code> and <code>Pressure (atm)</code>. Keep the <b>legend</b>.'],
+      [9, 'Set the title, both axis titles and the legend to <b>12 pt</b>.'],
+      [11, 'Show the data as <b>markers only</b>, with no lines joining the points.']] },
+  C: { title: 'Lab C · Beer\'s law calibration curve', modules: '10–11',
+    intro: 'You measured the absorbance of six standard solutions and three unknowns. Your job: make a calibration curve, fit a line, and find each unknown\'s concentration.',
+    data: labCData, block: labCBlock, extra: () => '',
+    tasks: [
+      [1, 'Paste the data at <b>A1</b>. Type your name in <b>B1</b>, exactly as above.'],
+      [7, 'Select the standards, <b>A3:B9</b>, and <span class="path">Insert → Scatter</span> (markers only). Don\'t plot the unknowns.'],
+      [8, 'Add a <b>chart title</b> and <b>axis titles</b> <code>Concentration (M)</code> and <code>Absorbance</code>. Turn the <b>legend off</b> (one series).'],
+      [9, 'Set the title and both axis titles to <b>12 pt</b>. Keep markers only, no connecting lines.'],
+      [10, 'Add a <b>linear trendline</b> showing the <b>equation</b> and <b>R²</b> on the chart.'],
+      [10, 'In <b>H4:H6</b> type the labels Slope, Intercept, R². In <b>I4:I6</b> calculate them: <code>=SLOPE(B4:B9,A4:A9)</code>, <code>=INTERCEPT(B4:B9,A4:A9)</code>, <code>=RSQ(B4:B9,A4:A9)</code>.'],
+      [10, 'In <b>F3</b> type <code>Concentration (M)</code>. In F4 calculate the first unknown\'s concentration, c = (A − b) ÷ m, with <b>fixed references</b> to I4 and I5, and fill down to F6.'],
+      [6, 'Format I4, I5 and F4:F6 in <b>scientific notation with 3 decimals</b>, and R² (I6) as a number with <b>4 decimals</b>.']] }
+};
+let curLab = 'A', labData = null;
+function pickLab(l) {
+  curLab = l; labData = null;
+  $$('#labPick button').forEach(b => b.classList.toggle('on', b.dataset.lab === l));
+  $('#labTitle').textContent = LABS[l].title;
+  $('#labIntro').innerHTML = LABS[l].intro + ` <span class="muted">(Modules ${LABS[l].modules})</span>`;
+  $('#labOut').hidden = true; $('#labNameNote').textContent = ''; $('#labCopyNote').textContent = '';
+  if ($('#labName').value.trim()) makeLab();
+}
+function makeLab() {
+  const name = $('#labName').value.trim(), L = LABS[curLab];
+  if (!name) { $('#labNameNote').textContent = 'Type your name first.'; return; }
+  labData = L.data(name);
+  $('#labNameNote').innerHTML = `Data set for <b>${esc(name)}</b>. Type your name in B1 exactly like this; if it doesn't match, the checker will look for a different data set.`;
+  $('#labBlock').innerHTML = tableHTML(L.block(labData), 1);
+  $('#labExtra').innerHTML = L.extra(labData);
+  $('#labTasks').innerHTML = L.tasks.map(([m, t]) => `<li>${t} <a href="#" data-golesson="${m}" class="muted">(Module ${m})</a></li>`).join('');
+  $('#labOut').hidden = false; $('#labCopyNote').textContent = '';
+  try { localStorage.setItem('ewb-name', name); } catch (e) {}
+}
+$$('#labPick button').forEach(b => b.onclick = () => pickLab(b.dataset.lab));
+document.addEventListener('click', e => { const g = e.target.closest('[data-golab]'); if (g) { e.preventDefault(); showTab('lab'); pickLab(g.dataset.golab); } });
+$('#labGo').onclick = makeLab;
+$('#labName').addEventListener('keydown', e => { if (e.key === 'Enter') makeLab(); });
+try { const n = localStorage.getItem('ewb-name'); if (n) $('#labName').value = n; } catch (e) {}
+pickLab('A');
+const curBlock = () => LABS[curLab].block(labData);
+const fileStem = () => `Lab${curLab}_` + labData.name.replace(/[^A-Za-z0-9]+/g, '_');
+$('#labCopy').onclick = async () => {
+  const tsv = curBlock().map(r => r.join('\t')).join('\n');
+  const note = $('#labCopyNote');
+  try { await navigator.clipboard.writeText(tsv); note.textContent = 'Copied. Now click A1 in Excel and paste.'; }
+  catch (e) { note.innerHTML = 'Your browser blocked copying. Select all the text below, copy it, and paste at A1:<br><textarea rows="5">' + esc(tsv) + '</textarea>'; }
+};
+$('#labXlsx').onclick = async () => { if (!await download(makeXlsx(curBlock(), 'Lab ' + curLab), fileStem() + '.xlsx')) $('#labCopyNote').textContent = 'Download blocked here; use Copy data instead.'; };
+$('#labCsv').onclick = async () => { if (!await download(new Blob([makeCsv(curBlock())], { type: 'text/csv' }), fileStem() + '.csv')) $('#labCopyNote').textContent = 'Download blocked here; use Copy data instead.'; };
+
+// ---------- Check ----------
+async function checkFile(file) {
+  const out = $('#checkOut'); out.hidden = false;
+  out.innerHTML = '<p class="muted">Reading ' + esc(file.name) + '…</p>';
+  if (/\.(csv|xls)$/i.test(file.name)) { out.innerHTML = `<div class="badbox">That's a ${file.name.split('.').pop().toLowerCase()} file. The checker needs the workbook as <b>.xlsx</b> (File → Create a Copy → Download a Copy in Excel for the web).</div>`; return; }
+  let wb;
+  try { wb = await readXlsx(await file.arrayBuffer()); }
+  catch (e) { out.innerHTML = '<div class="badbox">I couldn\'t read this as an Excel workbook (.xlsx). Download it again from Excel with Download a Copy, and upload that file.</div>'; return; }
+  const res = checkWorkbook(wb, $('#checkLab').value || null);
+  if (res.lab === 'K') { out.innerHTML = '<div class="okbox">This looks like a <b>Key Assessment</b> capstone. Pre-check it on the <a href="#" data-go="ka">Key Assessment</a> tab.</div>'; return; }
+  if (!res.lab) { out.innerHTML = '<div class="badbox">I can\'t tell which lab this workbook is for. Choose the lab above and upload it again. (Each lab\'s data should start at A1, with the headers in row 3.)</div>'; return; }
+  const all = LAB_TASKS[res.lab], ids = new Set(res.tasks.map(t => t.id));
+  let h = `<h3 style="margin-top:0">${esc(LABS[res.lab].title)}</h3>`;
+  if (res.done) h += `<div class="okbox"><b>All tasks complete.</b> Your completion code for <b>${esc(res.name)}</b>:<br><span class="code">${res.code}</span><br>Paste this code into the Lab ${res.lab} assignment in Blackboard.</div>`;
+  else { const n = res.tasks.filter(t => t.ok).length; h += `<p><b>${n} of ${all.length}</b> tasks done${res.name ? ' for ' + esc(res.name) : ''}. Fix the items marked ✗, download a new copy, and check again.</p>`; }
+  h += '<ul class="tasks">';
+  for (const t of res.tasks) h += `<li class="${t.ok ? 'ok' : 'no'}"><span class="ic">${t.ok ? '✓' : '✗'}</span><div><div class="t">${esc(t.title)}</div><div class="m">${esc(t.msg)}</div>${t.ok ? '' : `<a href="#" data-golesson="${t.module}">Review Module ${t.module}</a>`}</div></li>`;
+  for (const [id, title] of all) if (!ids.has(id)) h += `<li class="skip"><span class="ic">–</span><div><div class="t">${esc(title)}</div><div class="m">Checked after the items above are fixed.</div></div></li>`;
+  out.innerHTML = h + '</ul>';
+}
+$('#file').onchange = e => { if (e.target.files[0]) checkFile(e.target.files[0]); e.target.value = ''; };
+const drop = $('#drop');
+['dragenter', 'dragover'].forEach(ev => drop.addEventListener(ev, e => { e.preventDefault(); drop.classList.add('over'); }));
+['dragleave', 'drop'].forEach(ev => drop.addEventListener(ev, e => { e.preventDefault(); drop.classList.remove('over'); }));
+drop.addEventListener('drop', e => { const f = e.dataTransfer.files[0]; if (f) checkFile(f); });
+
+// ---------- Instructor ----------
+$('#vGo').onclick = () => {
+  const ok = verifyCode($('#vName').value, $('#vCode').value);
+  $('#vOut').innerHTML = !$('#vName').value.trim() || !$('#vCode').value.trim() ? 'Enter a name and a code.' : ok ? '<b style="color:var(--g)">✓ Valid</b> for this name.' : '<b style="color:var(--bad)">✗ Not valid</b> for this name.';
+};
+$('#vListGo').onclick = () => {
+  const lines = $('#vList').value.split(/\r?\n/).map(l => l.trim()).filter(Boolean);
+  let h = '<table class="data"><tr><th>Name</th><th>Code</th><th>Result</th></tr>';
+  for (const l of lines) {
+    const m = /^(.*?)[\t,;]\s*([A-Za-z]-[A-Za-z0-9]{6})\s*$/.exec(l);
+    if (!m) { h += `<tr><td colspan="2">${esc(l)}</td><td style="color:var(--warn)">couldn't read this line</td></tr>`; continue; }
+    const ok = verifyCode(m[1], m[2]);
+    h += `<tr><td>${esc(m[1].trim())}</td><td><code>${esc(m[2].toUpperCase())}</code></td><td style="color:${ok ? 'var(--g)' : 'var(--bad)'}">${ok ? '✓ valid' : '✗ not valid'}</td></tr>`;
+  }
+  $('#vListOut').innerHTML = h + '</table>';
+};
+
+// ---------- Key Assessment: Capstones 1 and 2 ----------
+$$('#kaPick button').forEach(b => b.onclick = () => {
+  $$('#kaPick button').forEach(x => x.classList.toggle('on', x === b));
+  $('#cap1').hidden = b.dataset.cap !== '1'; $('#cap2').hidden = b.dataset.cap !== '2';
+});
+function setupCapstone(p, block, check, tasks, file, okText, sheet) {
+  $(`#${p}Block`).innerHTML = tableHTML(block(), 1);
+  $(`#${p}Copy`).onclick = async () => {
+    const tsv = block().map(r => r.join('\t')).join('\n');
+    try { await navigator.clipboard.writeText(tsv); $(`#${p}Note`).textContent = 'Copied. Now click A1 in Excel and paste.'; }
+    catch (e) { $(`#${p}Note`).innerHTML = 'Your browser blocked copying. Select all the text below, copy it, and paste at A1:<br><textarea rows="5">' + esc(tsv) + '</textarea>'; }
+  };
+  $(`#${p}Xlsx`).onclick = async () => { if (!await download(makeXlsx(block(), sheet), file + '.xlsx')) $(`#${p}Note`).textContent = 'Download blocked here; use Copy data instead.'; };
+  $(`#${p}Csv`).onclick = async () => { if (!await download(new Blob([makeCsv(block())], { type: 'text/csv' }), file + '.csv')) $(`#${p}Note`).textContent = 'Download blocked here; use Copy data instead.'; };
+  try { const n = localStorage.getItem('ewb-name'); if (n) $(`#${p}Name`).value = n; } catch (e) {}
+  let last = null;
+  async function run(f) {
+    last = f;
+    const out = $(`#${p}Out`), name = $(`#${p}Name`).value.trim();
+    if (name) try { localStorage.setItem('ewb-name', name); } catch (e) {}
+    if (/\.(csv|xls)$/i.test(f.name)) { out.innerHTML = '<div class="badbox">The pre-check needs your workbook as <b>.xlsx</b> (File → Create a Copy → Download a Copy in Excel for the web).</div>'; return; }
+    let wb;
+    try { wb = await readXlsx(await f.arrayBuffer()); }
+    catch (e) { out.innerHTML = '<div class="badbox">I couldn\'t read this as an Excel workbook (.xlsx). Download it again from Excel with Download a Copy, and try that file.</div>'; return; }
+    const res = check(wb, name), ids = new Set(res.tasks.map(t => t.id));
+    let h = res.done ? `<div class="okbox">${okText}</div>` : `<p><b>${res.tasks.filter(t => t.ok).length} of ${tasks.length}</b> checks pass. Fix the items marked ✗, download a new copy, and check again.</p>`;
+    h += '<ul class="tasks">';
+    // one row per checklist item, in the checklist's order (with group headings for Capstone 2)
+    for (const row of tasks) {
+      const [id, title, , group] = row, t = res.tasks.find(x => x.id === id);
+      if (group) h += `<li class="grp">${esc(group)}</li>`;
+      if (t) h += `<li class="${t.ok ? 'ok' : 'no'}"><span class="ic">${t.ok ? '✓' : '✗'}</span><div><div class="t">${esc(t.title)}</div><div class="m">${esc(t.msg)}</div>${t.ok ? '' : `<a href="#" data-golesson="${t.module}">Review Module ${t.module}</a>`}</div></li>`;
+      else h += `<li class="skip"><span class="ic">–</span><div><div class="t">${esc(title)}</div><div class="m">Checked once there is a chart.</div></div></li>`;
+    }
+    out.innerHTML = h + '</ul>';
+  }
+  $(`#${p}File`).onchange = e => { if (e.target.files[0]) run(e.target.files[0]); e.target.value = ''; };
+  $(`#${p}Name`).addEventListener('change', () => { if (last) run(last); });
+  const dz = $(`#${p}Drop`);
+  ['dragenter', 'dragover'].forEach(ev => dz.addEventListener(ev, e => { e.preventDefault(); dz.classList.add('over'); }));
+  ['dragleave', 'drop'].forEach(ev => dz.addEventListener(ev, e => { e.preventDefault(); dz.classList.remove('over'); }));
+  dz.addEventListener('drop', e => { const f = e.dataTransfer.files[0]; if (f) run(f); });
+}
+setupCapstone('ka', kaBlock, checkKeyAssessment, KA_TASKS, 'KeyAssessment_MassVolume',
+  '<b>Your plot has all six elements.</b> Now copy it into Word (or a PDF) and attach both files to the Blackboard assignment.', 'Mass vs Volume');
+setupCapstone('ka2', ka2Block, checkCapstone2, KA2_TASKS, 'Capstone2_EthanolWater',
+  '<b>Both plots and the table have every element.</b> Now copy them into Word (or a PDF) and attach both files to the Blackboard assignment.', 'Ethanol-water');
+</script>
+</body>
+</html>
